@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ Culture.Name }}">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>{{ "PageTitle" | shape_new | shape_stringify }}</title> 
+      {% shape "Metas" %}
+      <link rel="icon" type="image/x-icon" href="/TheResumeTheme/favicon.ico" />
+      {% style name:"muli-font", src:"~/TheResumeTheme/css/muli-font.css",
+            cdn_src:"https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" %}
+      {% style name:"saira-extra-condensed-font", src:"~/TheResumeTheme/css/saira-extra-condensed-font.css",
+            cdn_src:"https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" %}    
+      {% style name:"bootstrap", version:"4" %}
+      {% script name:"bootstrap", version:"4" %}
+      {% style name:"Resume", version:"6" %}
+      {% script name:"font-awesome", version:"5" %}
+      {% script name:"font-awesome-v4-shims", version:"5" %}
+      {% resources type: "Meta" %}
+      {% resources type: "HeadLink" %}
+      {% resources type: "Stylesheet" %}
+      {% resources type: "HeadScript" %}
+   </head>
+   <body id="page-top" style="position: relative">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+         <a class="navbar-brand js-scroll-trigger" href="#page-top">
+         <span class="d-block d-lg-none">{{ Site.SiteName }}</span>
+         <span class="d-none d-lg-block">
+         {% shape "Profile" %}
+         </span>
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_fixed_duration: "00:05:00", cache_tag: "alias:main-menu" %}
+      </nav>
+      <div class="container-fluid p-0">
+         {% render_body %}
+      </div>
+      {% render_section "Footer", required: false %}
+      {% script name:"Resume", version:"6" %}
+      {% resources type: "FootScript" %}
+   </body>
+</html>

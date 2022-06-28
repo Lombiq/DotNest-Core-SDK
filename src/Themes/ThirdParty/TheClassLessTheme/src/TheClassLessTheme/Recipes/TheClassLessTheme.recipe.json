@@ -1,0 +1,910 @@
+{
+  "name": "TheClassLessTheme",
+  "displayName": "The ClassLess Theme",
+  "description": "Provides a ClassLess theme.",
+  "author": "Antoine Griffard",
+  "website": "http://antoinegriffard.com",
+  "version": "1.0.0",
+  "issetuprecipe": true,
+  "categories": [
+    "Theme"
+  ],
+  "tags": [
+    "ClassLess"
+  ],
+  "steps": [
+    //Feature
+    {
+      "name": "Feature",
+      "enable": [
+        "OrchardCore.Settings",
+        "OrchardCore.Admin",
+        "OrchardCore.Contents",
+        "OrchardCore.Liquid",
+        "OrchardCore.Templates",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Alias",
+        "OrchardCore.Autoroute",
+        "OrchardCore.ContentFields",
+        "OrchardCore.ContentPreview",
+        "OrchardCore.Contents.FileContentDefinition",
+        "OrchardCore.CustomSettings",
+        "OrchardCore.Deployment",
+        "OrchardCore.Deployment.Remote",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Resources",
+        "OrchardCore.Widgets",
+        "OrchardCore.Features",
+        "OrchardCore.Feeds",
+        "OrchardCore.Flows",
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Html",
+        "OrchardCore.Indexing",
+        "OrchardCore.Scripting",
+        "OrchardCore.Layers",
+        "OrchardCore.Lists",
+        "OrchardCore.Lucene",
+        "OrchardCore.Markdown",
+        "OrchardCore.Media",
+        "OrchardCore.Title",
+        "OrchardCore.Menu",
+        "OrchardCore.Navigation",
+        "OrchardCore.Queries",
+        "OrchardCore.Users",
+        "OrchardCore.Recipes",
+        "OrchardCore.Roles",
+        "OrchardCore.Themes",
+        "TheAdmin",
+        "TheClassLessTheme"
+      ]
+    },
+    //Themes
+    {
+      "name": "Themes",
+      "Site": "TheClassLessTheme",
+      "Admin": "TheAdmin"
+    },
+    //Settings
+    {
+      "name": "Settings",
+      "HomeRoute": {
+        "Area": "OrchardCore.Contents",
+        "Controller": "Item",
+        "Action": "Display",
+        "contentItemId": "42cg0xp2vp3yd40a9tytbdzfne"
+      },
+      "LayerSettings": {
+        "Zones": [
+          "Navigation",
+          "Content",
+          "Footer"
+        ]
+      }
+    },
+    //ContentDefinition
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        //Menu
+        {
+          "Name": "Menu",
+          "DisplayName": "Menu",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Creatable": true
+            },
+            "Draftable": "True",
+            "Versionable": "True",
+            "Creatable": "True",
+            "Listable": "True"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                },
+                "Position": "1"
+              }
+            },
+            {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "AliasPartSettings": {
+                  "Pattern": "{{ ContentItem | display_text | slugify }}"
+                },
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "Position": "2"
+              }
+            },
+            {
+              "PartName": "MenuPart",
+              "Name": "MenuPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                },
+                "Position": "3"
+              }
+            },
+            {
+              "PartName": "MenuItemsListPart",
+              "Name": "MenuItemsListPart",
+              "Settings": {
+                "Position": "4"
+              }
+            }
+          ]
+        },
+        //LinkMenuItem
+        {
+          "Name": "LinkMenuItem",
+          "DisplayName": "Link Menu Item",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "MenuItem"
+            },
+            "Stereotype": "MenuItem"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LinkMenuItemPart",
+              "Name": "LinkMenuItemPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "LinkMenuItem",
+              "Name": "LinkMenuItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        //Page
+        {
+          "Name": "Page",
+          "DisplayName": "Page",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Page",
+              "Name": "Page",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ ContentItem | display_text | slugify }}",
+                  "ShowHomepageOption": true,
+                  "AllowUpdatePath": true
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2",
+                  "Editor": "Wysiwyg"
+                },
+                "HtmlBodyPartSettings": {}
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        //Content
+        {
+          "Name": "Content",
+          "DisplayName": "Content",
+          "Settings": {},
+          "ContentTypePartDefinitionRecords": []
+        },
+        {
+          "Name": "LiquidWidget",
+          "DisplayName": "Liquid Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Securable": true,
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LiquidWidget",
+              "Name": "LiquidWidget",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "LiquidPart",
+              "Name": "LiquidPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        //BlogPost
+        {
+          "Name": "BlogPost",
+          "DisplayName": "Blog Post",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "BlogPost",
+              "Name": "BlogPost",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentIndexSettings": {},
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ ContentItem | container | display_text | slugify }}/{{ ContentItem | display_text | slugify }}"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentIndexSettings": {
+                  "Included": true,
+                  "Stored": true,
+                  "Analyzed": true,
+                  "Sanitized": true,
+                  "Tokenized": true
+                },
+                "HtmlBodyPartSettings": {},
+                "ContentTypePartSettings": {
+                  "Position": "2",
+                  "Editor": "Wysiwyg"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentIndexSettings": {
+                  "Included": true,
+                  "Stored": true,
+                  "Analyzed": true,
+                  "Sanitized": true,
+                  "Tokenized": true
+                },
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "CommonPart",
+              "Name": "CommonPart",
+              "Settings": {
+                "CommonPartSettings": {
+                  "DisplayDateEditor": true,
+                  "DisplayOwnerEditor": true
+                },
+                "ContentIndexSettings": {},
+                "ContentTypePartSettings": {
+                  "Position": "5"
+                }
+              }
+            }
+          ]
+        },
+        //Blog
+        {
+          "Name": "Blog",
+          "DisplayName": "Blog",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Blog",
+              "Name": "Blog",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ ContentItem | display_text | slugify }}",
+                  "ShowHomepageOption": true
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "ListPart",
+              "Name": "ListPart",
+              "Settings": {
+                "ContentIndexSettings": {},
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                },
+                "ListPartSettings": {
+                  "PageSize": 10,
+                  "ContainedContentTypes": [
+                    "BlogPost"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        //MenuItem
+        {
+          "Name": "MenuItem",
+          "DisplayName": "Menu Item",
+          "Settings": {},
+          "ContentTypePartDefinitionRecords": []
+        },
+        //ThemeSettings
+        {
+          "Name": "ThemeSettings",
+          "DisplayName": "Theme Settings",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "CustomSettings",
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "ThemeSettings",
+              "Name": "ThemeSettings",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        //WidgetsListPart
+        {
+          "Name": "WidgetsListPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a way to add widgets per content items."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        //MenuPart
+        {
+          "Name": "MenuPart",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        //MenuItemPart
+        {
+          "Name": "MenuItemPart",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        //LinkMenuItemPart
+        {
+          "Name": "LinkMenuItemPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a menu link behavior for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        //BlogPost
+        {
+          "Name": "BlogPost",
+          "Settings": {
+            "ContentPartSettings": {}
+          },
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Tags",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Tags",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        //ThemeSettings
+        {
+          "Name": "ThemeSettings",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "ThemeVariation",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Theme variation",
+                  "Editor": "PredefinedList",
+                  "Position": "0"
+                },
+                "TextFieldSettings": {},
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Light",
+                      "value": ""
+                    },
+                    {
+                      "name": "Dark",
+                      "value": "dark"
+                    },
+                    {
+                      "name": "Sepia",
+                      "value": "sepia"
+                    },
+                    {
+                      "name": "Milligram",
+                      "value": "milligram"
+                    },
+                    {
+                      "name": "Pure",
+                      "value": "pure"
+                    },
+                    {
+                      "name": "Sakura",
+                      "value": "sakura"
+                    },
+                    {
+                      "name": "Skeleton",
+                      "value": "skeleton"
+                    },
+                    {
+                      "name": "Bootstrap",
+                      "value": "bootstrap"
+                    },
+                    {
+                      "name": "Medium",
+                      "value": "medium"
+                    },
+                    {
+                      "name": "Tufte",
+                      "value": "tufte"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "pure"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "UseTinyVersion",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Use Tiny Version",
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    //Content
+    {
+      "name": "Content",
+      "data": [
+        //HTML5 Page
+        {
+          "ContentItemId": "42cg0xp2vp3yd40a9tytbdzfne",
+          "ContentType": "Page",
+          "DisplayText": "Demo page",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "Page": {},
+          "AutoroutePart": {
+            "Path": "html5-page",
+            "SetHomepage": true
+          },
+          "HtmlBodyPart": {
+            "Html": "<section id=\"text\">\r\n          <header><h1>Text</h1></header>\r\n          <article id=\"text__headings\">\r\n            <header>\r\n              <h1>Headings</h1>\r\n            </header>\r\n            <div>\r\n              <h1>Heading 1</h1>\r\n              <h2>Heading 2</h2>\r\n              <h3>Heading 3</h3>\r\n              <h4>Heading 4</h4>\r\n              <h5>Heading 5</h5>\r\n              <h6>Heading 6</h6>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__paragraphs\">\r\n            <header><h1>Paragraphs</h1></header>\r\n            <div>\r\n              <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__blockquotes\">\r\n            <header><h1>Blockquotes</h1></header>\r\n            <div>\r\n              <blockquote>\r\n                <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>\r\n                <p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>\r\n                <cite><a href=\"#!\">Said no one, ever.</a></cite>\r\n              </blockquote>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__lists\">\r\n            <header><h1>Lists</h1></header>\r\n            <div>\r\n              <h3>Definition list</h3>\r\n              <dl>\r\n                <dt>Definition List Title</dt>\r\n                <dd>This is a definition list division.</dd>\r\n              </dl>\r\n              <h3>Ordered List</h3>\r\n              <ol>\r\n                <li>List Item 1</li>\r\n                <li>List Item 2</li>\r\n                <li>List Item 3</li>\r\n              </ol>\r\n              <h3>Unordered List</h3>\r\n              <ul>\r\n                <li>List Item 1</li>\r\n                <li>List Item 2</li>\r\n                <li>List Item 3</li>\r\n              </ul>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__hr\">\r\n            <header><h1>Horizontal rules</h1></header>\r\n            <div>\r\n              <hr>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__tables\">\r\n            <header><h1>Tabular data</h1></header>\r\n            <table>\r\n              <caption>Table Caption</caption>\r\n              <thead>\r\n                <tr>\r\n                  <th scope=\"col\">Table Heading 1</th>\r\n                  <th scope=\"col\">Table Heading 2</th>\r\n                  <th scope=\"col\">Table Heading 3</th>\r\n                  <th scope=\"col\">Table Heading 4</th>\r\n                  <th scope=\"col\">Table Heading 5</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr>\r\n                  <td>Table Cell 1</td>\r\n                  <td>Table Cell 2</td>\r\n                  <td>Table Cell 3</td>\r\n                  <td>Table Cell 4</td>\r\n                  <td>Table Cell 5</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>Table Cell 1</td>\r\n                  <td>Table Cell 2</td>\r\n                  <td>Table Cell 3</td>\r\n                  <td>Table Cell 4</td>\r\n                  <td>Table Cell 5</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>Table Cell 1</td>\r\n                  <td>Table Cell 2</td>\r\n                  <td>Table Cell 3</td>\r\n                  <td>Table Cell 4</td>\r\n                  <td>Table Cell 5</td>\r\n                </tr>\r\n                <tr>\r\n                  <td>Table Cell 1</td>\r\n                  <td>Table Cell 2</td>\r\n                  <td>Table Cell 3</td>\r\n                  <td>Table Cell 4</td>\r\n                  <td>Table Cell 5</td>\r\n                </tr>\r\n              </tbody>\r\n            <tfoot>\r\n                <tr>\r\n                  <th scope=\"col\">Table Footer 1</th>\r\n                  <th scope=\"col\">Table Footer 2</th>\r\n                  <th scope=\"col\">Table Footer 3</th>\r\n                  <th scope=\"col\">Table Footer 4</th>\r\n                  <th scope=\"col\">Table Footer 5</th>\r\n                </tr>\r\n              </tfoot>\r\n              </table>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__code\">\r\n            <header><h1>Code</h1></header>\r\n            <div>\r\n              <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>\r\n              <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>\r\n              <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>\r\n              <h2>Pre-formatted text</h2>\r\n              <pre>P R E F O R M A T T E D T E X T\r\n  ! \" # $ % &amp; ' ( ) * + , - . /\r\n  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?\r\n  @ A B C D E F G H I J K L M N O\r\n  P Q R S T U V W X Y Z [ \\ ] ^ _\r\n  ` a b c d e f g h i j k l m n o\r\n  p q r s t u v w x y z { | } ~ </pre>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"text__inline\">\r\n            <header><h1>Inline elements</h1></header>\r\n            <div>\r\n              <p><a href=\"#!\">This is a text link</a>.</p>\r\n              <p><strong>Strong is used to indicate strong importance.</strong></p>\r\n              <p><em>This text has added emphasis.</em></p>\r\n              <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.</p>\r\n              <p>The <i>i element</i> is text that is offset from the normal text.</p>\r\n              <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</p>\r\n              <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>\r\n              <p><s>This text has a strikethrough</s>.</p>\r\n              <p>Superscript<sup>®</sup>.</p>\r\n              <p>Subscript for things like H<sub>2</sub>O.</p>\r\n              <p><small>This small text is small for for fine print, etc.</small></p>\r\n              <p>Abbreviation: <abbr title=\"HyperText Markup Language\">HTML</abbr></p>\r\n              <p><q cite=\"https://developer.mozilla.org/en-US/docs/HTML/Element/q\">This text is a short inline quotation.</q></p>\r\n              <p><cite>This is a citation.</cite></p>\r\n              <p>The <dfn>dfn element</dfn> indicates a definition.</p>\r\n              <p>The <mark>mark element</mark> indicates a highlight.</p>\r\n              <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>\r\n              <p>The time element: <time datetime=\"2013-04-06T12:32+00:00\">2 weeks ago</time></p>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n        </section>\r\n\r\n        <section id=\"embedded\">\r\n          <header><h1>Embedded content</h1></header>\r\n          <article id=\"embedded__images\">\r\n            <header><h2>Images</h2></header>\r\n            <div>\r\n              <h3>No <code>&lt;figure&gt;</code> element</h3>\r\n              <p><img src=\"[asset_url]Images/cat-image-480x480.jfif[/asset_url]\" alt=\"Image alt text\"></p>\r\n              <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>\r\n              <figure><img src=\"[asset_url]Images/cat-image-420x420.jfif[/asset_url]\" alt=\"Image alt text\"></figure>\r\n              <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>\r\n              <figure>\r\n                <img src=\"[asset_url]Images/cat-image-420x420.jfif[/asset_url]\" alt=\"Image alt text\">\r\n                <figcaption>Here is a caption for this image.</figcaption>\r\n              </figure>\r\n            </div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__audio\">\r\n            <header><h2>Audio</h2></header>\r\n            <div><audio controls=\"\">audio</audio></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__video\">\r\n            <header><h2>Video</h2></header>\r\n            <div><video controls=\"\">video</video></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__canvas\">\r\n            <header><h2>Canvas</h2></header>\r\n            <div><canvas>canvas</canvas></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__meter\">\r\n            <header><h2>Meter</h2></header>\r\n            <div><meter value=\"2\" min=\"0\" max=\"10\">2 out of 10</meter></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__progress\">\r\n            <header><h2>Progress</h2></header>\r\n            <div><progress>progress</progress></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__svg\">\r\n            <header><h2>Inline SVG</h2></header>\r\n            <div><svg focusable=\"false\" width=\"100px\" height=\"100px\"><circle cx=\"100\" cy=\"100\" r=\"100\" fill=\"#1fa3ec\"></circle></svg></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n          <article id=\"embedded__iframe\">\r\n            <header><h2>IFrame</h2></header>\r\n            <div><iframe title=\"Example iframe\"src=\"about:blank\" height=\"300\"></iframe></div>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </article>\r\n        </section>\r\n        <section id=\"forms\">\r\n          <header><h1>Form elements</h1></header>\r\n          <form>\r\n            <fieldset id=\"forms__input\">\r\n              <legend>Input fields</legend>\r\n              <p>\r\n                <label for=\"input__text\">Text Input</label>\r\n                <input id=\"input__text\" type=\"text\" placeholder=\"Text Input\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__password\">Password</label>\r\n                <input id=\"input__password\" type=\"password\" placeholder=\"Type your Password\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__webaddress\">Web Address</label>\r\n                <input id=\"input__webaddress\" type=\"url\" placeholder=\"http://yoursite.com\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__emailaddress\">Email Address</label>\r\n                <input id=\"input__emailaddress\" type=\"email\" placeholder=\"name@email.com\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__phone\">Phone Number</label>\r\n                <input id=\"input__phone\" type=\"tel\" placeholder=\"(999) 999-9999\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__search\">Search</label>\r\n                <input id=\"input__search\" type=\"search\" placeholder=\"Enter Search Term\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__text2\">Number Input</label>\r\n                <input id=\"input__text2\" type=\"number\" placeholder=\"Enter a Number\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__text3\" class=\"error\">Error</label>\r\n                <input id=\"input__text3\" class=\"is-error\" type=\"text\" placeholder=\"Text Input\">\r\n              </p>\r\n              <p>\r\n                <label for=\"input__text4\" class=\"valid\">Valid</label>\r\n                <input id=\"input__text4\" class=\"is-valid\" type=\"text\" placeholder=\"Text Input\">\r\n              </p>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n            <fieldset id=\"forms__select\">\r\n              <legend>Select menus</legend>\r\n              <p>\r\n                <label for=\"select\">Select</label>\r\n                <select id=\"select\">\r\n                  <optgroup label=\"Option Group\">\r\n                    <option>Option One</option>\r\n                    <option>Option Two</option>\r\n                    <option>Option Three</option>\r\n                  </optgroup>\r\n                </select>\r\n              </p>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n            <fieldset id=\"forms__checkbox\">\r\n              <legend>Checkboxes</legend>\r\n              <ul class=\"list list--bare\">\r\n                <li><label><input id=\"checkbox1\" name=\"checkbox\" type=\"checkbox\" checked=\"checked\"> Choice A</label></li>\r\n                <li><label><input id=\"checkbox2\" name=\"checkbox\" type=\"checkbox\"> Choice B</label></li>\r\n                <li><label><input id=\"checkbox3\" name=\"checkbox\" type=\"checkbox\"> Choice C</label></li>\r\n              </ul>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n            <fieldset id=\"forms__radio\">\r\n              <legend>Radio buttons</legend>\r\n              <ul class=\"list list--bare\">\r\n                <li><label><input id=\"radio1\" name=\"radio\" type=\"radio\" class=\"radio\" checked=\"checked\"> Option 1</label></li>\r\n                <li><label><input id=\"radio2\" name=\"radio\" type=\"radio\" class=\"radio\"> Option 2</label></li>\r\n                <li><label><input id=\"radio3\" name=\"radio\" type=\"radio\" class=\"radio\"> Option 3</label></li>\r\n              </ul>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n            <fieldset id=\"forms__textareas\">\r\n              <legend>Textareas</legend>\r\n              <p>\r\n                <label for=\"textarea\">Textarea</label>\r\n                <textarea id=\"textarea\" rows=\"8\" cols=\"48\" placeholder=\"Enter your message here\"></textarea>\r\n              </p>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n            <fieldset id=\"forms__html5\">\r\n              <legend>HTML5 inputs</legend>\r\n              <p>\r\n                <label for=\"ic\">Color input</label>\r\n                <input type=\"color\" id=\"ic\" value=\"#000000\">\r\n              </p>\r\n              <p>\r\n                <label for=\"in\">Number input</label>\r\n                <input type=\"number\" id=\"in\" min=\"0\" max=\"10\" value=\"5\">\r\n              </p>\r\n              <p>\r\n                <label for=\"ir\">Range input</label>\r\n                <input type=\"range\" id=\"ir\" value=\"10\">\r\n              </p>\r\n              <p>\r\n                <label for=\"idd\">Date input</label>\r\n                <input type=\"date\" id=\"idd\" value=\"1970-01-01\">\r\n              </p>\r\n              <p>\r\n                <label for=\"idm\">Month input</label>\r\n                <input type=\"month\" id=\"idm\" value=\"1970-01\">\r\n              </p>\r\n              <p>\r\n                <label for=\"idw\">Week input</label>\r\n                <input type=\"week\" id=\"idw\" value=\"1970-W01\">\r\n              </p>\r\n              <p>\r\n                <label for=\"idt\">Datetime input</label>\r\n                </p>\r\n              <p>\r\n                <label for=\"idtl\">Datetime-local input</label>\r\n                <input type=\"datetime-local\" id=\"idtl\" value=\"1970-01-01T00:00\">\r\n              </p>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n            <fieldset id=\"forms__action\">\r\n              <legend>Action buttons</legend>\r\n              <p>\r\n                        </p>\r\n              <p>\r\n                <button type=\"submit\">&lt;button type=submit&gt;</button>\r\n                <button type=\"button\">&lt;button type=button&gt;</button>\r\n                <button type=\"reset\">&lt;button type=reset&gt;</button>\r\n                <button type=\"button\" disabled>&lt;button disabled&gt;</button>\r\n              </p>\r\n            </fieldset>\r\n            <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n          </form>\r\n        </section>"
+          },
+          "TitlePart": {
+            "Title": "Demo page"
+          }
+        },
+        //Demo Page Header
+        {
+          "ContentItemId": "4x9cj322cjqxn3a1jksm2b5p59",
+          "ContentType": "LiquidWidget",
+          "DisplayText": "Demo Page Header",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUserId')]",
+          "LiquidWidget": {},
+          "LiquidPart": {
+            "Liquid": "<header>\r\n    <h1>\r\n        <a class=\"navbar-brand\" href=\"{{ '~/' | href }}\">{{ Site.SiteName }}</a>\r\n    </h1>\r\n    <p>This page uses the <b>Classless.css</b> style sheet and on this page, you can try out how the base  HTML elements will be displayed with it.</p>\r\n  \t<p>The official site of the style sheet: <a hred=\"https://classless.de/\">https://classless.de</a></p>\r\n    <p>\r\n        You can try out different palettes of the style :\r\n        <select id=\"theme\" onchange=\"switchTheme(this)\">\r\n            <option value=\"\">Light</option>\r\n            <option value=\"dark\">Dark</option>\r\n            <option value=\"sepia\">Sepia</option>\r\n            <option value=\"milligram\">Milligram</option>\r\n            <option value=\"pure\">Pure</option>\r\n            <option value=\"sakura\">Sakura</option>\r\n            <option value=\"skeleton\">Skeleton</option>\r\n            <option value=\"bootstrap\">Bootstrap</option>\r\n            <option value=\"medium\">Medium</option>\r\n            <option value=\"tufte\">Tufte</option>\r\n        </select>\r\n    </p>\r\n  \t<p>You can set the palette under <i>Configuration/Settings/Theme Settings</i> for the entire site.</p>\r\n</header>\r\n<ul>\r\n    <li>\r\n        <a href=\"#text\">Text</a>      \r\n        <ul>\r\n            <li><a href=\"#text__headings\">Headings</a></li>\r\n            <li><a href=\"#text__paragraphs\">Paragraphs</a></li>\r\n            <li><a href=\"#text__blockquotes\">Blockquotes</a></li>\r\n            <li><a href=\"#text__lists\">Lists</a></li>\r\n            <li><a href=\"#text__hr\">Horizontal rules</a></li>\r\n            <li><a href=\"#text__tables\">Tabular data</a></li>\r\n            <li><a href=\"#text__code\">Code</a></li>\r\n            <li><a href=\"#text__inline\">Inline elements</a></li>\r\n        </ul>\r\n    </li>\r\n    <li>\r\n        <a href=\"#embedded\">Embedded content</a>      \r\n        <ul>\r\n            <li><a href=\"#embedded__images\">Images</a></li>\r\n            <li><a href=\"#embedded__audio\">Audio</a></li>\r\n            <li><a href=\"#embedded__video\">Video</a></li>\r\n            <li><a href=\"#embedded__canvas\">Canvas</a></li>\r\n            <li><a href=\"#embedded__meter\">Meter</a></li>\r\n            <li><a href=\"#embedded__progress\">Progress</a></li>\r\n            <li><a href=\"#embedded__svg\">Inline SVG</a></li>\r\n            <li><a href=\"#embedded__iframe\">IFrames</a></li>\r\n        </ul>\r\n    </li>\r\n    <li>\r\n        <a href=\"#forms\">Form elements</a>      \r\n        <ul>\r\n            <li><a href=\"#forms__input\">Input fields</a></li>\r\n            <li><a href=\"#forms__select\">Select menus</a></li>\r\n            <li><a href=\"#forms__checkbox\">Checkboxes</a></li>\r\n            <li><a href=\"#forms__radio\">Radio buttons</a></li>\r\n            <li><a href=\"#forms__textareas\">Textareas</a></li>\r\n            <li><a href=\"#forms__html5\">HTML5 inputs</a></li>\r\n            <li><a href=\"#forms__action\">Action buttons</a></li>\r\n        </ul>\r\n    </li>\r\n</ul>\r\n<script>\r\n\tfunction switchTheme(el) { document.documentElement.setAttribute('data-theme', el.value) }\r\n</script>\r\n<hr>"
+          },
+          "LayerMetadata": {
+            "RenderTitle": false,
+            "Position": 2.0,
+            "Zone": "Navigation",
+            "Layer": "Homepage"
+          }
+        },
+        //Blog
+        {
+          "ContentItemId": "4djrpvy6y6btd1t87cn2thbbmy",
+          "ContentType": "Blog",
+          "DisplayText": "Blog Example",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Blog"
+          },
+          "HtmlBodyPart": {
+            "Html": null
+          },
+          "AutoroutePart": {
+            "Path": "blog",
+            "SetHomepage": false
+          },
+          "ListPart": {
+            "FeedProxyUrl": "",
+            "FeedItemsCount": 20
+          },
+          "Blog": {}
+        },
+        //Orchard Core Beta
+        {
+          "ContentItemId": "4pwbepcfx5fanzb0s5235e3ac0",
+          "ContentType": "BlogPost",
+          "DisplayText": "Orchard Core Beta",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "Number": 4,
+          "BlogPost": {
+            "Tags": {
+              "Text": "Orchard Core"
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/orchard-core-beta",
+            "SetHomepage": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>Today, we are really proud to announce that the first version of <strong>Orchard Core</strong> has been released in Beta.</p><p><span style=\"color: inherit; font-family: inherit; font-size: 2rem;\">What is Orchard Core and Orchard Core CMS?</span><br></p><br><p><strong>Orchard Core</strong> is a Modular and Extensible Application Framework developped on the .NET Core ecosystem.<br><span style=\"font-size: 1rem;\">It allows you to create Multi tenant SaaS applications and host multiple sites with only one instance.<br></span><span style=\"font-size: 1rem;\"><strong>Orchard Core CMS</strong> is a full featured Content Management System that provides many useful modules.<br></span><span style=\"font-size: 1rem;\">With it, you can easily enable existing features or add your own modules to extend your application.</span></p><p>{{ \"Orchard/OrchardCore-Logo.png\" | asset_url | img_tag }}</p><h2>What features are available?</h2><p>These features are available out of the box:</p><ul><li><strong style=\"font-size: 1rem;\">Nuget Packages</strong><span style=\"font-size: 1rem;\">: Add reference in your application to Orchard Core Nuget packages.</span><br></li><li><strong style=\"font-size: 1rem;\">Performance</strong><span style=\"font-size: 1rem;\">: Handle many requests per second by default and even more with Response Cache.</span><br></li><li><strong style=\"font-size: 1rem;\">Portable </strong><span style=\"font-size: 1rem;\">: You can develop and deploy on multiple platforms : Windows, Mac and Linux.</span><br></li><li><strong style=\"font-size: 1rem;\">Deployment</strong><span style=\"font-size: 1rem;\">: Import/Export the data and the structure of your site with deployment plans.</span><br></li><li><strong style=\"font-size: 1rem;\">Setup</strong><span style=\"font-size: 1rem;\">: Use different recipes to setup your site with initial features and content types using configurable steps and dynamic parameters.&nbsp;</span><br></li><li><strong style=\"font-size: 1rem;\">Storage</strong><span style=\"font-size: 1rem;\">: YesSQL allows you to store your contents in SQL Server, SQLite, MySQL or PostgreSQL as if it was a document database.</span><br></li></ul><p>Many other modules can allow you to create a CMS:</p><ul><li>Create your <strong>Content Types</strong> adding out of the box predefined Parts and Fields.<br></li><li>Customize your site using <strong>Themes </strong>with ASP.NET Razor or Liquid syntax files.<br></li><li>Define different <strong>Zones</strong> on the site and add <strong>Widgets </strong>anywhere in your pages.<br></li><li>Declare <strong>Templates </strong>in admin that overrides the rendering of your content types.<br></li><li>Edit your content with <strong>Wysiwyg </strong>or <strong>Mardown </strong>editors that can use <strong>Liquid filters</strong>.<br></li><li>Get a <strong>Live Preview</strong> of your content in separate window while editing it from the admin.<br></li><li>Manage the <strong>Users, Roles and Permissions</strong> to give access to the Admin dashboard pages.<br></li><li>Manage your Assets and Media folders, upload files and add link to dynamically resized pictures.<br></li><li>Organize your <strong>Contents </strong>and navigate in the site: Lists, Menus, Taxonomies, Urls, ...<br></li><li>Search: <strong>Index</strong> your data and <strong>Query </strong>them in <strong>Sql </strong>or <strong>Lucene </strong>using Liquid syntax.<br></li></ul><br><h2>What is the current Status?</h2><p>Orchard Core is currently in <strong>Beta</strong>. See the <a href=\"https://github.com/OrchardCMS/OrchardCore/wiki/Roadmap\" target=\"_blank\">Roadmap</a>&nbsp;for more details. <br><span style=\"font-size: 1rem;\">This is an <strong>Open Source</strong> project so everyone can contribute and help in many ways to make it grows.</span></p><br><h2>How do I get started?</h2><p>Create an application using Orchard Core is as easy as adding a Nuget package reference to your <strong>ASP.NET Core project</strong> and configure two lines in the startup.cs file.<br><span style=\"font-size: 1rem;\">You can have a running instance in less than 5 minutes following this <a href=\"http://www.ideliverable.com/blog/getting-started-with-orchard-core-as-a-nuget-package\" target=\"_blank\">tutorial</a>.</span></p><br><h2>Useful links:</h2><p>GitHub repository : <a href=\"https://github.com/OrchardCMS/OrchardCore\" target=\"_blank\">https://github.com/OrchardCMS/OrchardCore</a><br><span style=\"font-size: 1rem;\">Gitter chat room : </span><a href=\"https://gitter.im/OrchardCMS/OrchardCore\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-size: 1rem;\">https://gitter.im/OrchardCMS/OrchardCore</a><br><span style=\"font-size: 1rem;\">Orchard Project site : </span><a href=\"http://orchardproject.net/\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-size: 1rem;\">http://orchardproject.net</a><br><span style=\"font-size: 1rem;\">Orchard Core documentation : </span><a href=\"http://orchardcore.readthedocs.io\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-size: 1rem;\">http://orchardcore.readthedocs.io</a></p><br>"
+          },
+          "TitlePart": {
+            "Title": "Orchard Core Beta"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4djrpvy6y6btd1t87cn2thbbmy",
+            "Order": 0
+          },
+          "CommonPart": {}
+        },
+        //Orchard Core Beta 2
+        {
+          "ContentItemId": "4c66qk8jqx358vk2txrmwma44y",
+          "ContentType": "BlogPost",
+          "DisplayText": "Orchard Core Beta 2",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "BlogPost": {
+            "Tags": {
+              "Text": "Orchard Core"
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/orchard-core-beta-2",
+            "SetHomepage": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>Orchard Core is available in Beta 2:&nbsp;<a href=\"https://github.com/OrchardCMS/OrchardCore/releases\">https://github.com/OrchardCMS/OrchardCore/releases</a>&nbsp;</p><p>   {{ \"Orchard/OrchardCore-Logo.png\" | asset_url | img_tag }}</p><p style=\"line-height: 24px; margin-right: 0px; margin-bottom: 24px; margin-left: 0px; color: rgb(64, 64, 64); font-family: Lato, proxima-nova, &quot;Helvetica Neue&quot;, Arial, sans-serif; background-color: rgb(252, 252, 252);\">Orchard Core consists of two different targets:&nbsp;</p><ul style=\"margin-right: 0px; margin-bottom: 24px; margin-left: 0px; padding: 0px; list-style-position: initial; list-style-image: initial; line-height: 24px; color: rgb(64, 64, 64); font-family: Lato, proxima-nova, &quot;Helvetica Neue&quot;, Arial, sans-serif; background-color: rgb(252, 252, 252);\"><li style=\"list-style: disc; margin-left: 24px;\"><strong style=\"font-weight: bold;\">Orchard Core Framework</strong>: An application framework for building&nbsp;<strong style=\"font-weight: bold;\">modular</strong>,&nbsp;<strong style=\"font-weight: bold;\">multi-tenant&nbsp;</strong>applications on ASP.NET Core.&nbsp;</li><li style=\"list-style: disc; margin-left: 24px;\"><strong style=\"font-weight: bold;\">Orchard Core CMS</strong>: A Web Content Management System (CMS) built on top of the Orchard Core Framework.&nbsp;</li></ul><p></p><p>Here is a list of the new features implemented in this release:&nbsp;</p><ul style=\"padding-left: 2em; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; margin-bottom: 0px !important;\"><li>Update to ASP.NET Core 2.1&nbsp;<ul style=\"padding-left: 2em;\"><li>Precompiled Razor Views&nbsp;</li><li style=\"margin-top: 0.25em;\">Razor Pages&nbsp;</li></ul></li><li style=\"margin-top: 0.25em;\">Updated to Bootstrap 4.1&nbsp;</li><li style=\"margin-top: 0.25em;\">Admin responsive menu&nbsp;</li><li style=\"margin-top: 0.25em;\">Assets user interface improvements&nbsp;</li><li style=\"margin-top: 0.25em;\">Fragment caching&nbsp;</li><li style=\"margin-top: 0.25em;\">Content and Query tag helpers&nbsp;</li><li style=\"margin-top: 0.25em;\">Code based manifest files&nbsp;</li><li style=\"margin-top: 0.25em;\">Updated OpenId&nbsp;</li><li style=\"margin-top: 0.25em;\">Social login support&nbsp;</li><li style=\"margin-top: 0.25em;\">Email module&nbsp;</li><li style=\"margin-top: 0.25em;\">Password reset&nbsp;</li><li style=\"margin-top: 0.25em;\">Email confirmation&nbsp;</li><li style=\"margin-top: 0.25em;\">Site and User timezones&nbsp;</li><li style=\"margin-top: 0.25em;\">Date Time (with timezone), Date and Time fields&nbsp;</li><li style=\"margin-top: 0.25em;\">Workflows module&nbsp;</li><li style=\"margin-top: 0.25em;\">Forms module&nbsp;</li><li style=\"margin-top: 0.25em;\">Azure Blob Storage&nbsp;<ul style=\"padding-left: 2em;\"><li>Assets&nbsp;</li><li style=\"margin-top: 0.25em;\">Data Protection&nbsp;</li></ul></li><li style=\"margin-top: 0.25em;\"><code style=\"font-family: SFMono-Regular, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; padding: 0.2em 0.4em; margin: 0px; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;\">dotnet new</code>&nbsp;templates&nbsp;</li></ul><p></p>"
+          },
+          "TitlePart": {
+            "Title": "Orchard Core Beta 2"
+          },
+          "CommonPart": {},
+          "ContainedPart": {
+            "ListContentItemId": "4djrpvy6y6btd1t87cn2thbbmy",
+            "Order": 0
+          }
+        },
+        //Orchard Core Beta 3
+        {
+          "ContentItemId": "4n87etcf55sgprcfwaz2bbbadz",
+          "ContentType": "BlogPost",
+          "DisplayText": "Orchard Core Beta 3",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "BlogPost": {
+            "Tags": {
+              "Text": "Orchard Core"
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/orchard-core-beta-3",
+            "SetHomepage": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>Orchard Core is available in Beta 3:&nbsp;<a href=\"https://github.com/OrchardCMS/OrchardCore/releases/tag/1.0.0-beta3\">https://github.com/OrchardCMS/OrchardCore/releases/tag/1.0.0-beta3</a> </p><h2>Open-source, modular, multi-tenant application framework and CMS for ASP.NET Core</h2><br><p>{{ \"Orchard/OrchardCore-Logo.png\" | asset_url | img_tag }}</p><h3>Flexible content management&nbsp;</h3><p>Define custom content types dynamically and reuse content fields. Define roles and permissions for all your users.&nbsp;<br><br></p><h3>Full, decoupled, or headless cms&nbsp;</h3><p>You can separate the content management from the front-end by using GraphQL, and create SPA applications or even static websites.&nbsp;</p><br><h3>Modular&nbsp;</h3><p>Every feature is a module which ships as a Nuget package, can be enabled, disabled or replaced. Create your own ecosystem of modules, or reuse existing ones to bootstrap your applications.</p><br><h3>Multi-tenant</h3><p>A single installation lets you manage multiple sites. The notion of Recipe lets you write reusable websites templates.&nbsp;</p><br><h3>Speed&nbsp;</h3><p>Between the fast performance of ASP.NET Core and the architectural choices of Orchard Core CMS, you get one of the fastest CMS solutions you have ever tried, on any OS (Windows, Linux, MacOS).&nbsp;</p><br><h3>Workflows&nbsp;</h3><p>Create content validation workflows, and define Web Hooks to trigger external processes or react to external events&nbsp;</p><br><h2 style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; color: rgb(33, 37, 41);\">List of changes for this release</h2><ul><li>Update to ASP.NET Core 2.2</li><li style=\"margin-top: 0.25em;\">GraphQL for all Content</li><li style=\"margin-top: 0.25em;\">Facebook, Microsoft Account, Google and Twitter authentication</li><li style=\"margin-top: 0.25em;\">ASP.NET Configuration support</li><li style=\"margin-top: 0.25em;\">Decoupled and headless CMS support</li><li style=\"margin-top: 0.25em;\">Improved performance</li><li style=\"margin-top: 0.25em;\">Background tasks management</li><li style=\"margin-top: 0.25em;\">Taxonomies module</li><li style=\"margin-top: 0.25em;\">Custom navigation</li><li style=\"margin-top: 0.25em;\">ReCaptcha module</li><li style=\"margin-top: 0.25em;\">Mini Profiler module</li><li style=\"margin-top: 0.25em;\">Recipe migrations</li><li style=\"margin-top: 0.25em;\">File based Content Definition</li><li style=\"margin-top: 0.25em;\">The Coming Soon theme</li><li style=\"margin-top: 0.25em;\">Edit and Display modes</li></ul>"
+          },
+          "TitlePart": {
+            "Title": "Orchard Core Beta 3"
+          },
+          "CommonPart": {},
+          "ContainedPart": {
+            "ListContentItemId": "4djrpvy6y6btd1t87cn2thbbmy",
+            "Order": 0
+          }
+        },
+        //Orchard Core RC 1
+        {
+          "ContentItemId": "4xp0pcs6d1b3xz4160ba2tz3d1",
+          "ContentType": "BlogPost",
+          "DisplayText": "Orchard Core RC 1",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "BlogPost": {
+            "Tags": {
+              "Text": "Orchard Core"
+            }
+          },
+          "AutoroutePart": {
+            "Path": "blog/orchard-core-rc-1",
+            "SetHomepage": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>Orchard Core is available in RC 1<span style=\"font-size: 1rem;\">:&nbsp;</span><a href=\"https://github.com/OrchardCMS/OrchardCore/releases/tag/1.0.0-rc1\">https://github.com/OrchardCMS/OrchardCore/releases/tag/1.0.0-rc1</a></p><h2>Open-source, modular, multi-tenant application framework and CMS for ASP.NET Core</h2><br><p>{{ \"Orchard/OrchardCore-Logo.png\" | asset_url | img_tag }}</p><h3>Flexible content management&nbsp;</h3><p>Define custom content types dynamically and reuse content fields. Define roles and permissions for all your users.&nbsp;<br><br></p><h3>Full, decoupled, or headless cms&nbsp;</h3><p>You can separate the content management from the front-end by using GraphQL, and create SPA applications or even static websites.&nbsp;</p><br><h3>Modular&nbsp;</h3><p>Every feature is a module which ships as a Nuget package, can be enabled, disabled or replaced. Create your own ecosystem of modules, or reuse existing ones to bootstrap your applications.</p><br><h3>Multi-tenant</h3><p>A single installation lets you manage multiple sites. The notion of Recipe lets you write reusable websites templates.&nbsp;</p><br><h3>Speed&nbsp;</h3><p>Between the fast performance of ASP.NET Core and the architectural choices of Orchard Core CMS, you get one of the fastest CMS solutions you have ever tried, on any OS (Windows, Linux, MacOS).&nbsp;</p><br><h3>Workflows&nbsp;</h3><p>Create content validation workflows, and define Web Hooks to trigger external processes or react to external events&nbsp;</p><br><h2 style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; color: rgb(33, 37, 41);\">List of changes for this release</h2><ul style=\"padding-left: 2em; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; margin-bottom: 0px !important;\"><li>Update to ASP.NET Core 3.0</li><li style=\"margin-top: 0.25em;\">Content Localization</li><li style=\"margin-top: 0.25em;\">RTL admin theme</li><li style=\"margin-top: 0.25em;\">Resources CDN</li><li style=\"margin-top: 0.25em;\">Media CDN support</li><li style=\"margin-top: 0.25em;\">GitHub authentication</li><li style=\"margin-top: 0.25em;\">Facebook applications</li><li style=\"margin-top: 0.25em;\">.NET Core 3.0</li><li style=\"margin-top: 0.25em;\">Localization NuGet packages</li><li style=\"margin-top: 0.25em;\">Azure Media resizing</li><li style=\"margin-top: 0.25em;\">SQL fields indexing</li><li style=\"margin-top: 0.25em;\">Full Text aspect</li></ul>"
+          },
+          "TitlePart": {
+            "Title": "Orchard Core RC 1"
+          },
+          "CommonPart": {},
+          "ContainedPart": {
+            "ListContentItemId": "4djrpvy6y6btd1t87cn2thbbmy",
+            "Order": 0
+          }
+        },
+        //Main Menu
+        {
+          "ContentItemId": "4z79pc542kvj50ns2ft8cba6wr",
+          "ContentType": "Menu",
+          "DisplayText": "Main Menu",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUserId')]",
+          "MenuPart": {},
+          "TitlePart": {
+            "Title": "Main Menu"
+          },
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "ContentItemId": "4rs64dr05xhz1333268pvgmq4h",
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "Demo Page",
+                "Latest": false,
+                "Published": false,
+                "Owner": "[js: parameters('AdminUserId')]",
+                "Author": "[js: parameters('AdminUserId')]",
+                "LinkMenuItemPart": {
+                  "Name": "Demo Page",
+                  "Url": "~/"
+                },
+                "LinkMenuItem": {}
+              },
+              {
+                "ContentItemId": "486mm3q0xf2aszz5cp3msgj7x1",
+                "ContentType": "ContentMenuItem",
+                "DisplayText": "Blog Example",
+                "Latest": false,
+                "Published": false,
+                "Owner": "[js: parameters('AdminUserId')]",
+                "Author": "[js: parameters('AdminUserId')]",
+                "ContentMenuItemPart": {
+                  "Name": "Blog Example",
+                  "SelectedContentItem": {
+                    "ContentItemIds": [
+                      "4djrpvy6y6btd1t87cn2thbbmy"
+                    ]
+                  }
+                },
+                "ContentMenuItem": {}
+              }
+            ]
+          },
+          "AliasPart": {
+            "Alias": "main-menu"
+          }
+        }
+      ]
+    },
+    //media
+    {
+      "name": "media",
+      "Files": [
+        {
+          "SourcePath": "Orchard/OrchardCore-Logo.png",
+          "TargetPath": "Orchard/OrchardCore-Logo.png"
+        },
+        // This image was made by "nicsuzor" (https://flickr.com/photos/nicsuzor/) and is under Attribution-ShareAlike
+        // 2.0 Generic (https://creativecommons.org/licenses/by-sa/2.0/) license.
+        {
+          "SourcePath": "Images/cat-image-420x420.jfif",
+          "TargetPath": "Images/cat-image-420x420.jfif"
+        },
+        // This image was made by "quatre mains" (https://flickr.com/photos/titrans/) and is under Attribution 2.0
+        // Generic (https://creativecommons.org/licenses/by/2.0/) license.
+        {
+          "SourcePath": "Images/cat-image-480x480.jfif",
+          "TargetPath": "Images/cat-image-480x480.jfif"
+        }
+      ]
+    },
+    //Layers
+    {
+      "name": "Layers",
+      "Layers": [
+        {
+          "Name": "Always",
+          "Rule": "true",
+          "Description": "The widgets in this layer are displayed on any page of this site."
+        },
+        {
+          "Name": "Homepage",
+          "Rule": "isHomepage()",
+          "Description": "The widgets in this layer are only displayed on the homepage."
+        }
+      ]
+    },
+    //custom-settings
+    {
+      "name": "custom-settings",
+      "ThemeSettings": {
+        "ContentItemId": "4wx7xwnj6nv37435n413r3etna",
+        "ContentType": "ThemeSettings",
+        "DisplayText": "",
+        "Latest": false,
+        "Published": false,
+        "Owner": "[js: parameters('AdminUserId')]",
+        "Author": "[js: parameters('AdminUserId')]",
+        "ThemeSettings": {
+          "ThemeVariation": {
+            "Text": ""
+          },
+          "UseTinyVersion": {
+            "Value": false
+          }
+        }
+      }
+    }
+  ]
+}

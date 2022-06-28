@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TheClassLessTheme": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

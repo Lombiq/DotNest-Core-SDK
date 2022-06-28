@@ -1,0 +1,9 @@
+.vs/
+.vscode/
+.idea/
+obj/
+bin/
+*.user
+wwwroot
+node_modules
+.pnpm-debug.log
