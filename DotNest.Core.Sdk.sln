@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{707EEA9F-5777-4820-8CC1-7AE8A2EA355F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNest.Core.SDK.Web", "DotNest.Core.SDK.Web\DotNest.Core.SDK.Web.csproj", "{D032E9F0-DC6A-4218-95A7-DA6F8DB713E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{3BA053C3-7B1E-4FF3-90E8-ACE1C03C87A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lombiq.BaseTheme", "..\DotNest-Tenants-Core\src\Themes\Lombiq.BaseTheme\Lombiq.BaseTheme\Lombiq.BaseTheme.csproj", "{C10EE82C-54F8-44CB-9168-57A51489AC5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{3A23A855-F3E1-48E4-90A5-CE7F0A9385EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBootstrapTheme", "..\DotNest-Tenants-Core\src\Themes\ThirdParty\TheBootstrapTheme\src\TheBootstrapTheme\TheBootstrapTheme.csproj", "{74B7861C-840B-4C03-867F-43E15269A4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheClassLessTheme", "..\DotNest-Tenants-Core\src\Themes\ThirdParty\TheClassLessTheme\src\TheClassLessTheme\TheClassLessTheme.csproj", "{E4B013FA-2081-410B-BC00-186C43C0AF68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheResumeTheme", "..\DotNest-Tenants-Core\src\Themes\ThirdParty\TheResumeTheme\src\TheResumeTheme\TheResumeTheme.csproj", "{8E98A471-2995-4AFD-8886-82F5CD2BADF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E067EAD6-6F1C-4549-A471-9BD16199CDE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNest.Hosting.Tenants", "..\DotNest-Tenants-Core\src\Modules\DotNest.Hosting.Tenants\DotNest.Hosting.Tenants.csproj", "{260DE9FB-806B-4159-B316-6BF343371F90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D032E9F0-DC6A-4218-95A7-DA6F8DB713E4} = {707EEA9F-5777-4820-8CC1-7AE8A2EA355F}
+		{3BA053C3-7B1E-4FF3-90E8-ACE1C03C87A8} = {707EEA9F-5777-4820-8CC1-7AE8A2EA355F}
+		{C10EE82C-54F8-44CB-9168-57A51489AC5E} = {3BA053C3-7B1E-4FF3-90E8-ACE1C03C87A8}
+		{3A23A855-F3E1-48E4-90A5-CE7F0A9385EA} = {3BA053C3-7B1E-4FF3-90E8-ACE1C03C87A8}
+		{74B7861C-840B-4C03-867F-43E15269A4D0} = {3A23A855-F3E1-48E4-90A5-CE7F0A9385EA}
+		{E4B013FA-2081-410B-BC00-186C43C0AF68} = {3A23A855-F3E1-48E4-90A5-CE7F0A9385EA}
+		{8E98A471-2995-4AFD-8886-82F5CD2BADF4} = {3A23A855-F3E1-48E4-90A5-CE7F0A9385EA}
+		{E067EAD6-6F1C-4549-A471-9BD16199CDE1} = {707EEA9F-5777-4820-8CC1-7AE8A2EA355F}
+		{260DE9FB-806B-4159-B316-6BF343371F90} = {E067EAD6-6F1C-4549-A471-9BD16199CDE1}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D032E9F0-DC6A-4218-95A7-DA6F8DB713E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D032E9F0-DC6A-4218-95A7-DA6F8DB713E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D032E9F0-DC6A-4218-95A7-DA6F8DB713E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D032E9F0-DC6A-4218-95A7-DA6F8DB713E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10EE82C-54F8-44CB-9168-57A51489AC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10EE82C-54F8-44CB-9168-57A51489AC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10EE82C-54F8-44CB-9168-57A51489AC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10EE82C-54F8-44CB-9168-57A51489AC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74B7861C-840B-4C03-867F-43E15269A4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B7861C-840B-4C03-867F-43E15269A4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B013FA-2081-410B-BC00-186C43C0AF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B013FA-2081-410B-BC00-186C43C0AF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E98A471-2995-4AFD-8886-82F5CD2BADF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E98A471-2995-4AFD-8886-82F5CD2BADF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260DE9FB-806B-4159-B316-6BF343371F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260DE9FB-806B-4159-B316-6BF343371F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260DE9FB-806B-4159-B316-6BF343371F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260DE9FB-806B-4159-B316-6BF343371F90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
