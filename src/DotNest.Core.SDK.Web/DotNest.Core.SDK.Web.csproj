@@ -57,11 +57,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\DotNest-Tenants-Core\src\Modules\DotNest.Hosting.Tenants\DotNest.Hosting.Tenants.csproj" />
-      <ProjectReference Include="..\..\..\DotNest-Tenants-Core\src\Themes\Lombiq.BaseTheme\Lombiq.BaseTheme\Lombiq.BaseTheme.csproj" />
-      <ProjectReference Include="..\..\..\DotNest-Tenants-Core\src\Themes\ThirdParty\TheBootstrapTheme\src\TheBootstrapTheme\TheBootstrapTheme.csproj" />
-      <ProjectReference Include="..\..\..\DotNest-Tenants-Core\src\Themes\ThirdParty\TheClassLessTheme\src\TheClassLessTheme\TheClassLessTheme.csproj" />
-      <ProjectReference Include="..\..\..\DotNest-Tenants-Core\src\Themes\ThirdParty\TheResumeTheme\src\TheResumeTheme\TheResumeTheme.csproj" />
+      <ProjectReference Include="..\Themes\Lombiq.BaseTheme\Lombiq.BaseTheme.csproj" />
+      <ProjectReference Include="..\Themes\ThirdParty\TheBootstrapTheme\TheBootstrapTheme.csproj" />
+      <ProjectReference Include="..\Themes\ThirdParty\TheClassLessTheme\TheClassLessTheme.csproj" />
+      <ProjectReference Include="..\Themes\ThirdParty\TheResumeTheme\TheResumeTheme.csproj" />
     </ItemGroup>
 
 </Project>

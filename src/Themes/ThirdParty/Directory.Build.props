@@ -1,5 +1,0 @@
-<Project>
-  <ItemGroup> 
-      <Analyzer Remove="@(Analyzer)" /> 
-  </ItemGroup>
-</Project>

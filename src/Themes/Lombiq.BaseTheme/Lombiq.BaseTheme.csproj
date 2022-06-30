@@ -24,39 +24,31 @@
     <None Include="NuGetIcon.png" Pack="true" PackagePath="" />
     <None Remove="node_modules\**" />
   </ItemGroup>
-
-  <Import Condition="'$(NuGetBuild)' != 'true'" Project="..\..\..\Utilities\Lombiq.Npm.Targets\Lombiq.Npm.Targets.props" />
-  <Import Condition="'$(NuGetBuild)' != 'true'" Project="..\..\..\Utilities\Lombiq.Npm.Targets\Lombiq.Npm.Targets.targets" />
-  <Import Condition="'$(NuGetBuild)' != 'true'" Project="..\..\..\Utilities\Lombiq.Gulp.Extensions\Lombiq.Gulp.Extensions.targets" />
-
+  
+  <ItemGroup>
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="4.1.0-alpha.1" />
+    <PackageReference Include="Lombiq.HelpfulLibraries" Version="4.4.0" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.4.0" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.4.0" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.4.0" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.4.0" />
+  </ItemGroup>
+  
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.4.0" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.4.0" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.4.0" />
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.4.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(NuGetBuild)' != 'true'">
-    <ProjectReference Include="..\..\..\Libraries\Lombiq.HelpfulLibraries\Lombiq.HelpfulLibraries\Lombiq.HelpfulLibraries.csproj" />
-    <ProjectReference Include="..\..\..\Modules\Lombiq.HelpfulExtensions\Lombiq.HelpfulExtensions.csproj" />
-    <ProjectReference Include="..\..\..\Utilities\Lombiq.Gulp.Extensions\Lombiq.Gulp.Extensions.csproj" />
-    <ProjectReference Include="..\..\..\Utilities\Lombiq.Npm.Targets\Lombiq.Npm.Targets.csproj" />
-  </ItemGroup>
-
   <ItemGroup Condition="'$(NuGetBuild)' == 'true'">
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="4.4.0" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="3.3.1" />
-
     <Content Include="Assets/Styles/**/*.*">
       <IncludeInPackage>true</IncludeInPackage>
       <BuildAction>Content</BuildAction>
       <CopyToOutput>true</CopyToOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilities\Lombiq.Gulp.Extensions\Lombiq.Gulp.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,2 +1,0 @@
-[*.cs]
-dotnet_analyzer_diagnostic.category-Style.severity = none
