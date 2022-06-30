@@ -1,25 +1,48 @@
+using Lombiq.Hosting.Tenants.Admin.Login.Constants;
+using NLog.Web;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
+
+var configuration = builder.Configuration;
+
+builder.Services.AddOrchardCms(orchardCoreBuilder =>
+{
+    orchardCoreBuilder
+        .AuthorizeApiRequestsIfEnabled(builder.Configuration)
+        .AllowMiniProfilerOnAdmin()
+        .AddDatabaseShellsConfigurationIfAvailable(configuration)
+        .ConfigureSmtpSettings(overrideAdminSettings: false)
+        .ConfigureUITesting(configuration, enableShortcutsDuringUITesting: true);
+
+    // Dependencies need to be added to AddTenantFeatures() explicitly.
+    orchardCoreBuilder.AddTenantFeatures("DotNest.Core.SDK", FeatureNames.SubTenant);
+
+    if (configuration.IsAzureHosting())
+    {
+        orchardCoreBuilder.AddTenantFeatures(
+            "Lombiq.Hosting.Azure.ApplicationInsights",
+            "OrchardCore.DataProtection.Azure");
+
+        // Azure Media Storage and its dependencies. It's always enabled for now but should rather only be enabled if
+        // OrchardCore.Media is.
+        orchardCoreBuilder.AddTenantFeatures(
+            "OrchardCore.Contents",
+            "OrchardCore.ContentTypes",
+            "OrchardCore.Liquid",
+            "OrchardCore.Media",
+            "OrchardCore.Media.Azure.Storage",
+            "OrchardCore.Media.Cache",
+            "OrchardCore.Settings");
+    }
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+app.UseForwardedHeadersForCloudflareAndAzure();
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
+app.UseOrchardCore();
 app.Run();
