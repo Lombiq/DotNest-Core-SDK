@@ -5,16 +5,13 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
-
+  
     <ItemGroup>
-      <PackageReference Include="AsyncFixer" Version="1.6.0">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="DotNetAnalyzers.DocumentationAnalyzers" Version="1.0.0-beta.59">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+      <PackageReference Include="OrchardCore.Application.Cms.Core.Targets" Version="1.4.0" />
+      <PackageReference Include="OrchardCore.Logging.NLog" Version="1.4.0" />
+    </ItemGroup>
+  
+    <ItemGroup>
       <PackageReference Include="Lombiq.HelpfulExtensions" Version="4.1.0-alpha.1" />
       <PackageReference Include="Lombiq.HelpfulLibraries" Version="4.5.0" />
       <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="3.1.0" />
@@ -24,6 +21,17 @@
       <PackageReference Include="Lombiq.SetupExtensions" Version="2.1.0" />
       <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="3.2.0" />
       <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="3.2.0" />
+    </ItemGroup>
+  
+    <ItemGroup>
+      <PackageReference Include="AsyncFixer" Version="1.6.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="DotNetAnalyzers.DocumentationAnalyzers" Version="1.0.0-beta.59">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="Meziantou.Analyzer" Version="1.0.704">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -40,8 +48,6 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
-      <PackageReference Include="OrchardCore.Application.Cms.Core.Targets" Version="1.4.0" />
-      <PackageReference Include="OrchardCore.Logging.NLog" Version="1.4.0" />
       <PackageReference Include="SecurityCodeScan.VS2019" Version="5.6.3">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -61,16 +67,6 @@
       <ProjectReference Include="..\Theme\ThirdParty\TheBootstrapTheme\TheBootstrapTheme.csproj" />
       <ProjectReference Include="..\Theme\ThirdParty\TheClassLessTheme\TheClassLessTheme.csproj" />
       <ProjectReference Include="..\Theme\ThirdParty\TheResumeTheme\TheResumeTheme.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <_ContentIncludedByDefault Remove="Pages\Error.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\Privacy.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\Shared\_Layout.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\Shared\_ValidationScriptsPartial.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\_ViewImports.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\_ViewStart.cshtml" />
     </ItemGroup>
 
 </Project>
