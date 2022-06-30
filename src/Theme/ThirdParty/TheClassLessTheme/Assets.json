@@ -1,0 +1,7 @@
+[
+  {
+    "generateSourceMaps": false,
+    "inputs": [ "../node_modules/marx-css/css/marx.css" ],
+    "output": "wwwroot/css/marx.css"
+  }
+]

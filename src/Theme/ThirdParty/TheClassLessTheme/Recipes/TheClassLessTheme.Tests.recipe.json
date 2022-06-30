@@ -1,0 +1,27 @@
+{
+  "name": "TheClassLessTheme.Tests",
+  "displayName": "The ClassLess Theme Tests",
+  "description": "Provides a ClassLess theme for tests.",
+  "author": "Antoine Griffard",
+  "website": "http://antoinegriffard.com",
+  "version": "1.0.0",
+  "issetuprecipe": true,
+  "categories": [ "developer" ],
+  "tags": [ "ClassLess" ],
+
+  "steps": [
+    {
+      "name": "recipes",
+      "Values": [
+        {
+          "executionid": "TheClassLessTheme",
+          "name": "TheClassLessTheme"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "UseCdn": false
+    }
+  ]
+}

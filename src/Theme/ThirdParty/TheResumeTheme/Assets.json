@@ -1,0 +1,11 @@
+[
+  {
+    "generateSourceMaps": false,
+    "inputs": [ "node_modules/startbootstrap-resume/dist/css/styles.css" ],
+    "output": "wwwroot/css/styles.css"
+  },
+  {
+    "inputs": [ "node_modules/startbootstrap-resume/src/js/scripts.js" ],
+    "output": "wwwroot/js/scripts.js"
+  }
+]
