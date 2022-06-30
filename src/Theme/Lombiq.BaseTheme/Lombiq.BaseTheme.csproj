@@ -30,49 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AsyncFixer" Version="1.6.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="DotNetAnalyzers.DocumentationAnalyzers" Version="1.0.0-beta.59">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Lombiq.HelpfulLibraries.Common" Version="4.4.0" />
-    <PackageReference Include="Meziantou.Analyzer" Version="1.0.704">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="4.3.0-2.final">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.0-preview1.22274.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.2.32">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.4.0" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.4.0" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.4.0" />
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.4.0" />
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="4.4.0" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="4.1.0-alpha.1" />
-    <PackageReference Include="SecurityCodeScan.VS2019" Version="5.6.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.40.0.48530">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+      <PackageReference Include="OrchardCore.Theme.Targets" Version="1.4.0" />
+      <PackageReference Include="OrchardCore.ContentManagement" Version="1.4.0" />
+      <PackageReference Include="OrchardCore.DisplayManagement" Version="1.4.0" />
+      <PackageReference Include="OrchardCore.ResourceManagement" Version="1.4.0" />
+      <PackageReference Include="Lombiq.HelpfulLibraries" Version="4.4.0" />
+      <PackageReference Include="Lombiq.HelpfulExtensions" Version="4.1.0-alpha.1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(NuGetBuild)' == 'true'">
