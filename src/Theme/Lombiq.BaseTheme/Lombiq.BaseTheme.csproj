@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+      <PackageReference Include="Lombiq.Analyzers" Version="2.1.1-alpha.0" />
       <PackageReference Include="OrchardCore.Theme.Targets" Version="1.4.0" />
       <PackageReference Include="OrchardCore.ContentManagement" Version="1.4.0" />
       <PackageReference Include="OrchardCore.DisplayManagement" Version="1.4.0" />
