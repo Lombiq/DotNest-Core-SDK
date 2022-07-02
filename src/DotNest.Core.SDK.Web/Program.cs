@@ -19,24 +19,6 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
 
     // Dependencies need to be added to AddTenantFeatures() explicitly.
     orchardCoreBuilder.AddTenantFeatures("DotNest.Core.SDK", FeatureNames.SubTenant);
-
-    if (configuration.IsAzureHosting())
-    {
-        orchardCoreBuilder.AddTenantFeatures(
-            "Lombiq.Hosting.Azure.ApplicationInsights",
-            "OrchardCore.DataProtection.Azure");
-
-        // Azure Media Storage and its dependencies. It's always enabled for now but should rather only be enabled if
-        // OrchardCore.Media is.
-        orchardCoreBuilder.AddTenantFeatures(
-            "OrchardCore.Contents",
-            "OrchardCore.ContentTypes",
-            "OrchardCore.Liquid",
-            "OrchardCore.Media",
-            "OrchardCore.Media.Azure.Storage",
-            "OrchardCore.Media.Cache",
-            "OrchardCore.Settings");
-    }
 });
 
 var app = builder.Build();
