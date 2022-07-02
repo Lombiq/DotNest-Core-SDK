@@ -26,7 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Theme\Lombiq.BaseTheme\Lombiq.BaseTheme.csproj" />
       <ProjectReference Include="..\Theme\ThirdParty\TheBootstrapTheme\TheBootstrapTheme.csproj" />
       <ProjectReference Include="..\Theme\ThirdParty\TheClassLessTheme\TheClassLessTheme.csproj" />
       <ProjectReference Include="..\Theme\ThirdParty\TheResumeTheme\TheResumeTheme.csproj" />
