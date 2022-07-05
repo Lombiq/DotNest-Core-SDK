@@ -1,0 +1,72 @@
+﻿{
+  "name": "DotNest.Core.SDK.Setup",
+  "displayName": "DotNest Core SDK - Setup",
+  "description": "",
+  "author": "DotNestCoreSDK",
+  "website": "https://www.dotnestcoresdk.com",
+  "version": "1.0",
+  "categories": [ "dotnestcoresdk" ],
+  "tags": [],
+
+  "steps": [
+    {
+      "name": "feature",
+      "disable": [],
+      "enable": [
+        // Ochard Core
+        "OrchardCore.Admin",
+        "OrchardCore.AuditTrail",
+        "OrchardCore.Autoroute",
+        "OrchardCore.BackgroundTasks",
+        "OrchardCore.ContentFields.Indexing.SQL",
+        "OrchardCore.Contents",
+        "OrchardCore.Contents.Deployment.AddToDeploymentPlan",
+        "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget",
+        "OrchardCore.ContentFields",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Deployment",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Email",
+        "OrchardCore.Features",
+        "OrchardCore.Flows",
+        "OrchardCore.Layers",
+        "OrchardCore.Liquid",
+        "OrchardCore.Localization",
+        "OrchardCore.Markdown",
+        "OrchardCore.Media",
+        "OrchardCore.Navigation",
+        "OrchardCore.Recipes",
+        "OrchardCore.Resources",
+        "OrchardCore.Roles",
+        "OrchardCore.Scripting",
+        "OrchardCore.Settings",
+        "OrchardCore.Taxonomies",
+        "OrchardCore.Tenants",
+        "OrchardCore.Themes",
+        "OrchardCore.Title",
+        "OrchardCore.Users",
+        "OrchardCore.Users.AuditTrail",
+        "OrchardCore.Users.ResetPassword",
+        "OrchardCore.Widgets",
+        "OrchardCore.Workflows",
+        "OrchardCore.Workflows.Http",
+
+        // Other
+        "Lombiq.HelpfulExtensions.Bootstrap",
+        "Lombiq.HelpfulExtensions.ContentTypes",
+        "Lombiq.HelpfulExtensions.Widgets",
+        "Lombiq.HelpfulExtensions.Security",
+        "Lombiq.HelpfulExtensions.TargetBlank",
+        "Lombiq.VueJs",
+        "TheAdmin",
+        "TheBlogTheme"
+      ]
+    },
+    {
+      "name": "themes",
+      "site": "TheBlogTheme",
+      "admin": "TheAdmin"
+    }
+  ]
+}
