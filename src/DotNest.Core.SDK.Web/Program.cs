@@ -17,6 +17,11 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
         .ConfigureSmtpSettings(overrideAdminSettings: false)
         .ConfigureUITesting(configuration, enableShortcutsDuringUITesting: true);
 
+    if (!configuration.IsUITesting())
+    {
+        orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup");
+    }
+
     // Dependencies need to be added to AddTenantFeatures() explicitly.
     orchardCoreBuilder.AddTenantFeatures("DotNest.Core.SDK", FeatureNames.SubTenant);
 });

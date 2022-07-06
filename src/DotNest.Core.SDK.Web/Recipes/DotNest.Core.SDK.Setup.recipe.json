@@ -5,6 +5,7 @@
   "author": "DotNestCoreSDK",
   "website": "https://www.dotnestcoresdk.com",
   "version": "1.0",
+  "issetuprecipe": true,
   "categories": [ "dotnestcoresdk" ],
   "tags": [],
 
@@ -131,6 +132,7 @@
         "OrchardCore.Workflows.Http",
         "OrchardCore.Workflows.Timers",
         "OrchardCore.XmlRpc",
+
         "SafeMode",
         "TheAdmin",
         "TheTheme",
