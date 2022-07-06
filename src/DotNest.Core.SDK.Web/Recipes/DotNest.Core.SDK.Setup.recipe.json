@@ -16,9 +16,6 @@
       "enable": [
         "Application.Default",
         // Ochard Core
-
-        "DotNest.Hosting.Tenants",
-        "DotNest.Tenants.Core.Web",
         "OrchardCore.Admin",
         "OrchardCore.AdminDashboard",
         "OrchardCore.AdminMenu",
