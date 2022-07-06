@@ -29,7 +29,7 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
 var app = builder.Build();
 
 app.UseForwardedHeadersForCloudflareAndAzure();
-
+if (app.Environment.IsDevelopment()) app.UseDeveloperExceptionPage();
 app.UseStaticFiles();
 app.UseOrchardCore();
 app.Run();
