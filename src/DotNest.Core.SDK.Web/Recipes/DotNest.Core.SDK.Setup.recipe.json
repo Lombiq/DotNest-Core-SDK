@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "DotNest.Core.SDK.Setup",
   "displayName": "DotNest Core SDK - Setup",
   "description": "",
@@ -14,7 +14,6 @@
       "name": "feature",
       "disable": [],
       "enable": [
-        "Application.Default",
         // Ochard Core
         "OrchardCore.Admin",
         "OrchardCore.AdminDashboard",
@@ -156,8 +155,8 @@
     },
     {
       "name": "themes",
-      "site": "TheTheme",
-      "admin": "TheAdmin"
+      "admin": "TheAdmin",
+      "site": "TheTheme"
     }
   ]
 }
