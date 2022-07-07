@@ -1,7 +1,7 @@
 {
   "name": "DotNest.Core.SDK.Setup",
   "displayName": "DotNest Core SDK - Setup",
-  "description": "",
+  "description": "Settings and contents required only for development.",
   "author": "DotNestCoreSDK",
   "website": "https://www.dotnestcoresdk.com",
   "version": "1.0",
