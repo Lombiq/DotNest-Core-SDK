@@ -25,3 +25,5 @@ profiling/
 .vs/
 .build/
 .testPublish/
+
+src/*.Web/Localization
