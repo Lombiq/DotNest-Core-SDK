@@ -6,4 +6,23 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Lombiq.Analyzers" Version="2.1.1-osoe-141.0" />
+      <PackageReference Include="Lombiq.BaseTheme" Version="1.1.1" />
+      <PackageReference Include="Lombiq.HelpfulExtensions" Version="4.1.0-alpha.1" />
+      <PackageReference Include="Lombiq.HelpfulLibraries" Version="4.5.0" />
+      <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="3.1.0" />
+      <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="2.1.0" />
+      <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="2.1.0" />
+      <PackageReference Include="Lombiq.Privacy" Version="3.1.1" />
+      <PackageReference Include="Lombiq.SetupExtensions" Version="2.1.0" />
+      <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="3.3.0" />
+      <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="3.3.0" />
+      <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.4.0" />
+      <PackageReference Include="OrchardCore.Logging.NLog" Version="1.4.0" />
+      <PackageReference Include="TheBootstrapTheme" Version="1.4.0" />
+      <PackageReference Include="TheClassLessTheme" Version="1.4.0" />
+      <PackageReference Include="TheResumeTheme" Version="1.4.0" />
+    </ItemGroup>
+
 </Project>
