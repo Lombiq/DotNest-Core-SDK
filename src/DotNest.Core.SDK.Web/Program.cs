@@ -1,4 +1,3 @@
-using Lombiq.Hosting.Tenants.Management.Extensions;
 using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,10 +16,7 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
         .ConfigureSmtpSettings(overrideAdminSettings: false)
         .ConfigureUITesting(configuration, enableShortcutsDuringUITesting: true);
 
-    if (!configuration.IsUITesting())
-    {
-        orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup").HideRecipesByTagsFromSetup();
-    }
+    orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup");
 });
 
 var app = builder.Build();
