@@ -15,7 +15,10 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
         .AddDatabaseShellsConfigurationIfAvailable(configuration)
         .ConfigureSmtpSettings(overrideAdminSettings: false);
 
+    if (builder.Environment.IsDevelopment())
+    {
         orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup");
+    }
 });
 
 var app = builder.Build();
