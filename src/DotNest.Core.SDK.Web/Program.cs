@@ -13,15 +13,13 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
         .AuthorizeApiRequestsIfEnabled(builder.Configuration)
         .AllowMiniProfilerOnAdmin()
         .AddDatabaseShellsConfigurationIfAvailable(configuration)
-        .ConfigureSmtpSettings(overrideAdminSettings: false)
-        .ConfigureUITesting(configuration, enableShortcutsDuringUITesting: true);
+        .ConfigureSmtpSettings(overrideAdminSettings: false);
 
-    orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup");
+        orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup");
 });
 
 var app = builder.Build();
 
-app.UseForwardedHeadersForCloudflareAndAzure();
 app.UseStaticFiles();
 app.UseOrchardCore();
 app.Run();
