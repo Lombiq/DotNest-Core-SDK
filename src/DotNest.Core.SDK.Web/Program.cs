@@ -13,12 +13,8 @@ builder.Services.AddOrchardCms(orchardCoreBuilder =>
         .AuthorizeApiRequestsIfEnabled(builder.Configuration)
         .AllowMiniProfilerOnAdmin()
         .AddDatabaseShellsConfigurationIfAvailable(configuration)
-        .ConfigureSmtpSettings(overrideAdminSettings: false);
-
-    if (builder.Environment.IsDevelopment())
-    {
-        orchardCoreBuilder.AddSetupFeatures("OrchardCore.AutoSetup");
-    }
+        .ConfigureSmtpSettings(overrideAdminSettings: false)
+        .AddSetupFeatures("OrchardCore.AutoSetup");
 });
 
 var app = builder.Build();
