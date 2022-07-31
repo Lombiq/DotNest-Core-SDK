@@ -29,6 +29,12 @@
     <PackageReference Include="Lombiq.SetupExtensions" Version="2.1.0" />
     <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="3.2.0" />
     <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="3.2.0" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="1.0.0-alpha.4" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="1.0.0-alpha.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj" />
   </ItemGroup>
 
 </Project>

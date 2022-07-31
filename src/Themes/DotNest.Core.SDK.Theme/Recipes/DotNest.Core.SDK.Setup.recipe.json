@@ -22,7 +22,6 @@
         "OrchardCore.Alias",
         "OrchardCore.Apis.GraphQL",
         "OrchardCore.AuditTrail",
-        "OrchardCore.AutoSetup",
         "OrchardCore.Autoroute",
         "OrchardCore.BackgroundTasks",
         "OrchardCore.ContentFields",
@@ -90,7 +89,6 @@
         "OrchardCore.Scripting",
         "OrchardCore.Seo",
         "OrchardCore.Settings",
-        "OrchardCore.Setup",
         "OrchardCore.Shortcodes",
         "OrchardCore.Shortcodes.Templates",
         "OrchardCore.Sitemaps",
@@ -127,7 +125,7 @@
         "Lombiq.Hosting.Tenants.Admin.Login",
         "Lombiq.Hosting.Tenants.Admin.Login.SubTenant",
         "Lombiq.Hosting.Tenants.Management.ForbiddenTenantNames",
-        "Lombiq.Hosting.Tenants.Management.HideRecipesFromSetup",
+        "Lombiq.Hosting.MediaTheme",
         "Lombiq.Privacy",
         "Lombiq.Privacy.ConsentBanner",
         "Lombiq.Privacy.FormConsent",
@@ -135,21 +133,41 @@
 
         // Themes
         "TheAdmin",
-        "TheTheme"
+        "Lombiq.BaseTheme",
+        "DotNest.Core.SDK.Theme"
       ]
     },
     {
       "name": "themes",
       "admin": "TheAdmin",
-      "site": "TheTheme"
+      "site": "DotNest.Core.SDK.Theme"
     },
     {
-      "name": "Settings",
-      "HomeRoute": {
-        "Action": "Index",
-        "Controller": "Home",
-        "Area": "TheTheme"
-      }
+      "name": "recipes",
+      "Values": [
+        {
+          "executionid": "DotNest.Core.SDK.Web",
+          "name": "Lombiq.BaseTheme.LayersAndZones"
+        }
+      ]
+    },
+    {
+      "name": "mediatheme",
+      "ClearMediaThemeFolder": false,
+      "BaseThemeId": "Lombiq.BaseTheme"
+    },
+    {
+      "name": "media",
+      "Files": [
+        {
+          "SourcePath": "_MediaTheme/Assets/example.png",
+          "TargetPath": "_MediaTheme/Assets/example.png"
+        },
+        {
+          "SourcePath": "_MediaTheme/Templates/Example.liquid",
+          "TargetPath": "_MediaTheme/Templates/Example.liquid"
+        }
+      ]
     }
   ]
 }
