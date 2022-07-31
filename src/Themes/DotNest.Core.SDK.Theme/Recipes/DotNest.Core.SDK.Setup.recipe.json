@@ -143,11 +143,6 @@
       "site": "DotNest.Core.SDK.Theme"
     },
     {
-      "name": "mediatheme",
-      "ClearMediaThemeFolder": false,
-      "BaseThemeId": "Lombiq.BaseTheme"
-    },
-    {
       "name": "recipes",
       "Values": [
         {
@@ -157,15 +152,20 @@
       ]
     },
     {
+      "name": "mediatheme",
+      "ClearMediaThemeFolder": false,
+      "BaseThemeId": "Lombiq.BaseTheme"
+    },
+    {
       "name": "media",
       "Files": [
         {
-          "SourcePath": "_MediaTheme/wwwroot/example.png",
-          "TargetPath": "_MediaTheme/wwwroot/example.png"
+          "SourcePath": "_MediaTheme/Assets/example.png",
+          "TargetPath": "_MediaTheme/Assets/example.png"
         },
         {
-          "SourcePath": "_MediaTheme/Views/Example.liquid",
-          "TargetPath": "_MediaTheme/Views/Example.liquid"
+          "SourcePath": "_MediaTheme/Templates/Example.liquid",
+          "TargetPath": "_MediaTheme/Templates/Example.liquid"
         }
       ]
     }
