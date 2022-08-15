@@ -5,7 +5,7 @@
 
 [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) is a local developer environment for building Media Themes to be deployed on sites running on [DotNest](http://dotnest.com).
 The base of the source code on the `dev` branch is the same Orchard Core version that is running on DotNest as well as all the hotfixes and mods we've applied to it.
-On top of that, all the open-source modules and themes are added as Git submodules, which gives you the ability to develop your theme and run your site locally in an environment quite close to the live DotNest site.
+On top of that, all the open-source modules are added as NuGet packages, which gives you the ability to develop your theme and run your site locally in an environment quite close to the live DotNest site.
 
 This project (along with [DotNest](https://dotnest.com), the [Orchard Core CMS](http://orchardcore.net) SaaS) is developed by [Lombiq Technologies Ltd](https://lombiq.com). Commercial-grade support is available through Lombiq.
 
@@ -18,7 +18,7 @@ For simplicity, we'll refer to your repository as `fork` from now on and assume 
 This gives you an easy way to always work with same code base as what is running on DotNest.
   - The `Git clone URL` should be `git+https://github.com/Lombiq/DotNest-Core-SDK.git`.
   - The `Hg clone URL` (don't worry about `Hg`) should be a similar URL pointing to your fork with some authentication details to allow Git-Hg Mirror to push to your repository.
-  You can create an access token under under [your GitHub settings](https://github.com/settings/tokens) (select full `repo` access) and use it as follows: `git+https://0123456789abcdef0123456789abcdef:x-oauth-basic@github.com/AwesomeDeveloper/Awesome-Project.git`.
+  You can create an access token under [your GitHub settings](https://github.com/settings/tokens) (select full `repo` access) and use it as follows: `git+https://0123456789abcdef0123456789abcdef:x-oauth-basic@github.com/AwesomeDeveloper/Awesome-Project.git`.
   - The `Mirroring direction` should be `Git to Hg`.
   - Make sure that you never commit anything on the branches coming from the original repository, otherwise the synchronization will fail.
 
