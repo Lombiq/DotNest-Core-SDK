@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.4.0" />
+    <PackageReference Include="OrchardCore.Commerce" Version="0.0.1-preview-4" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="1.4.0" />
   </ItemGroup>
 

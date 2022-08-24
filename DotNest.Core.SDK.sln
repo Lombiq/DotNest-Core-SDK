@@ -1,12 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C0E663BB-B9D0-49AA-BBEB-ECA748632007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNest.Core.SDK.Web", "src\DotNest.Core.SDK.Web\DotNest.Core.SDK.Web.csproj", "{F5884DA6-7351-475B-BEA4-0C831E0382AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNest.Core.SDK.Web", "src\DotNest.Core.SDK.Web\DotNest.Core.SDK.Web.csproj", "{F5884DA6-7351-475B-BEA4-0C831E0382AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{4415DF94-4550-45C4-85DA-2741284D2C01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNest.Core.SDK.Theme", "src\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj", "{2A65FF2E-0C9C-4FEF-9136-B575141355AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNest.Core.SDK.Theme", "src\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj", "{2A65FF2E-0C9C-4FEF-9136-B575141355AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C140F40-3A44-4A05-BD18-E59431FAD8BE}"
+	ProjectSection(SolutionItems) = preProject
+		License.md = License.md
+		Readme.md = Readme.md
+		NuGet.config = NuGet.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +33,15 @@ Global
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F5884DA6-7351-475B-BEA4-0C831E0382AC} = {C0E663BB-B9D0-49AA-BBEB-ECA748632007}
 		{4415DF94-4550-45C4-85DA-2741284D2C01} = {C0E663BB-B9D0-49AA-BBEB-ECA748632007}
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE} = {4415DF94-4550-45C4-85DA-2741284D2C01}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E281D9A-C9FF-49D6-A7E7-192EB8DC0074}
 	EndGlobalSection
 EndGlobal

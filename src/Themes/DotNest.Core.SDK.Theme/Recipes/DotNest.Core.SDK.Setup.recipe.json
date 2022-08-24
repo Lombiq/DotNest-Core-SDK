@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "DotNest.Core.SDK.Setup",
   "displayName": "DotNest Core SDK - Setup",
   "description": "Settings and features required only for development.",
@@ -14,7 +14,7 @@
       "name": "feature",
       "disable": [],
       "enable": [
-        // Ochard Core
+        // Orchard Core
         "OrchardCore.Admin",
         "OrchardCore.AdminDashboard",
         "OrchardCore.AdminMenu",
@@ -24,6 +24,9 @@
         "OrchardCore.AuditTrail",
         "OrchardCore.Autoroute",
         "OrchardCore.BackgroundTasks",
+        "OrchardCore.Commerce",
+        "OrchardCore.Commerce.CommerceSettingsCurrencySelector",
+        "OrchardCore.Commerce.SessionCartStorage",
         "OrchardCore.ContentFields",
         "OrchardCore.ContentFields.Indexing.SQL",
         "OrchardCore.ContentFields.Indexing.SQL.UserPicker",
