@@ -8,25 +8,11 @@ on:
       - dev
 
 jobs:
-  build_test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-    name: Build & Test
-    steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core 6.0 on ${{ matrix.os }}
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.0.*
-    - name: Submodule Init
-      run: |
-        git submodule init && git submodule update
-    - name: Static Code Analysis
-      run: |
-        dotnet build DotNest.Core.SDK.sln --no-incremental -warnaserror /p:TreatWarningsAsErrors=true /p:RunAnalyzersDuringBuild=true -nologo -consoleLoggerParameters:NoSummary -verbosity:quiet
-    - name: Build
-      run: |
-        dotnet build --configuration Release
+  call-build-and-test-workflow:
+    name: Build and Test
+    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-orchard-core.yml@dev
+    with:
+      # This should be windows-latest but keeping on Ubuntu until we start working on
+      # https://lombiq.atlassian.net/browse/NEST-316 since Ubuntu is faster and cheaper per minute.
+      machine-types: "[\"ubuntu-latest\"]"
+      timeout-minutes: 60
