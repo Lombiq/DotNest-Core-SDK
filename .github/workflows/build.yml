@@ -12,7 +12,5 @@ jobs:
     name: Build
     uses: Lombiq/GitHub-Actions/.github/workflows/build-dotnet.yml@dev
     with:
-      # This should be windows-latest but keeping on Ubuntu until we start working on
-      # https://lombiq.atlassian.net/browse/NEST-316 since Ubuntu is faster and cheaper per minute.
       machine-types: "[\"ubuntu-latest\"]"
       timeout-minutes: 60
