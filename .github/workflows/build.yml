@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build
 
 # Runs for PRs opened for any branch, and pushes to the dev branch.
 on:
@@ -8,8 +8,8 @@ on:
       - dev
 
 jobs:
-  call-build-and-test-workflow:
-    name: Build and Test
+  call-build-workflow:
+    name: Build
     uses: Lombiq/GitHub-Actions/.github/workflows/build-dotnet.yml@dev
     with:
       # This should be windows-latest but keeping on Ubuntu until we start working on
