@@ -1,0 +1,16 @@
+name: Build
+
+# Runs for PRs opened for any branch, and pushes to the dev branch.
+on:
+  pull_request:
+  push:
+    branches:
+      - dev
+
+jobs:
+  call-build-workflow:
+    name: Build
+    uses: Lombiq/GitHub-Actions/.github/workflows/build-dotnet.yml@dev
+    with:
+      machine-types: "[\"ubuntu-latest\"]"
+      timeout-minutes: 60
