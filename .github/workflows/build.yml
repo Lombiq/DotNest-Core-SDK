@@ -18,3 +18,4 @@ jobs:
   spelling:
     name: Spelling
     uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@issue/NEST-365
+
