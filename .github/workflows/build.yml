@@ -14,3 +14,7 @@ jobs:
     with:
       machine-types: "[\"ubuntu-latest\"]"
       timeout-minutes: 60
+
+  spelling:
+    name: Spelling
+    uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@dev
