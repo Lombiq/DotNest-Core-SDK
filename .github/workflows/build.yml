@@ -1,4 +1,4 @@
-name: Build
+name: Build and Test
 
 # Runs for PRs opened for any branch, and pushes to the dev branch.
 on:
@@ -8,9 +8,9 @@ on:
       - dev
 
 jobs:
-  call-build-workflow:
-    name: Build
-    uses: Lombiq/GitHub-Actions/.github/workflows/build-dotnet.yml@dev
+  build-and-test:
+    name: Build and Test
+    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-dotnet.yml@issue/HAST-290
     with:
       timeout-minutes: 5
 
