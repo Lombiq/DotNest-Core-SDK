@@ -12,7 +12,6 @@ jobs:
     name: Build
     uses: Lombiq/GitHub-Actions/.github/workflows/build-dotnet.yml@dev
     with:
-      machine-types: "[\"ubuntu-latest\"]"
       timeout-minutes: 5
 
   spelling:
