@@ -14,8 +14,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C140F40-3A44-4A05-BD18-E59431FAD8BE}"
 	ProjectSection(SolutionItems) = preProject
 		License.md = License.md
-		Readme.md = Readme.md
 		NuGet.config = NuGet.config
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{7E3915D4-E24A-45FD-887C-3CB4F445C30B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{190B979E-A5AB-42A4-85CE-8A94044706DF}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
+		.github\workflows\create-jira-issues-for-community-activities.yml = .github\workflows\create-jira-issues-for-community-activities.yml
+		.github\workflows\validate-pull-request.yml = .github\workflows\validate-pull-request.yml
 	EndProjectSection
 EndProject
 Global
@@ -40,6 +49,7 @@ Global
 		{F5884DA6-7351-475B-BEA4-0C831E0382AC} = {C0E663BB-B9D0-49AA-BBEB-ECA748632007}
 		{4415DF94-4550-45C4-85DA-2741284D2C01} = {C0E663BB-B9D0-49AA-BBEB-ECA748632007}
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE} = {4415DF94-4550-45C4-85DA-2741284D2C01}
+		{190B979E-A5AB-42A4-85CE-8A94044706DF} = {7E3915D4-E24A-45FD-887C-3CB4F445C30B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E281D9A-C9FF-49D6-A7E7-192EB8DC0074}
