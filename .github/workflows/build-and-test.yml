@@ -10,10 +10,13 @@ on:
 jobs:
   build-and-test:
     name: Build and Test
+    # Don't run (by default) in fork repositories.
+    if: github.repository == 'Lombiq/DotNest-Core-SDK'
     uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-dotnet.yml@dev
     with:
       timeout-minutes: 5
 
   spelling:
     name: Spelling
+    if: github.repository == 'Lombiq/DotNest-Core-SDK'
     uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@dev

@@ -7,4 +7,6 @@ on:
 
 jobs:
   validate-pull-request:
+    # Don't run (by default) in fork repositories.
+    if: github.repository == 'Lombiq/DotNest-Core-SDK'
     uses: Lombiq/GitHub-Actions/.github/workflows/validate-pull-request.yml@dev
