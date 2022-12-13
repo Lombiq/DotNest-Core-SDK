@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "Reset-Local": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -NonInteractive -File Reset-Local.ps1"
+    }
+  }
+}
