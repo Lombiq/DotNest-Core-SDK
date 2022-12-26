@@ -43,8 +43,8 @@
         "OrchardCore.Media.Cache",
         "OrchardCore.Admin",
         "OrchardCore.AdminMenu",
-        "OrchardCore.Templates",
         "OrchardCore.Alias",
+        "OrchardCore.AuditTrail",
         "OrchardCore.ContentFields",
         "OrchardCore.ContentPreview",
         "OrchardCore.Deployment.Remote",
@@ -67,6 +67,7 @@
         "OrchardCore.Shortcodes.Templates",
         "OrchardCore.Taxonomies",
         "OrchardCore.Themes",
+        "OrchardCore.Users.AuditTrail",
         "Lombiq.Hosting.Tenants.IdleTenantManagement.ShutDownIdleTenants",
         "Lombiq.Hosting.MediaTheme",
         "SafeMode",
@@ -100,9 +101,9 @@
         "OrchardCore.Workflows.Http",
         "Lombiq.Tests.UI.Shortcuts.Workflows",
         "OrchardCore.AdminDashboard",
+        "OrchardCore.Templates",
         "OrchardCore.AdminTemplates",
         "OrchardCore.Apis.GraphQL",
-        "OrchardCore.AuditTrail",
         "OrchardCore.AutoSetup",
         "OrchardCore.BackgroundTasks",
         "OrchardCore.Commerce.ContentFields",
@@ -167,7 +168,6 @@
         "OrchardCore.Tenants.FileProvider",
         "OrchardCore.Twitter",
         "OrchardCore.Twitter.Signin",
-        "OrchardCore.Users.AuditTrail",
         "OrchardCore.Users.ChangeEmail",
         "OrchardCore.Users.CustomUserSettings",
         "OrchardCore.Users.ResetPassword",
@@ -1584,6 +1584,16 @@
               }
             }
           ]
+        },
+        {
+          "Name": "AuditTrailPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Allows editors to enter a comment to be saved into the Audit Trail event when saving a content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
         }
       ]
     },
@@ -1746,15 +1756,133 @@
         "DisplayNewMenu": false,
         "DisplayTitlesInTopbar": false
       },
-      "ContentAuditTrailSettings": {
-        "AllowedContentTypes": []
-      },
       "LoginSettings": {
         "UseSiteTheme": false,
         "UseExternalProviderIfOnlyOneDefined": false,
         "DisableLocalLogin": false,
         "UseScriptToSyncRoles": false,
         "SyncRolesScript": null
+      },
+      "AuditTrailSettings": {
+        "Categories": [
+          {
+            "Name": "Content",
+            "Events": [
+              {
+                "Name": "Created",
+                "Category": "Content",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Saved",
+                "Category": "Content",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Published",
+                "Category": "Content",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Unpublished",
+                "Category": "Content",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Removed",
+                "Category": "Content",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Cloned",
+                "Category": "Content",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Restored",
+                "Category": "Content",
+                "IsEnabled": true
+              }
+            ]
+          },
+          {
+            "Name": "User",
+            "Events": [
+              {
+                "Name": "LoggedIn",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "LogInFailed",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "LogInIsLockedOut",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Enabled",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Disabled",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Created",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Updated",
+                "Category": "User",
+                "IsEnabled": true
+              },
+              {
+                "Name": "Deleted",
+                "Category": "User",
+                "IsEnabled": true
+              }
+            ]
+          }
+        ],
+        "ClientIpAddressAllowed": true
+      },
+      "AuditTrailTrimmingSettings": {
+        "RetentionDays": 10,
+        "LastRunUtc": null,
+        "Disabled": false
+      },
+      "ContentAuditTrailSettings": {
+        "AllowedContentTypes": [
+          "Article",
+          "Blockquote",
+          "Blog",
+          "BlogPost",
+          "Category",
+          "Container",
+          "ContainerWidget",
+          "ContentMenuItem",
+          "HtmlMenuItem",
+          "HtmlWidget",
+          "Image",
+          "LinkMenuItem",
+          "LiquidWidget",
+          "MarkdownWidget",
+          "Menu",
+          "MenuWidget",
+          "Page",
+          "Paragraph",
+          "RawHtml",
+          "SocialMetaSettings",
+          "Tag",
+          "Taxonomy"
+        ]
       }
     },
     {
@@ -2050,47 +2178,6 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "Article",
-          "DisplayText": "About",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "AutoroutePart": {
-            "Path": "about",
-            "SetHomepage": false,
-            "Disabled": false,
-            "RouteContainedItems": false,
-            "Absolute": false
-          },
-          "HtmlBodyPart": {
-            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I won't write hands-on tutorials or technical deep dives.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of wisdom. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles:</p><ul><li><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></li><li><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></li><li><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></li></ul>"
-          },
-          "TitlePart": {
-            "Title": "About"
-          },
-          "Article": {
-            "Subtitle": {
-              "Text": "What is Letters from Fiume?"
-            },
-            "Image": {
-              "Paths": [
-                "about-bg.jpg"
-              ],
-              "Anchors": [
-                {
-                  "X": 0.5,
-                  "Y": 0.5
-                }
-              ],
-              "MediaTexts": [
-                ""
-              ]
-            }
-          }
-        },
-        {
           "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
           "ContentType": "Blog",
           "DisplayText": "Letters",
@@ -2180,6 +2267,47 @@
           "ContainedPart": {
             "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
             "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Article",
+          "DisplayText": "About",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "AutoroutePart": {
+            "Path": "about",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I won't write hands-on tutorials or technical deep dives.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of wisdom. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles:</p><ul><li><p><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></p></li><li><p><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></p></li><li><p><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></p></li></ul>"
+          },
+          "TitlePart": {
+            "Title": "About"
+          },
+          "Article": {
+            "Subtitle": {
+              "Text": "What is Letters from Fiume?"
+            },
+            "Image": {
+              "Paths": [
+                "about-bg.jpg"
+              ],
+              "Anchors": [
+                {
+                  "X": 0.5,
+                  "Y": 0.5
+                }
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            }
           }
         }
       ]
@@ -2333,7 +2461,9 @@
             "SiteOwner",
             "ManageTaxonomy",
             "ApplyTheme",
-            "ManageMediaTheme"
+            "ManageMediaTheme",
+            "ViewAuditTrail",
+            "ManageAuditTrailSettings"
           ]
         }
       ]
@@ -2345,7 +2475,7 @@
     {
       "name": "custom-settings",
       "SocialMetaSettings": {
-        "ContentItemId": "4p5ensjkmj64n0c7z7qfwesqw7",
+        "ContentItemId": "4gxgrkawnwdnq0a1hd1k9wn8d0",
         "ContentItemVersionId": null,
         "ContentType": "SocialMetaSettings",
         "DisplayText": "",
@@ -2484,13 +2614,6 @@
               }
             },
             {
-              "Type": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep",
-              "Step": {
-                "Id": "3d0d3e5638174298bc98d377186325b2",
-                "Name": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep"
-              }
-            },
-            {
               "Type": "CustomSettingsDeploymentStep",
               "Step": {
                 "IncludeAll": true,
@@ -2559,6 +2682,27 @@
               "Step": {
                 "Id": "157f2b7b77c341c8afed099957ad5a7b",
                 "Name": "Themes"
+              }
+            },
+            {
+              "Type": "AuditTrailSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "2e4ea1e9f236470cb6bb1bbd854af9c3",
+                "Name": "AuditTrailSettings_SiteSettingsPropertyDeploymentStep"
+              }
+            },
+            {
+              "Type": "AuditTrailTrimmingSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "676cf12c740a4871a2cb48e52b2e45c7",
+                "Name": "AuditTrailTrimmingSettings_SiteSettingsPropertyDeploymentStep"
+              }
+            },
+            {
+              "Type": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "3d0d3e5638174298bc98d377186325b2",
+                "Name": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep"
               }
             }
           ]
