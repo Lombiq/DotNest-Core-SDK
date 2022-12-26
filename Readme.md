@@ -1,6 +1,5 @@
 # DotNest Core SDK
 
-
 ## Overview
 
 [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) is a local developer environment for building Media Themes to be deployed on sites running on [DotNest](http://dotnest.com).
@@ -8,7 +7,6 @@ The base of the source code on the `dev` branch is the same Orchard Core version
 On top of that, all the open-source modules are added as NuGet packages, which gives you the ability to develop your theme and run your site locally in an environment quite close to the live DotNest site.
 
 This project (along with [DotNest](https://dotnest.com), the [Orchard Core CMS](http://orchardcore.net) SaaS) is developed by [Lombiq Technologies Ltd](https://lombiq.com). Commercial-grade support is available through Lombiq.
-
 
 ## Getting started
 
@@ -22,14 +20,12 @@ This gives you an easy way to always work with same code base as what is running
   - The `Mirroring direction` should be `Git to Hg`.
   - Make sure that you never commit anything on the branches coming from the original repository, otherwise the synchronization will fail.
 
-
 ## Working with the repository 
 
 - Whenever you create any branches, make sure that you prefix their names so they don't collide with the ones in the SDK.
 For example, if the project you're working is called `Awesome Project`, then your development branch should be created on top of `dev` and name it e.g. `ap-dev`.
 - You might also want to change the default branch of your fork to your development branch.
 - In case new commits are pushed to your fork from the original repository, check the changes (e.g. new modules might be added that you also need to add to your custom solution) and merge `dev` to your development branch.
-
 
 ## Theme development
 
