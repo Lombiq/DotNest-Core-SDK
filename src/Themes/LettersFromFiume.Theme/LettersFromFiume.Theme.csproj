@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**</DefaultItemExcludes>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_helpers.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_mixins.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_native-variables.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_variables.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\general\_general.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\site.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\vendors\_bootstrap-mixins.scss" />
+      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\_base.scss" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="OrchardCore.Theme.Targets" Version="1.5.0" />
+        <PackageReference Include="OrchardCore.ContentManagement" Version="1.5.0" />
+        <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0" />
+        <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0" />
+        <PackageReference Include="Lombiq.BaseTheme" Version="2.0.0" />
+        <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
+</Project>

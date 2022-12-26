@@ -1,0 +1,2616 @@
+{
+  "name": "LettersFromFiume.Theme.Export",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": [],
+  "tags": [],
+  "steps": [
+    {
+      "name": "Feature",
+      // Azure features should be removed here.
+      "enable": [
+        "Application.Default",
+        "DotNest.Tenants.Core.Web",
+        "DotNest.Hosting.Tenants",
+        "OrchardCore.Resources",
+        "OrchardCore.Liquid",
+        "OrchardCore.Settings",
+        "OrchardCore.Contents",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Autoroute",
+        "OrchardCore.Widgets",
+        "OrchardCore.Flows",
+        "OrchardCore.Title",
+        "OrchardCore.Shortcodes",
+        "OrchardCore.Markdown",
+        "Lombiq.HelpfulExtensions.TargetBlank",
+        "OrchardCore.Html",
+        "Lombiq.HelpfulExtensions.Widgets",
+        "OrchardCore.Deployment",
+        "OrchardCore.Media",
+        "Lombiq.Hosting.MediaTheme.Bridge",
+        "Lombiq.Hosting.Tenants.Admin.Login.SubTenant",
+        "Lombiq.Hosting.Tenants.FeaturesGuard",
+        "OrchardCore.Features",
+        "OrchardCore.Scripting",
+        "OrchardCore.Recipes",
+        "OrchardCore.CustomSettings",
+        "OrchardCore.Users",
+        "OrchardCore.Media.Cache",
+        "OrchardCore.Admin",
+        "OrchardCore.AdminMenu",
+        "OrchardCore.Templates",
+        "OrchardCore.Alias",
+        "OrchardCore.ContentFields",
+        "OrchardCore.ContentPreview",
+        "OrchardCore.Deployment.Remote",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Feeds",
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Indexing",
+        "OrchardCore.Rules",
+        "OrchardCore.Layers",
+        "OrchardCore.Lists",
+        "OrchardCore.Media.Slugify",
+        "OrchardCore.Menu",
+        "OrchardCore.Navigation",
+        "OrchardCore.Placements",
+        "OrchardCore.Queries",
+        "OrchardCore.Queries.Sql",
+        "OrchardCore.Roles",
+        "OrchardCore.Seo",
+        "OrchardCore.Shortcodes.Templates",
+        "OrchardCore.Taxonomies",
+        "OrchardCore.Themes",
+        "Lombiq.Hosting.Tenants.IdleTenantManagement.ShutDownIdleTenants",
+        "Lombiq.Hosting.MediaTheme",
+        "SafeMode",
+        "TheAdmin",
+        "TheBlogTheme"
+      ],
+      "disable": [
+        "Lombiq.HelpfulExtensions.CodeGeneration",
+        "Lombiq.HelpfulExtensions.ContentTypes",
+        "OrchardCore.Email",
+        "Lombiq.HelpfulExtensions.Emails",
+        "Lombiq.HelpfulExtensions.Flows",
+        "Lombiq.HelpfulExtensions.Security",
+        "Lombiq.HelpfulExtensions.ShapeTracing",
+        "Lombiq.HelpfulExtensions.SiteTexts",
+        "OrchardCore.Tenants",
+        "Lombiq.Hosting.Tenants.Admin.Login",
+        "Lombiq.Hosting.Tenants.Management.ForbiddenTenantNames",
+        "OrchardCore.Setup",
+        "Lombiq.Hosting.Tenants.Management.HideRecipesFromSetup",
+        "Lombiq.Privacy",
+        "Lombiq.Privacy.ConsentBanner",
+        "OrchardCore.Forms",
+        "Lombiq.Privacy.FormConsent",
+        "OrchardCore.Users.Registration",
+        "Lombiq.Privacy.RegistrationConsent",
+        "Lombiq.Tests.UI.Shortcuts",
+        "Lombiq.Tests.UI.Shortcuts.FeatureToggleTestBench",
+        "Lombiq.Tests.UI.Shortcuts.MediaCachePurge",
+        "OrchardCore.Workflows",
+        "OrchardCore.Workflows.Http",
+        "Lombiq.Tests.UI.Shortcuts.Workflows",
+        "OrchardCore.AdminDashboard",
+        "OrchardCore.AdminTemplates",
+        "OrchardCore.Apis.GraphQL",
+        "OrchardCore.AuditTrail",
+        "OrchardCore.AutoSetup",
+        "OrchardCore.BackgroundTasks",
+        "OrchardCore.Commerce.ContentFields",
+        "OrchardCore.Commerce",
+        "OrchardCore.Commerce.CurrencySettingsSelector",
+        "OrchardCore.Commerce.SessionCartStorage",
+        "OrchardCore.Commerce.Tax",
+        "OrchardCore.ContentFields.Indexing.SQL",
+        "OrchardCore.ContentFields.Indexing.SQL.UserPicker",
+        "OrchardCore.Localization",
+        "OrchardCore.ContentLocalization",
+        "OrchardCore.ContentLocalization.ContentCulturePicker",
+        "OrchardCore.Sitemaps",
+        "OrchardCore.ContentLocalization.Sitemaps",
+        "OrchardCore.Contents.Deployment.AddToDeploymentPlan",
+        "OrchardCore.Contents.Deployment.Download",
+        "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget",
+        "OrchardCore.Contents.FileContentDefinition",
+        "OrchardCore.Cors",
+        "OrchardCore.Facebook",
+        "OrchardCore.Facebook.Login",
+        "OrchardCore.Facebook.Widgets",
+        "OrchardCore.GitHub.Authentication",
+        "OrchardCore.Google.Analytics",
+        "OrchardCore.Google.GoogleAuthentication",
+        "OrchardCore.Google.TagManager",
+        "OrchardCore.HealthChecks",
+        "OrchardCore.Https",
+        "OrchardCore.Localization.ContentLanguageHeader",
+        "OrchardCore.Lucene",
+        "OrchardCore.Lucene.ContentPicker",
+        "OrchardCore.Lucene.Worker",
+        "OrchardCore.Media.AmazonS3",
+        "OrchardCore.Microsoft.Authentication.AzureAD",
+        "OrchardCore.Microsoft.Authentication.MicrosoftAccount",
+        "OrchardCore.MiniProfiler",
+        "OrchardCore.OpenId",
+        "OrchardCore.OpenId.Client",
+        "OrchardCore.OpenId.Management",
+        "OrchardCore.OpenId.Server",
+        "OrchardCore.OpenId.Validation",
+        "OrchardCore.Placements.FileStorage",
+        "OrchardCore.PublishLater",
+        "OrchardCore.ReCaptcha",
+        "OrchardCore.ReCaptcha.Users",
+        "OrchardCore.Redis",
+        "OrchardCore.Redis.Bus",
+        "OrchardCore.Redis.Cache",
+        "OrchardCore.Redis.DataProtection",
+        "OrchardCore.Redis.Lock",
+        "OrchardCore.XmlRpc",
+        "OrchardCore.RemotePublishing",
+        "OrchardCore.ResponseCompression",
+        "OrchardCore.ReverseProxy",
+        "OrchardCore.Security",
+        "OrchardCore.Sitemaps.Cleanup",
+        "OrchardCore.Sitemaps.RazorPages",
+        "OrchardCore.Spatial",
+        "OrchardCore.Taxonomies.ContentsAdminList",
+        "OrchardCore.Tenants.Distributed",
+        "OrchardCore.Tenants.FeatureProfiles",
+        "OrchardCore.Tenants.FileProvider",
+        "OrchardCore.Twitter",
+        "OrchardCore.Twitter.Signin",
+        "OrchardCore.Users.AuditTrail",
+        "OrchardCore.Users.ChangeEmail",
+        "OrchardCore.Users.CustomUserSettings",
+        "OrchardCore.Users.ResetPassword",
+        "OrchardCore.Users.TimeZone",
+        "OrchardCore.Workflows.Session",
+        "OrchardCore.Workflows.Timers",
+        "Lombiq.BaseTheme",
+        "TheAgencyTheme",
+        "TheBootstrapTheme",
+        "TheClassLessTheme",
+        "TheComingSoonTheme",
+        "TheResumeTheme",
+        "TheTheme"
+      ]
+    },
+    {
+      "name": "ReplaceContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Menu",
+          "DisplayName": "Menu",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "AliasPartSettings": {
+                  "Pattern": "{{ ContentItem | display_text | slugify }}"
+                },
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "MenuPart",
+              "Name": "MenuPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "MenuItemsListPart",
+              "Name": "MenuItemsListPart",
+              "Settings": {}
+            }
+          ]
+        },
+        {
+          "Name": "LinkMenuItem",
+          "DisplayName": "Link Menu Item",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "MenuItem"
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LinkMenuItemPart",
+              "Name": "LinkMenuItemPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "LinkMenuItem",
+              "Name": "LinkMenuItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ContentMenuItem",
+          "DisplayName": "Content Menu Item",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "MenuItem"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "ContentMenuItemPart",
+              "Name": "ContentMenuItemPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "ContentMenuItem",
+              "Name": "ContentMenuItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "HtmlMenuItem",
+          "DisplayName": "Html Menu Item",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "MenuItem"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "HtmlMenuItemPart",
+              "Name": "HtmlMenuItemPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlMenuItem",
+              "Name": "HtmlMenuItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Taxonomy",
+          "DisplayName": "Taxonomy",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "AliasPartSettings": {
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                },
+                "AutoroutePartSettings": {
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
+                  "AllowRouteContainedItems": true
+                }
+              }
+            },
+            {
+              "PartName": "TaxonomyPart",
+              "Name": "TaxonomyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Article",
+          "DisplayName": "Article",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Listable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Article",
+              "Name": "Article",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
+                  "ShowHomepageOption": true
+                },
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Editor": "Wysiwyg",
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "BlogPost",
+          "DisplayName": "Blog Post",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Versionable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ Model.ContentItem | container | display_text | slugify }}/{{ Model.ContentItem | display_text | slugify }}",
+                  "ShowHomepageOption": false
+                }
+              }
+            },
+            {
+              "PartName": "BlogPost",
+              "Name": "BlogPost",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "CommonPart",
+              "Name": "CommonPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                },
+                "CommonPartSettings": {
+                  "DisplayDateEditor": true
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2",
+                  "Editor": "Trumbowyg"
+                },
+                "HtmlBodyPartSettings": {},
+                "HtmlBodyPartTrumbowygEditorSettings": {
+                  "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"insertShortcode\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blog",
+          "DisplayName": "Blog",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
+                  "ShowHomepageOption": true
+                }
+              }
+            },
+            {
+              "PartName": "Blog",
+              "Name": "Blog",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "ListPart",
+              "Name": "ListPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                },
+                "ListPartSettings": {
+                  "PageSize": 10,
+                  "ContainedContentTypes": [
+                    "BlogPost"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Container",
+          "DisplayName": "Container",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true,
+              "Stereotype": "Widget"
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Container",
+              "Name": "Container",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "FlowPart",
+              "Name": "FlowPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blockquote",
+          "DisplayName": "Blockquote",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true,
+              "Stereotype": "Widget"
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Blockquote",
+              "Name": "Blockquote",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Image",
+          "DisplayName": "Image",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true,
+              "Stereotype": "Widget"
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Image",
+              "Name": "Image",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Paragraph",
+          "DisplayName": "Paragraph",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true,
+              "Stereotype": "Widget"
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Paragraph",
+              "Name": "Paragraph",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "RawHtml",
+          "DisplayName": "Raw Html",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true,
+              "Stereotype": "Widget"
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "RawHtml",
+              "Name": "RawHtml",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Page",
+          "DisplayName": "Page",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Listable": true,
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Page",
+              "Name": "Page",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
+                  "ShowHomepageOption": true
+                }
+              }
+            },
+            {
+              "PartName": "FlowPart",
+              "Name": "FlowPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Tag",
+          "DisplayName": "Tag",
+          "Settings": {
+            "ContentTypeSettings": {},
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Tag",
+              "Name": "Tag",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
+                  "ManageContainedItemRoutes": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Category",
+          "DisplayName": "Category",
+          "Settings": {
+            "ContentTypeSettings": {},
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Category",
+              "Name": "Category",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
+                  "ManageContainedItemRoutes": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SocialMetaSettings",
+          "DisplayName": "Social Meta Settings",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "CustomSettings"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "SocialMetaSettings",
+              "Name": "SocialMetaSettings",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ContainerWidget",
+          "DisplayName": "Container Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget",
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "FlowPart",
+              "Name": "FlowPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "HtmlWidget",
+          "DisplayName": "Html Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget",
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Editor": "Trumbowyg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "LiquidWidget",
+          "DisplayName": "Liquid Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget",
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LiquidPart",
+              "Name": "LiquidPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Liquid Part"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "MenuWidget",
+          "DisplayName": "Menu Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget",
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": []
+        },
+        {
+          "Name": "MarkdownWidget",
+          "DisplayName": "Markdown Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget",
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "MarkdownBodyPart",
+              "Name": "MarkdownBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Markdown Part"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "LiquidPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a Liquid formatted body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "CommonPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides an editor for the common properties of a content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "AutoroutePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a custom url for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "WidgetsListPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a way to add widgets to Layout zones for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "FlowPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a customizable body for your content item where you can build a content structure with widgets."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "BagPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Reusable": true,
+              "Description": "Provides a collection behavior for your content item where you can place other content items."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a Title for your content item.",
+              "DefaultPosition": "0"
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides an HTML Body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "AliasPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a way to define custom aliases for content items."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "PreviewPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a way to define the url that is used to render your content item for preview. You only need to use this for the content preview feature when running the frontend decoupled from the admin."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "ListPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Add a list behavior."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "MarkdownBodyPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a Markdown formatted body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "MenuPart",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "MenuItemPart",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "LinkMenuItemPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a menu link behavior for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "ContentMenuItemPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "DisplayName": "Content Menu Item",
+              "Description": "Provides a menu link behavior with the Content Picker for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "SelectedContentItem",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Selected Content Item",
+                  "Position": "0"
+                },
+                "ContentPickerFieldSettings": {
+                  "Required": true,
+                  "DisplayAllContentTypes": true,
+                  "DisplayedContentTypes": []
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "HtmlMenuItemPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "DisplayName": "Html Menu Item",
+              "Description": "Provides a menu link behavior with a field to display html for the link text."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "Blog",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Image",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Banner Image",
+                  "Position": "0"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "AllowAnchors": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "BlogPost",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Subtitle",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Subtitle",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Image",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Banner Image",
+                  "Position": "1"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "AllowAnchors": true
+                }
+              }
+            },
+            {
+              "FieldName": "TaxonomyField",
+              "Name": "Tags",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Tags",
+                  "Editor": "Tags",
+                  "DisplayMode": "Tags",
+                  "Position": "2"
+                },
+                "ContentIndexSettings": {},
+                "TaxonomyFieldSettings": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "TaxonomyFieldTagsEditorSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Article",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Subtitle",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Subtitle",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Image",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Banner Image",
+                  "Position": "0"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "AllowAnchors": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blockquote",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Quote",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Quote",
+                  "Editor": "TextArea",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Image",
+          "Settings": {
+            "Attachable": true
+          },
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Media",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image",
+                  "Position": "0"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "Required": true
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Caption",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Caption",
+                  "Position": "1"
+                },
+                "TextFieldSettings": {
+                  "Hint": "A description of the image used as title or alternate text"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Paragraph",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "HtmlField",
+              "Name": "Content",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Content",
+                  "Position": "0",
+                  "Editor": "Wysiwyg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "RawHtml",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "HtmlField",
+              "Name": "Content",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Content",
+                  "Position": "0",
+                  "Editor": "Multiline"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Category",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Icon",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Icon",
+                  "Editor": "IconPicker",
+                  "Position": "0"
+                },
+                "TextFieldSettings": {
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SeoMetaPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a part that allows SEO meta descriptions to be applied to a content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "DefaultSocialImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Default social image"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "OpenGraphImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open graph image"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "TwitterImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Twitter image"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SocialMetaSettings",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "DefaultSocialImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Default social image",
+                  "Position": "1"
+                },
+                "ContentIndexSettings": {},
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "OpenGraphImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open graph image",
+                  "Position": "2"
+                },
+                "ContentIndexSettings": {},
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "TwitterImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Twitter Image",
+                  "Position": "3"
+                },
+                "ContentIndexSettings": {},
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "OpenGraphType",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open Graph Type",
+                  "Position": "4"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "TwitterCard",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Twitter Card",
+                  "Position": "8"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "TwitterCreator",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Twitter Creator",
+                  "Position": "10"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "TwitterSite",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Twitter Site",
+                  "Position": "11"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "GoogleSchema",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Google Schema",
+                  "Editor": "CodeMirror",
+                  "Position": "12"
+                },
+                "TextFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "OpenGraphSiteName",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open Graph Site Name",
+                  "Position": "6"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "OpenGraphAppId",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open Graph App Id",
+                  "Position": "7"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DefaultMetaDescription",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Default Meta Description",
+                  "Editor": "CodeMirror",
+                  "Position": "0"
+                },
+                "TextFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DefaultTwitterDescription",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Default Twitter Description",
+                  "Editor": "CodeMirror",
+                  "Position": "9"
+                },
+                "TextFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DefaultOpenGraphDescription",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Default Open Graph Description",
+                  "Editor": "CodeMirror",
+                  "Position": "5"
+                },
+                "TextFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AdminMenu",
+      "data": [
+        {
+          "Id": "baef6f85ad13481681cde70ada401333",
+          "Name": "Admin menus",
+          "Enabled": true,
+          "MenuItems": [
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "New Blog Post",
+              "LinkUrl": "~/Admin/Contents/ContentTypes/BlogPost/Create?ListPart.ContainerId=4v58m5s5fnhz6z8hrqaa9sj953&ListPart.ContentType=BlogPost&ListPart.EnableOrdering=False&returnUrl=%2FAdmin%2FContents%2FContentItems%2F4v58m5s5fnhz6z8hrqaa9sj953%2FDisplay%3Fadmin%3D-1701622765",
+              "IconClass": "far fa-envelope",
+              "PermissionNames": [],
+              "UniqueId": "b97c290fa531447595294fa9f9f698e2",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "Priority": 0,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Items": [],
+              "Classes": []
+            },
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "Blog",
+              "LinkUrl": "Admin/Contents/ContentItems/4v58m5s5fnhz6z8hrqaa9sj953/Display",
+              "IconClass": "fas fa-rss",
+              "PermissionNames": [],
+              "UniqueId": "7b293d57056a4eebb3713f07f12c65d8",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "Priority": 0,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Items": [],
+              "Classes": []
+            },
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "Main Menu",
+              "LinkUrl": "Admin/Contents/ContentItems/40ksmf6w4ssk43gbpv2gcgqsc2/Edit",
+              "IconClass": "fas fa-sitemap",
+              "PermissionNames": [],
+              "UniqueId": "5118cecfde834dacb26ac08980f1b5a7",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "Priority": 0,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Items": [],
+              "Classes": []
+            },
+            {
+              "$type": "OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminMenu",
+              "LinkText": "Content",
+              "IconClass": null,
+              "PermissionNames": [],
+              "UniqueId": "3e590d44f8704e4588e272dd966ce291",
+              "Enabled": true,
+              "Text": null,
+              "Id": null,
+              "Href": null,
+              "Url": null,
+              "Position": null,
+              "Priority": 0,
+              "LinkToFirstChild": true,
+              "LocalNav": false,
+              "Culture": null,
+              "Items": [
+                {
+                  "$type": "OrchardCore.AdminMenu.AdminNodes.LinkAdminNode, OrchardCore.AdminMenu",
+                  "LinkText": "Content Items",
+                  "LinkUrl": "Admin/Contents/ContentItems/",
+                  "IconClass": null,
+                  "PermissionNames": [],
+                  "UniqueId": "7b293d57056a4eebb3713f07f12c65d9",
+                  "Enabled": true,
+                  "Text": null,
+                  "Id": null,
+                  "Href": null,
+                  "Url": null,
+                  "Position": "0",
+                  "Priority": 0,
+                  "LinkToFirstChild": true,
+                  "LocalNav": false,
+                  "Culture": null,
+                  "Items": [],
+                  "Classes": []
+                },
+                {
+                  "$type": "OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNode, OrchardCore.AdminMenu",
+                  "LinkText": "Content Types",
+                  "IconClass": null,
+                  "PermissionNames": [],
+                  "UniqueId": "2f1fc33133334a1abf7d1a0516ee8b4e",
+                  "Enabled": true,
+                  "Text": null,
+                  "Id": null,
+                  "Href": null,
+                  "Url": null,
+                  "Position": "1",
+                  "Priority": 50,
+                  "LinkToFirstChild": true,
+                  "LocalNav": false,
+                  "Culture": null,
+                  "Items": [
+                    {
+                      "$type": "OrchardCore.Contents.AdminNodes.ContentTypesAdminNode, OrchardCore.Contents",
+                      "ShowAll": true,
+                      "IconClass": null,
+                      "ContentTypes": [],
+                      "UniqueId": "ee18224e1b814c638b0732678b74cfd9",
+                      "Enabled": true,
+                      "Text": null,
+                      "Id": null,
+                      "Href": null,
+                      "Url": null,
+                      "Position": null,
+                      "Priority": 0,
+                      "LinkToFirstChild": true,
+                      "LocalNav": false,
+                      "Culture": null,
+                      "Items": [],
+                      "Classes": []
+                    }
+                  ],
+                  "Classes": []
+                }
+              ],
+              "Classes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "AdminSettings": {
+        "DisplayDarkMode": true,
+        "DisplayMenuFilter": false,
+        "DisplayNewMenu": false,
+        "DisplayTitlesInTopbar": false
+      },
+      "ContentAuditTrailSettings": {
+        "AllowedContentTypes": []
+      },
+      "LoginSettings": {
+        "UseSiteTheme": false,
+        "UseExternalProviderIfOnlyOneDefined": false,
+        "DisableLocalLogin": false,
+        "UseScriptToSyncRoles": false,
+        "SyncRolesScript": null
+      }
+    },
+    {
+      "name": "Content",
+      "data": [
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Taxonomy",
+          "DisplayText": "Categories",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Categories"
+          },
+          "AliasPart": {
+            "Alias": "categories"
+          },
+          "TaxonomyPart": {
+            "Terms": [
+              {
+                "ContentItemId": "42qzqr0xqekc1trxsf9hqjt1cs",
+                "ContentType": "Category",
+                "DisplayText": "Travel",
+                "Category": {
+                  "Icon": {
+                    "Text": "fas fa-globe-americas"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Travel"
+                },
+                "AutoroutePart": {
+                  "Path": "travel"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4fg5djtbj3zhet680y90aevjn7"
+                }
+              }
+            ],
+            "TermContentType": "Category"
+          },
+          "AutoroutePart": {
+            "Path": "categories",
+            "RouteContainedItems": true
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Menu",
+          "DisplayText": "Main Menu",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "MenuPart": {},
+          "TitlePart": {
+            "Title": "Main Menu"
+          },
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "4h0nerfy764z85w1dav70pg9w9",
+                "DisplayText": "Letters",
+                "LinkMenuItemPart": {
+                  "Name": "Letters",
+                  "Url": "~/"
+                },
+                "LinkMenuItem": {}
+              },
+              {
+                "ContentType": "LinkMenuItem",
+                "ContentItemId": "4dp52ykk9ppcf2m9e7tm7s1r50",
+                "DisplayText": "About",
+                "LinkMenuItemPart": {
+                  "Name": "About",
+                  "Url": "~/about"
+                }
+              }
+            ]
+          },
+          "AliasPart": {
+            "Alias": "main-menu"
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Taxonomy",
+          "DisplayText": "Tags",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Tags"
+          },
+          "AliasPart": {
+            "Alias": "tags"
+          },
+          "TaxonomyPart": {
+            "Terms": [
+              {
+                "ContentItemId": "45gem5axzb9w6ze4ntvzw7t2wg",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Space",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": null,
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": null,
+                "TitlePart": {
+                  "Title": "Space"
+                },
+                "AutoroutePart": {
+                  "Path": "space",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "Tag": {},
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4kbketez8hhq8xxwvh6ctgwexj",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "EU",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-02-15T18:16:32.6377202Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "eu",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4xq0vk4en1m2m5p855xsvsj7wj",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Politics",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-02-15T18:16:36.5113391Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": "Politics"
+                },
+                "AutoroutePart": {
+                  "Path": "politics",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4wzh8kjhmcsx87k9bp1kn1fsmy",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Time management",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-12-25T18:14:32.9022309Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": "Time management"
+                },
+                "AutoroutePart": {
+                  "Path": "time-management",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "45yfj4790xsnc651g7defxxdmz",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Communication",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-12-25T18:14:42.8788416Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": "Communication"
+                },
+                "AutoroutePart": {
+                  "Path": "communication",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4zd5r4y7r4gfm49bd7j5htn5wa",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Work",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-12-25T18:14:43.925976Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": "Work"
+                },
+                "AutoroutePart": {
+                  "Path": "work",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              }
+            ],
+            "TermContentType": "Tag"
+          },
+          "AutoroutePart": {
+            "Path": "tags",
+            "RouteContainedItems": true,
+            "SetHomepage": false,
+            "Disabled": false,
+            "Absolute": false
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Article",
+          "DisplayText": "About",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "AutoroutePart": {
+            "Path": "about",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I won't write hands-on tutorials or technical deep dives.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of wisdom. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles:</p><ul><li><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></li><li><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></li><li><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></li></ul>"
+          },
+          "TitlePart": {
+            "Title": "About"
+          },
+          "Article": {
+            "Subtitle": {
+              "Text": "What is Letters from Fiume?"
+            },
+            "Image": {
+              "Paths": [
+                "about-bg.jpg"
+              ],
+              "Anchors": [
+                {
+                  "X": 0.5,
+                  "Y": 0.5
+                }
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+          "ContentType": "Blog",
+          "DisplayText": "Letters",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Letters"
+          },
+          "HtmlBodyPart": {
+            "Html": ""
+          },
+          "AutoroutePart": {
+            "Path": "letters",
+            "SetHomepage": true,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "Blog": {
+            "Image": {
+              "Paths": [
+                "home-bg.jpg"
+              ],
+              "MediaTexts": [
+                ""
+              ],
+              "Anchors": [
+                {
+                  "X": 0.5,
+                  "Y": 0.5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "BlogPost",
+          "DisplayText": "The calmest week of the year, every week",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "The calmest week of the year, every week"
+          },
+          "AutoroutePart": {
+            "Path": "letters/the-calmest-week-of-the-year-every-week",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "BlogPost": {
+            "Subtitle": {
+              "Text": "On trying to live like between Christmas and New Year's Eve"
+            },
+            "Image": {
+              "Paths": [],
+              "MediaTexts": [],
+              "Anchors": []
+            },
+            "Tags": {
+              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+              "TermContentItemIds": [
+                "4wzh8kjhmcsx87k9bp1kn1fsmy",
+                "45yfj4790xsnc651g7defxxdmz",
+                "4zd5r4y7r4gfm49bd7j5htn5wa"
+              ],
+              "TagNames": [
+                "Time management",
+                "Communication",
+                "Work"
+              ]
+            }
+          },
+          "CommonPart": {},
+          "HtmlBodyPart": {
+            "Html": "<p>You may agree with me that the last week of the year, between Christmas and&nbsp;New Year's Eve, has a particular charm. I mean that aspect here, that nobody (at least in the \"Western\" world) is really working. It's that one week where you can take time off from daily duties and not be left behind, because everybody just agreed that we won't be busy this week. Hence that's the week I'm also starting this website on. I finally have time, time in the sense that pressing issues, however well-managed, are not piling up right while I'm writing this letter.&nbsp;</p><p>At the software company&nbsp;<a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>, we work all around the clock. On contrary to global teams that do this by \"following the sun\", most of our team members are in the same or close time zones. So, it's a result of us being a remote-first, distributed, asynchronously collaborating team: there are people who, following their personal preference, get up&nbsp;at the same time others&nbsp;go to bed, despite living in the same city. We also have clients and partners from all continents. This means that, especially if you fulfill a leadership role, you'll always have something to catch up on when you first sit down to work for the day.</p><p>Can we replicate the calmest week? Is it possible to make the world stop for you while you're away from the keyboard, during weekends, public holidays, or when you go on vacation? I don't think so&nbsp;unless we go extremely local and synchronized, including with clients, which isn't really possible in IT (but can be the case if you open a corner store without an online presence, for example). There are experiments <a href=\"https://time.com/3116424/daimler-vacation-email-out-of-office/\" target=\"_blank\">like at the German automaker Daimler</a>, to free you from at least having to chew through the dump of e-mails that you get during your time off by auto-deleting them. While this is interesting, you'll still have things to catch up on, causing stress during your first few days of being back. Also, I as someone running a company can't really imagine telling prospective clients that their e-mail was deleted, and if they really insist on the pleasure of giving us money, they should send their e-mail again when it fits my schedule.</p><p>So, what can we do? Since I don't think the root cause can be solved (or rather, I don't think there's an actual problem to being with, i.e. people your work with communicating with you), what I recommend tackling is the effect: you having to catch up on matters. So, here are my tips, that I follow continuously, so the cognitive load of everything happening all at once is reduced not just when I'm on holiday:</p><ul><li>Distribute not just work, but responsibility. I'm consciously the opposite of the managers that tell they \"want to know about everything\". When working in a team, have defined areas of responsibility that allows you to not care about things. You don't need to further optimize communication if there's no communication.</li><li>Turn off disruptive notifications. The only time my phone makes a sound is when somebody is calling (so the only time I use my phone for synchronous communication). Everything else can wait until I decide that now I want to deal with it (like reading e-mails). Similarly, turn off any kind of desktop toast/popup notification.</li><li>Unsubscribe from what doesn't matter. If you notice yourself ignoring something that you get notified about, then unsubscribe from it. This sounds obvious, but people still somehow postpone it; I think this is because deleting a notification is a tiny bit easier than unsubscribing, and they subconsciously want to rather \"pay\" the single delete click right now&nbsp;than the two clicks to save many single clicks in the future. E.g., unsubscribe from newsletters that you don't actually read, mute conversations/hide channels in chat apps that you don't care about daily, and unfollow tasks in the collaboration platform you use.</li><li>Have a central stream of things that matter and may require action. I find that e-mail, as the lowest common denominator of all written communication, works well for this. You can get a list of things that require your attention, ordered by the time you received them. Due to this, I turn off in-app notifications whenever possible, and channel everything to e-mails instead (like notifications from the collaboration platform Basecamp, or the issue tracker Jira). Note that then you have to be diligent when processing e-mail, where I think the best is to go one by one, reading and replying to everything, not postponing anything</li><li>Set up e-mail rules to delete what you don't need to see. If all else fails, and you still get e-mails about things that don't matter to you, then employ automation to get rid of them. The upfront \"investment\" is a lot greater than unsubscribing, so you must be conscious about going through the pain of creating rules to then get the dividend of not deleting junk continuously.</li></ul><p>I also recommend the book&nbsp;<a href=\"https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/0062874780\" target=\"_blank\">It Doesn't Have to Be Crazy at Work</a> by <a href=\"https://basecamp.com/\" target=\"_blank\">Basecamp</a>'s founders, which largely matches how we work at Lombiq. <a href=\"https://basecamp.com/shapeup\" target=\"_blank\">Shape Up</a> is worth a read too.</p>"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "Order": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "Layers": [
+        {
+          "Name": "Always",
+          "Rule": null,
+          "Description": "The widgets in this layer are displayed on any page of this site.",
+          "LayerRule": {
+            "Conditions": [
+              {
+                "$type": "OrchardCore.Rules.Models.BooleanCondition, OrchardCore.Rules",
+                "Value": true,
+                "Name": "BooleanCondition",
+                "ConditionId": "4gms58qvwpadqtb1vxsc12xkmq"
+              }
+            ],
+            "Name": null,
+            "ConditionId": "4a67b9xsfq7a3rncf3wh34ywm6"
+          }
+        },
+        {
+          "Name": "Homepage",
+          "Rule": null,
+          "Description": "The widgets in this layer are only displayed on the homepage.",
+          "LayerRule": {
+            "Conditions": [
+              {
+                "$type": "OrchardCore.Rules.Models.HomepageCondition, OrchardCore.Rules",
+                "Value": true,
+                "Name": "HomepageCondition",
+                "ConditionId": "4zv4z9jv8fw8jtykahrkpjwrmv"
+              }
+            ],
+            "Name": null,
+            "ConditionId": "48nzf7m9gaqdxt210f4qj87yds"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "LayerSettings": {
+        "Zones": [
+          "Content",
+          "Footer"
+        ]
+      }
+    },
+    {
+      "name": "MediaProfiles",
+      "MediaProfiles": {
+        "banner": {
+          "Hint": "A banner image (2048px x 600px, cropped)",
+          "Width": 2048,
+          "Height": 600,
+          "Mode": 2,
+          "Format": 0,
+          "Quality": 100,
+          "BackgroundColor": null
+        }
+      }
+    },
+    {
+      "name": "Queries",
+      "Queries": [
+        {
+          "Template": "SELECT * FROM ContentItemIndex WHERE ContentType = 'BlogPost' ORDER BY CreatedUtc DESC",
+          "ReturnDocuments": false,
+          "Name": "RecentBlogPosts",
+          "Source": "Sql",
+          "Schema": "{\r\n    \"type\": \"ContentItem/BlogPost\"\r\n}"
+        }
+      ]
+    },
+    {
+      "name": "Roles",
+      "Roles": [
+        {
+          "Name": "Moderator",
+          "Description": "Moderator role",
+          "Permissions": [
+            "ManageOwnUserInformation",
+            "AccessAdminPanel"
+          ]
+        },
+        {
+          "Name": "Author",
+          "Description": "Author role",
+          "Permissions": [
+            "ManageOwnUserInformation",
+            "AccessAdminPanel"
+          ]
+        },
+        {
+          "Name": "Contributor",
+          "Description": "Contributor role",
+          "Permissions": [
+            "ManageOwnUserInformation",
+            "AccessAdminPanel"
+          ]
+        },
+        {
+          "Name": "Editor",
+          "Description": "Editor role",
+          "Permissions": [
+            "ManageShortcodeTemplates",
+            "ManageOwnUserInformation",
+            "AccessAdminPanel",
+            "ManageAdminMenu",
+            "ManageTemplates",
+            "QueryLuceneApi",
+            "ManagePlacements",
+            "ManageQueries"
+          ]
+        },
+        {
+          "Name": "Anonymous",
+          "Description": "Anonymous role",
+          "Permissions": [
+            "ViewContent",
+            "QueryLuceneSearchIndex"
+          ]
+        },
+        {
+          "Name": "Administrator",
+          "Description": "Administrator role",
+          "Permissions": [
+            "SetHomepage",
+            "ManageShortcodeTemplates",
+            "ManageUsers",
+            "AccessAdminPanel",
+            "ManageAdminSettings",
+            "ManageAdminMenu",
+            "ManageTemplates",
+            "ManageAdminTemplates",
+            "Import",
+            "Export",
+            "ManageRemoteInstances",
+            "ManageRemoteClients",
+            "ExportRemoteInstances",
+            "ManageLayers",
+            "ManageIndexes",
+            "ManageMenu",
+            "ManagePlacements",
+            "ManageQueries",
+            "ManageRoles",
+            "SiteOwner",
+            "ManageTaxonomy",
+            "ApplyTheme",
+            "ManageMediaTheme"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ShortcodeTemplates",
+      "ShortcodeTemplates": {}
+    },
+    {
+      "name": "custom-settings",
+      "SocialMetaSettings": {
+        "ContentItemId": "4p5ensjkmj64n0c7z7qfwesqw7",
+        "ContentItemVersionId": null,
+        "ContentType": "SocialMetaSettings",
+        "DisplayText": "",
+        "Latest": false,
+        "Published": false,
+        "ModifiedUtc": null,
+        "PublishedUtc": null,
+        "CreatedUtc": null,
+        "Owner": "",
+        "Author": "",
+        "SocialMetaSettings": {
+          "DefaultSocialImage": {
+            "Paths": [],
+            "MediaTexts": []
+          },
+          "OpenGraphImage": {
+            "Paths": [],
+            "MediaTexts": []
+          },
+          "TwitterImage": {
+            "Paths": [],
+            "MediaTexts": []
+          },
+          "OpenGraphType": {
+            "Text": null
+          },
+          "TwitterCard": {
+            "Text": null
+          },
+          "TwitterCreator": {
+            "Text": null
+          },
+          "TwitterSite": {
+            "Text": null
+          },
+          "GoogleSchema": {
+            "Text": null
+          },
+          "OpenGraphSiteName": {
+            "Text": null
+          },
+          "OpenGraphAppId": {
+            "Text": null
+          },
+          "DefaultMetaDescription": {
+            "Text": null
+          },
+          "DefaultTwitterDescription": {
+            "Text": null
+          },
+          "DefaultOpenGraphDescription": {
+            "Text": null
+          }
+        }
+      }
+    },
+    {
+      "name": "deployment",
+      "Plans": [
+        {
+          "Name": "Full export",
+          "Steps": [
+            {
+              "Type": "AllFeaturesDeploymentStep",
+              "Step": {
+                "IgnoreDisabledFeatures": false,
+                "Id": "6653532fe61c404f8e097d958ec7c850",
+                "Name": "AllFeatures"
+              }
+            },
+            {
+              "Type": "ReplaceContentDefinitionDeploymentStep",
+              "Step": {
+                "IncludeAll": true,
+                "ContentTypes": [],
+                "ContentParts": [],
+                "Id": "cb9e984ef4df40b1808b230a26badede",
+                "Name": "ReplaceContentDefinition"
+              }
+            },
+            {
+              "Type": "AdminMenuDeploymentStep",
+              "Step": {
+                "Id": "a7b28a6f6b884920be4bc5055322e689",
+                "Name": "AdminMenu"
+              }
+            },
+            {
+              "Type": "AdminSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "0ed249a2ebb54a5ebbced3d2e108b6e3",
+                "Name": "AdminSettings_SiteSettingsPropertyDeploymentStep"
+              }
+            },
+            {
+              "Type": "AllContentDeploymentStep",
+              "Step": {
+                "ExportAsSetupRecipe": true,
+                "Id": "87f6f300013e4c638764cb47fb5de6f9",
+                "Name": "AllContent"
+              }
+            },
+            {
+              "Type": "AllLayersDeploymentStep",
+              "Step": {
+                "Id": "7e0de9fe1168457ebeb09f791009eb26",
+                "Name": "AllLayers"
+              }
+            },
+            {
+              "Type": "AllMediaProfilesDeploymentStep",
+              "Step": {
+                "Id": "8e13cac1c5cf469cbcbfbe9fedd0564e",
+                "Name": "AllMediaProfiles"
+              }
+            },
+            {
+              "Type": "AllQueriesDeploymentStep",
+              "Step": {
+                "Id": "c70faf4aaa4a4cd4abbcb6a57e7d3132",
+                "Name": "AllQueries"
+              }
+            },
+            {
+              "Type": "AllRolesDeploymentStep",
+              "Step": {
+                "Id": "30d0f6fc632f4b03ba5c2dc196ebec66",
+                "Name": "AllRoles"
+              }
+            },
+            {
+              "Type": "AllShortcodeTemplatesDeploymentStep",
+              "Step": {
+                "Id": "e9b0cfbdade34d07970fd49da28807ea",
+                "Name": "AllShortcodeTemplates"
+              }
+            },
+            {
+              "Type": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "3d0d3e5638174298bc98d377186325b2",
+                "Name": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep"
+              }
+            },
+            {
+              "Type": "CustomSettingsDeploymentStep",
+              "Step": {
+                "IncludeAll": true,
+                "SettingsTypeNames": [],
+                "Id": "92f110de7f404eed8a6e5ecf406f374b",
+                "Name": "CustomSettings"
+              }
+            },
+            {
+              "Type": "DeploymentPlanDeploymentStep",
+              "Step": {
+                "IncludeAll": true,
+                "DeploymentPlanNames": [],
+                "Id": "d8c989bc54a7428dbbbd535faef89a99",
+                "Name": "DeploymentPlan"
+              }
+            },
+            {
+              "Type": "LoginSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "95cf1f6a6c0c463cb5932abcc5414fcd",
+                "Name": "LoginSettings_SiteSettingsPropertyDeploymentStep"
+              }
+            },
+            {
+              "Type": "MediaDeploymentStep",
+              "Step": {
+                "IncludeAll": true,
+                "FilePaths": [],
+                "DirectoryPaths": [],
+                "Id": "84a73e50b90948bfb596a236dff1d788",
+                "Name": "Media"
+              }
+            },
+            {
+              "Type": "PlacementsDeploymentStep",
+              "Step": {
+                "Id": "6db041eafa56414cab589ea27442814e",
+                "Name": "Placements"
+              }
+            },
+            {
+              "Type": "SiteSettingsDeploymentStep",
+              "Step": {
+                "Settings": [
+                  "Calendar",
+                  "MaxPagedCount",
+                  "MaxPageSize",
+                  "PageSize",
+                  "TimeZoneId",
+                  "ResourceDebugMode",
+                  "SiteName",
+                  "SiteSalt",
+                  "PageTitleFormat",
+                  "SuperUser",
+                  "HomeRoute",
+                  "AppendVersion",
+                  "CacheMode"
+                ],
+                "Id": "c03b1a5744fe450e9f0b1ffbeed58583",
+                "Name": "SiteSettings"
+              }
+            },
+            {
+              "Type": "ThemesDeploymentStep",
+              "Step": {
+                "Id": "157f2b7b77c341c8afed099957ad5a7b",
+                "Name": "Themes"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "media",
+      "Files": [
+        {
+          "SourcePath": "about-bg.jpg",
+          "TargetPath": "about-bg.jpg"
+        },
+        {
+          "SourcePath": "home-bg.jpg",
+          "TargetPath": "home-bg.jpg"
+        },
+        {
+          "SourcePath": "post-bg.jpg",
+          "TargetPath": "post-bg.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Placements",
+      "Placements": {}
+    },
+    {
+      "name": "Settings",
+      "Calendar": null,
+      "MaxPagedCount": 0,
+      "MaxPageSize": 100,
+      "PageSize": 10,
+      "TimeZoneId": "Europe/Budapest",
+      "ResourceDebugMode": 0,
+      "SiteName": "Letters from Fiume",
+      "SiteSalt": "abd6279225da47169554c19554a73683",
+      "PageTitleFormat": "{% page_title Site.SiteName, position: \"after\", separator: \" - \" %}",
+      "SuperUser": "4r7a294fed995x678hx54s95c5",
+      "HomeRoute": {
+        "Action": "Display",
+        "Controller": "Item",
+        "Area": "OrchardCore.Contents",
+        "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953"
+      },
+      "AppendVersion": true,
+      "CacheMode": 0
+    },
+    {
+      "name": "Themes",
+      "Site": "Lombiq.Hosting.MediaTheme",
+      "Admin": "TheAdmin"
+    }
+  ]
+}

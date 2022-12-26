@@ -27,3 +27,4 @@ profiling/
 .testPublish/
 
 src/*.Web/Localization
+MediaThemeDeployment_*.zip

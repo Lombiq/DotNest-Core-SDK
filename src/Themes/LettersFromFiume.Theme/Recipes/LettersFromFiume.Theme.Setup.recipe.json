@@ -1,0 +1,34 @@
+{
+  "name": "LettersFromFiume.Theme.Setup",
+  "displayName": "Letters from Fiume - Setup",
+  "description": "Settings and features required only for development.",
+  "author": "Zoltán Lehóczky",
+  "website": "https://lettersfromfiume.com/",
+  "version": "1.0",
+  "issetuprecipe": true,
+  "categories": [ "dotnestcoresdk" ],
+  "tags": [],
+
+  "steps": [
+    {
+      "name": "recipes",
+      "Values": [
+        {
+          "executionid": "DotNest.Core.SDK.Web",
+          "name": "LettersFromFiume.Theme.Export"
+        }
+      ]
+    },
+    {
+      "name": "Feature",
+      "enable": [
+        "LettersFromFiume.Theme"
+      ]
+    },
+    {
+      "name": "Themes",
+      "Site": "LettersFromFiume.Theme",
+      "Admin": "TheAdmin"
+    }
+  ]
+}

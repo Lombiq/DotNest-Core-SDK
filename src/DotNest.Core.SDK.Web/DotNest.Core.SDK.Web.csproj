@@ -41,5 +41,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj" />
+    <ProjectReference Include="..\Themes\LettersFromFiume.Theme\LettersFromFiume.Theme.csproj" />
   </ItemGroup>
 </Project>
