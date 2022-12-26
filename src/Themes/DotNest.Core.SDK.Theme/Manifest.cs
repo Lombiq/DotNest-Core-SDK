@@ -1,5 +1,5 @@
-using OrchardCore.DisplayManagement.Manifest;
 using Lombiq.Hosting.MediaTheme.Bridge.Constants;
+using OrchardCore.DisplayManagement.Manifest;
 
 [assembly: Theme(
     Name = "DotNest Core SDK Theme",
