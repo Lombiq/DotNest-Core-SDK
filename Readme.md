@@ -20,6 +20,8 @@ This gives you an easy way to always work with same code base as what is running
   - The `Mirroring direction` should be `Git to Hg`.
   - Make sure that you never commit anything on the branches coming from the original repository, otherwise the synchronization will fail.
 
+You can see an example of a fork of this project for the website [Letters from Fiume](https://lettersfromfiume.com/), with a Media Theme [here](https://github.com/Piedone/DotNest-Sites).
+
 ## Working with the repository 
 
 - Whenever you create any branches, make sure that you prefix their names so they don't collide with the ones in the SDK.
@@ -33,8 +35,9 @@ For example, if the project you're working is called `Awesome Project`, then you
 - From here on, general Orchard Core theme development rules apply with some DotNest-related extras. You can read about all these on the [`Theming a DotNest site` page of the DotNest Knowledge Base](https://dotnest.com/knowledge-base/topics/theming/).
 - If your theme contains Liquid templates, enable the `Liquid` feature for these to be picked up by Orchard Core.
 - The Media Theme on DotNest also has an automated mechanism to include some site-level resources. This might come in handy e.g. if your theme doesn't have a base theme and/or you're not overriding the `Document` or `Layout` shapes.
-- You can synchronize content from your site running on DotNest by exporting it and then importing it locally.
-
+- You can synchronize content from your site running on DotNest by exporting it and then importing it locally. That way, you can maintain a setup recipe locally that you keep up-to-date with the production site's data. Be sure to not use the recipe locally without some modifications:
+    - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
+    - Enable your theme project and set it as the site theme (instead of Media Theme).
 
 ## Help us make it better!
 
