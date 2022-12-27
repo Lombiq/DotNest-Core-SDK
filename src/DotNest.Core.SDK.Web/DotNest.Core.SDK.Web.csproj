@@ -38,6 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj" />
+    <ProjectReference Include="..\Themes\Sample.Theme\Sample.Theme.csproj" />
   </ItemGroup>
 </Project>

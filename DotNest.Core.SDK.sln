@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNest.Core.SDK.Web", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{4415DF94-4550-45C4-85DA-2741284D2C01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNest.Core.SDK.Theme", "src\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj", "{2A65FF2E-0C9C-4FEF-9136-B575141355AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Theme", "src\Themes\Sample.Theme\Sample.Theme.csproj", "{2A65FF2E-0C9C-4FEF-9136-B575141355AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C140F40-3A44-4A05-BD18-E59431FAD8BE}"
 	ProjectSection(SolutionItems) = preProject
