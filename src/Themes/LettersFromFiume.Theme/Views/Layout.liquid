@@ -15,9 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ "PageTitle" | shape_new | shape_stringify }}</title>
     {% resources type: "Meta" %}
-    <link rel="apple-touch-icon" sizes="180x180" href="/mediatheme/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/mediatheme/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/mediatheme/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "~/mediatheme/images/apple-touch-icon.png" | href }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "~/mediatheme/images/favicon-32x32.png" | href }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "~/mediatheme/images/favicon-16x16.png" | href }}">
     <link rel="manifest" href="/mediatheme/site.webmanifest">
 
     <!-- Font Awesome icons (free version)-->
@@ -28,7 +28,7 @@
     <!-- Core theme CSS (includes Bootstrap) -->
     {% style name:"theblogtheme" %}
     {% style name:"theblogtheme-bootstrap-oc", version:"1" %}
-    {% assign stylesPath = '~/mediatheme/styles/site.css' | href %}
+    {% assign stylesPath = "~/mediatheme/styles/site.css" | href %}
     {% style src:stylesPath %}
     {% script name:"theblogtheme", at:"Foot" %}
 
