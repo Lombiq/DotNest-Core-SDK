@@ -54,7 +54,6 @@
         "OrchardCore.HomeRoute",
         "OrchardCore.Indexing",
         "OrchardCore.Rules",
-        "OrchardCore.Layers",
         "OrchardCore.Lists",
         "OrchardCore.Media.Slugify",
         "OrchardCore.Menu",
@@ -132,6 +131,7 @@
         "OrchardCore.Google.TagManager",
         "OrchardCore.HealthChecks",
         "OrchardCore.Https",
+        "OrchardCore.Layers",
         "OrchardCore.Localization.ContentLanguageHeader",
         "OrchardCore.Lucene",
         "OrchardCore.Lucene.ContentPicker",
@@ -1855,7 +1855,7 @@
       },
       "AuditTrailTrimmingSettings": {
         "RetentionDays": 10,
-        "LastRunUtc": null,
+        "LastRunUtc": "2022-12-26T23:00:11.1831531Z",
         "Disabled": false
       },
       "ContentAuditTrailSettings": {
@@ -2285,7 +2285,7 @@
             "Absolute": false
           },
           "HtmlBodyPart": {
-            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I won't write hands-on tutorials or technical deep dives.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of wisdom. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles:</p><ul><li><p><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></p></li><li><p><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></p></li><li><p><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></p></li></ul>"
+            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I don't intend to write hands-on development tutorials or technical deep dives. Those I'll keep to <a href=\"https://orcharddojo.net/\" target=\"_blank\">Orchard Dojo</a>.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of insight. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles:</p><ul><li><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></li><li><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></li><li><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></li></ul>"
           },
           "TitlePart": {
             "Title": "About"
@@ -2311,54 +2311,6 @@
           }
         }
       ]
-    },
-    {
-      "name": "Layers",
-      "Layers": [
-        {
-          "Name": "Always",
-          "Rule": null,
-          "Description": "The widgets in this layer are displayed on any page of this site.",
-          "LayerRule": {
-            "Conditions": [
-              {
-                "$type": "OrchardCore.Rules.Models.BooleanCondition, OrchardCore.Rules",
-                "Value": true,
-                "Name": "BooleanCondition",
-                "ConditionId": "4gms58qvwpadqtb1vxsc12xkmq"
-              }
-            ],
-            "Name": null,
-            "ConditionId": "4a67b9xsfq7a3rncf3wh34ywm6"
-          }
-        },
-        {
-          "Name": "Homepage",
-          "Rule": null,
-          "Description": "The widgets in this layer are only displayed on the homepage.",
-          "LayerRule": {
-            "Conditions": [
-              {
-                "$type": "OrchardCore.Rules.Models.HomepageCondition, OrchardCore.Rules",
-                "Value": true,
-                "Name": "HomepageCondition",
-                "ConditionId": "4zv4z9jv8fw8jtykahrkpjwrmv"
-              }
-            ],
-            "Name": null,
-            "ConditionId": "48nzf7m9gaqdxt210f4qj87yds"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Settings",
-      "LayerSettings": {
-        "Zones": [
-          "Content",
-          "Footer"
-        ]
-      }
     },
     {
       "name": "MediaProfiles",
@@ -2475,7 +2427,7 @@
     {
       "name": "custom-settings",
       "SocialMetaSettings": {
-        "ContentItemId": "4gxgrkawnwdnq0a1hd1k9wn8d0",
+        "ContentItemId": "4q78rbnw6ky1a0t2yv0w5y6r5p",
         "ContentItemVersionId": null,
         "ContentType": "SocialMetaSettings",
         "DisplayText": "",
