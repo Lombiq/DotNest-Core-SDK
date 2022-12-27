@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C140F40-3A44-4A05-BD18-E59431FAD8BE}"
 	ProjectSection(SolutionItems) = preProject
 		License.md = License.md
+		LombiqLicense.md = LombiqLicense.md
 		NuGet.config = NuGet.config
 		Readme.md = Readme.md
 	EndProjectSection
