@@ -1,6 +1,5 @@
 # DotNest Core SDK
 
-
 ## Overview
 
 [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) is a local developer environment for building Media Themes to be deployed on sites running on [DotNest](http://dotnest.com).
@@ -8,7 +7,6 @@ The base of the source code on the `dev` branch is the same Orchard Core version
 On top of that, all the open-source modules are added as NuGet packages, which gives you the ability to develop your theme and run your site locally in an environment quite close to the live DotNest site.
 
 This project (along with [DotNest](https://dotnest.com), the [Orchard Core CMS](http://orchardcore.net) SaaS) is developed by [Lombiq Technologies Ltd](https://lombiq.com). Commercial-grade support is available through Lombiq.
-
 
 ## Getting started
 
@@ -22,6 +20,7 @@ This gives you an easy way to always work with same code base as what is running
   - The `Mirroring direction` should be `Git to Hg`.
   - Make sure that you never commit anything on the branches coming from the original repository, otherwise the synchronization will fail.
 
+You can see an example of a fork of this project for the website [Letters from Fiume](https://lettersfromfiume.com/), with a Media Theme [here](https://github.com/Piedone/DotNest-Sites).
 
 ## Working with the repository 
 
@@ -30,15 +29,15 @@ For example, if the project you're working is called `Awesome Project`, then you
 - You might also want to change the default branch of your fork to your development branch.
 - In case new commits are pushed to your fork from the original repository, check the changes (e.g. new modules might be added that you also need to add to your custom solution) and merge `dev` to your development branch.
 
-
 ## Theme development
 
 - Create a custom solution file on your prefixed development branch as a copy of `DotNest.Core.SDK.sln`, e.g. `AwesomeProject.sln`.
 - From here on, general Orchard Core theme development rules apply with some DotNest-related extras. You can read about all these on the [`Theming a DotNest site` page of the DotNest Knowledge Base](https://dotnest.com/knowledge-base/topics/theming/).
 - If your theme contains Liquid templates, enable the `Liquid` feature for these to be picked up by Orchard Core.
 - The Media Theme on DotNest also has an automated mechanism to include some site-level resources. This might come in handy e.g. if your theme doesn't have a base theme and/or you're not overriding the `Document` or `Layout` shapes.
-- You can synchronize content from your site running on DotNest by exporting it and then importing it locally.
-
+- You can synchronize content from your site running on DotNest by exporting it and then importing it locally. That way, you can maintain a setup recipe locally that you keep up-to-date with the production site's data. Be sure to not use the recipe locally without some modifications:
+    - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
+    - Enable your theme project and set it as the site theme (instead of Media Theme).
 
 ## Help us make it better!
 

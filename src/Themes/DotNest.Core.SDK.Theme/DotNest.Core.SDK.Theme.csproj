@@ -15,8 +15,8 @@
         <PackageReference Include="OrchardCore.ContentManagement" Version="1.5.0" />
         <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0" />
         <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0" />
-        <PackageReference Include="Lombiq.BaseTheme" Version="1.1.2" />
-        <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="1.0.0-alpha.4" />
+        <PackageReference Include="Lombiq.BaseTheme" Version="2.0.0" />
+        <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.0.0" />
     </ItemGroup>
 
 </Project>
