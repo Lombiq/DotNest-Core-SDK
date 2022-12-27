@@ -2427,7 +2427,7 @@
     {
       "name": "custom-settings",
       "SocialMetaSettings": {
-        "ContentItemId": "4q78rbnw6ky1a0t2yv0w5y6r5p",
+        "ContentItemId": "4sq0akxe9fpqb4epmgfbf3pjwh",
         "ContentItemVersionId": null,
         "ContentType": "SocialMetaSettings",
         "DisplayText": "",
@@ -2528,13 +2528,6 @@
                 "ExportAsSetupRecipe": true,
                 "Id": "87f6f300013e4c638764cb47fb5de6f9",
                 "Name": "AllContent"
-              }
-            },
-            {
-              "Type": "AllLayersDeploymentStep",
-              "Step": {
-                "Id": "7e0de9fe1168457ebeb09f791009eb26",
-                "Name": "AllLayers"
               }
             },
             {
