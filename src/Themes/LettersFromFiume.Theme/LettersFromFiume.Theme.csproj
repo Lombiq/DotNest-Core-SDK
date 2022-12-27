@@ -30,8 +30,4 @@
         <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.0.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="wwwroot\" />
-    </ItemGroup>
-
 </Project>
