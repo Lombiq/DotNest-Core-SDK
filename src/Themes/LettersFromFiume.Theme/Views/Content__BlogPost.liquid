@@ -17,7 +17,7 @@
                         <span class="meta">
                             {% assign format = "MMMM dd, yyyy" | t %}
                             {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
-                            {{ "TEST Posted on {0}" | t: dateTime | raw }}
+                            {{ "Posted on {0}" | t: dateTime | raw }}
                         </span>
                     </div>
                 </div>
