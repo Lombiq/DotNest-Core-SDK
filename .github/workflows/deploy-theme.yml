@@ -16,4 +16,3 @@ jobs:
       CLIENT_API_KEY: ${{ secrets.LETTERS_FROM_FIUME_DEPLOYMENT_CLIENT_API_KEY }}
     with:
       theme-path: "src/Themes/LettersFromFiume.Theme"
-      base-theme-id: "TheBlogTheme"

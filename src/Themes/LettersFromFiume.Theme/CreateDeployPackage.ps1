@@ -1,1 +1,1 @@
-media-theme-deploy --path . --base-id TheBlogTheme --deployment-path .\Deployment
+media-theme-deploy --path . --deployment-path .\Deployment
