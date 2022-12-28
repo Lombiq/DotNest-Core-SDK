@@ -1,4 +1,4 @@
-Copyright © 2022, Zoltán Lehóczky
+Copyright © 2022, Zoltán Lehóczky<!-- #spell-check-ignore-line -->
 
 All rights reserved.
 

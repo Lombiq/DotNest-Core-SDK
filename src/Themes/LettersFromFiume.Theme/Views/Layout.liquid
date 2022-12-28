@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ Culture.Name }}">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->{% comment %}#spell-check-ignore-line{% endcomment %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQZRSMKVJW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag(){dataLayer.push(arguments);} {% comment %}#spell-check-ignore-line{% endcomment %}
+      gtag('js', new Date());{% comment %}#spell-check-ignore-line{% endcomment %}
 
-      gtag('config', 'G-VQZRSMKVJW');
+      gtag('config', 'G-VQZRSMKVJW');{% comment %}#spell-check-ignore-line{% endcomment %}
     </script>
 
     <meta charset="utf-8">
@@ -26,11 +26,11 @@
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <!-- Core theme CSS (includes Bootstrap) -->
-    {% style name:"theblogtheme" %}
-    {% style name:"theblogtheme-bootstrap-oc", version:"1" %}
+    {% style name:"theblogtheme" %}{% comment %}#spell-check-ignore-line{% endcomment %}
+    {% style name:"theblogtheme-bootstrap-oc", version:"1" %}{% comment %}#spell-check-ignore-line{% endcomment %}
     {% assign stylesPath = "~/mediatheme/styles/site.css" | href %}
     {% style src:stylesPath %}
-    {% script name:"theblogtheme", at:"Foot" %}
+    {% script name:"theblogtheme", at:"Foot" %}{% comment %}#spell-check-ignore-line{% endcomment %}
 
     {% resources type: "HeadScript" %}
     {% resources type: "HeadLink" %}
