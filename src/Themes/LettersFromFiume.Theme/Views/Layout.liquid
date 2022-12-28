@@ -17,16 +17,16 @@
     {% resources type: "Meta" %}
 
     {% assign appleIconUrl = "~/mediatheme/images/apple-touch-icon.png" | href %}
-    {% link rel:"apple-touch-icon", sizes:"180x180", href:appleIconUrl %}
+    {% link rel:"apple-touch-icon", sizes:"180x180", href:appleIconUrl, append_version:"true" %}
 
     {% assign 32pxIconUrl = "~/mediatheme/images/favicon-32x32.png" | href %}
-    {% link type:"image/png", rel:"icon", sizes:"32x32", href:32pxIconUrl %}
+    {% link type:"image/png", rel:"icon", sizes:"32x32", href:32pxIconUrl, append_version:"true" %}
 
     {% assign 16pxIconUrl = "~/mediatheme/images/favicon-16x16.png" | href %}
-    {% link type:"image/png", rel:"icon", sizes:"16x16", href:16pxIconUrl %}
+    {% link type:"image/png", rel:"icon", sizes:"16x16", href:16pxIconUrl, append_version:"true" %}
 
     {% assign manifestUrl = "~/mediatheme/site.webmanifest" | href %}
-    {% link rel:"manifest", href:manifestUrl %}
+    {% link rel:"manifest", href:manifestUrl, append_version:"true" %}
 
     <!-- Font Awesome icons (free version)-->
     {% style name:"font-awesome", version:"6", at:"Head" %}
