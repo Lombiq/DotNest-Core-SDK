@@ -15,10 +15,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ "PageTitle" | shape_new | shape_stringify }}</title>
     {% resources type: "Meta" %}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "~/mediatheme/images/apple-touch-icon.png" | href }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "~/mediatheme/images/favicon-32x32.png" | href }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "~/mediatheme/images/favicon-16x16.png" | href }}">
-    <link rel="manifest" href="/mediatheme/site.webmanifest">
+
+    {% assign appleIconUrl = "~/mediatheme/images/apple-touch-icon.png" | href %}
+    {% link rel:"apple-touch-icon", sizes:"180x180", href:appleIconUrl %}
+
+    {% assign 32pxIconUrl = "~/mediatheme/images/favicon-32x32.png" | href %}
+    {% link type:"image/png", rel:"icon", sizes:"32x32", href:32pxIconUrl %}
+
+    {% assign 16pxIconUrl = "~/mediatheme/images/favicon-16x16.png" | href %}
+    {% link type:"image/png", rel:"icon", sizes:"16x16", href:16pxIconUrl %}
+
+    {% assign manifestUrl = "~/mediatheme/site.webmanifest" | href %}
+    {% link rel:"manifest", href:manifestUrl %}
 
     <!-- Font Awesome icons (free version)-->
     {% style name:"font-awesome", version:"6", at:"Head" %}
@@ -28,8 +36,8 @@
     <!-- Core theme CSS (includes Bootstrap) -->
     {% style name:"theblogtheme" %}{% comment %}#spell-check-ignore-line{% endcomment %}
     {% style name:"theblogtheme-bootstrap-oc", version:"1" %}{% comment %}#spell-check-ignore-line{% endcomment %}
-    {% assign stylesPath = "~/mediatheme/styles/site.css" | href %}
-    {% style src:stylesPath %}
+    {% assign stylesUrl = "~/mediatheme/styles/site.css" | href %}
+    {% style src:stylesUrl %}
     {% script name:"theblogtheme", at:"Foot" %}{% comment %}#spell-check-ignore-line{% endcomment %}
 
     {% resources type: "HeadScript" %}
