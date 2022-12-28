@@ -1,0 +1,20 @@
+name: Deploy Media Theme to DotNest
+
+on:
+  push:
+    branches:
+      - dev-piedone
+    paths:
+      - 'src/Themes/LettersFromFiume.Theme/**'
+
+jobs:
+  deploy-media-theme:
+    uses: Lombiq/Hosting-Media-Theme/.github/workflows/deploy-media-theme.yml@issue/OSOE-514
+    secrets:
+      URL: ${{ secrets.LETTERS_FROM_FIUME_DEPLOYMENT_URL }}
+      CLIENT_NAME: ${{ secrets.LETTERS_FROM_FIUME_DEPLOYMENT_CLIENT_NAME }}
+      CLIENT_API_KEY: ${{ secrets.LETTERS_FROM_FIUME_DEPLOYMENT_CLIENT_API_KEY }}
+    with:
+      theme-path: "src/Themes/LettersFromFiume.Theme"
+      base-theme-id: "TheBlogTheme"
+
