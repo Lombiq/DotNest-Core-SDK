@@ -17,4 +17,3 @@ jobs:
     with:
       theme-path: "src/Themes/LettersFromFiume.Theme"
       base-theme-id: "TheBlogTheme"
-
