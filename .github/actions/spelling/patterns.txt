@@ -1,0 +1,24 @@
+# URL formats. Match until the first whitespace character. Intentionally do not validate URLs to keep patterns simple.
+https?:\/\/\S+
+www.\S+
+
+# GUIDs with or without hyphens.
+\b[0-9a-fA-F]{8}-?(([0-9a-fA-F]{4}-?){3})[0-9a-fA-F]{12}\
+
+# SHA checksums.
+sha[0-9]{3}-[0-9a-zA-Z+/]{64}
+
+# Orchard Core content item IDs.
+\b[0-9a-z]{26}\b
+
+# Git commit hashes.
+\b[0-9a-f]{40}\b
+
+# Hex color codes.
+(?:#[0-9a-fA-F]{3,6})\b
+
+# Hexadecimal literals in C# code.
+\b0x[0-9a-fA-F]+\b
+
+# Ignore lines that contain the "#spell-check-ignore-line" marker text.
+.*#spell-check-ignore-line.*
