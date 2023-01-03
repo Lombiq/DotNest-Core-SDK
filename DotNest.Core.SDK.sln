@@ -32,6 +32,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "spelling", "spelling", "{5F584714-A74A-4DB5-B462-CF30E1C0B0FF}"
 	ProjectSection(SolutionItems) = preProject
 		.github\actions\spelling\advice.md = .github\actions\spelling\advice.md
+		.github\actions\spelling\excludes.txt = .github\actions\spelling\excludes.txt
+		.github\actions\spelling\patterns.txt = .github\actions\spelling\patterns.txt
 	EndProjectSection
 EndProject
 Global
