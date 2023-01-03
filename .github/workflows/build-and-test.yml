@@ -39,3 +39,4 @@ jobs:
         lombiq:allow.txt
         lombiq:expect.txt
         lombiq:liquid.txt
+        lombiq:patterns.txt
