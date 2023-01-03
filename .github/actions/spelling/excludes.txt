@@ -34,6 +34,7 @@
 appsettings.*\.json$
 appveyor\.yml$
 dotnet-tools\.json$
+launchsettings.*\.json$
 package-lock\.json$
 package\.json$
 pnpm-lock\.yaml$
