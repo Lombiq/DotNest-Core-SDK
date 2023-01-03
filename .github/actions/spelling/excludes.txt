@@ -8,7 +8,7 @@
 \.editorconfig$
 \.eslintrc$
 \.git
-\.htmlvalidate\.json$
+\.json$
 \.ico$
 \.jfif$
 \.jpg$
@@ -22,7 +22,6 @@
 \.png$
 \.ps1$
 \.psm1$
-\.recipe\.json$
 \.ruleset$
 \.sln$
 \.stylelintrc$
@@ -31,10 +30,5 @@
 \.woff2$
 ^\.github/
 ^LICENSE\.txt$
-appsettings.*\.json$
 appveyor\.yml$
-dotnet-tools\.json$
-launchsettings.*\.json$
-package-lock\.json$
-package\.json$
 pnpm-lock\.yaml$
