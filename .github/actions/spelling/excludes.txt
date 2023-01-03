@@ -8,10 +8,10 @@
 \.editorconfig$
 \.eslintrc$
 \.git
-\.json$
 \.ico$
 \.jfif$
 \.jpg$
+\.json$
 \.min\.css$
 \.min\.js$
 \.ndproj$
