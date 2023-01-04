@@ -27,15 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\validate-pull-request.yml = .github\workflows\validate-pull-request.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{F267EAB8-E463-434A-B984-69C8EDA8A2E2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "spelling", "spelling", "{5F584714-A74A-4DB5-B462-CF30E1C0B0FF}"
-	ProjectSection(SolutionItems) = preProject
-		.github\actions\spelling\advice.md = .github\actions\spelling\advice.md
-		.github\actions\spelling\excludes.txt = .github\actions\spelling\excludes.txt
-		.github\actions\spelling\patterns.txt = .github\actions\spelling\patterns.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,8 +50,6 @@ Global
 		{4415DF94-4550-45C4-85DA-2741284D2C01} = {C0E663BB-B9D0-49AA-BBEB-ECA748632007}
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE} = {4415DF94-4550-45C4-85DA-2741284D2C01}
 		{190B979E-A5AB-42A4-85CE-8A94044706DF} = {7E3915D4-E24A-45FD-887C-3CB4F445C30B}
-		{F267EAB8-E463-434A-B984-69C8EDA8A2E2} = {7E3915D4-E24A-45FD-887C-3CB4F445C30B}
-		{5F584714-A74A-4DB5-B462-CF30E1C0B0FF} = {F267EAB8-E463-434A-B984-69C8EDA8A2E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E281D9A-C9FF-49D6-A7E7-192EB8DC0074}
