@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy-media-theme:
-    uses: Lombiq/Hosting-Media-Theme/.github/workflows/deploy-media-theme.yml@issue/OSOE-514
+    uses: Lombiq/Hosting-Media-Theme/.github/workflows/deploy-media-theme.yml@dev
     secrets:
       URL: ${{ secrets.LETTERS_FROM_FIUME_DEPLOYMENT_URL }}
       CLIENT_NAME: ${{ secrets.LETTERS_FROM_FIUME_DEPLOYMENT_CLIENT_NAME }}
