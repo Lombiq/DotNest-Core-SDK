@@ -13,7 +13,6 @@ builder.Services
     .AddOrchardCms(orchardCoreBuilder =>
     {
         orchardCoreBuilder
-            .AuthorizeApiRequestsIfEnabled(builder.Configuration)
             .AllowMiniProfilerOnAdmin()
             .AddDatabaseShellsConfigurationIfAvailable(configuration)
             .ConfigureSmtpSettings(overrideAdminSettings: false);
@@ -24,13 +23,6 @@ builder.Services
                 .AddSetupFeatures("OrchardCore.AutoSetup")
                 .HideRecipesByTagsFromSetup("test", "HideFromSetupScreen");
         }
-
-        // Dependencies need to be added to AddTenantFeatures() explicitly.
-        orchardCoreBuilder.AddTenantFeatures(
-            "DotNest.Hosting.Tenants",
-            Lombiq.Hosting.Tenants.Admin.Login.Constants.FeatureNames.SubTenant,
-            Lombiq.Hosting.Tenants.FeaturesGuard.Constants.FeatureNames.FeaturesGuard,
-            Lombiq.Hosting.Tenants.IdleTenantManagement.Constants.FeatureNames.ShutDownIdleTenants);
     });
 
 var app = builder.Build();

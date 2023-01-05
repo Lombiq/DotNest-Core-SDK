@@ -129,13 +129,13 @@
         // Themes
         "TheAdmin",
         "Lombiq.BaseTheme",
-        "DotNest.Core.SDK.Theme"
+        "Sample.Theme"
       ]
     },
     {
       "name": "themes",
       "admin": "TheAdmin",
-      "site": "DotNest.Core.SDK.Theme"
+      "site": "Sample.Theme"
     },
     {
       "name": "recipes",

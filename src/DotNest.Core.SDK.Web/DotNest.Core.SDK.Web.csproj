@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.5.0" />
-    <PackageReference Include="OrchardCore.Commerce" Version="0.0.1-preview-81" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="0.0.1-preview-81" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="0.0.1-preview-81" />
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="0.0.1-preview-81" />
+    <PackageReference Include="OrchardCore.Commerce" Version="0.0.1-preview-87" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="0.0.1-preview-87" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="0.0.1-preview-87" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="0.0.1-preview-87" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="1.5.0" />
   </ItemGroup>
 
@@ -33,14 +33,12 @@
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="3.0.0" />
     <PackageReference Include="Lombiq.Privacy" Version="4.0.0" />
     <PackageReference Include="Lombiq.SetupExtensions" Version="3.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="5.0.1-aplha.0.osoe-423" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="5.0.1-aplha.0.osoe-423" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Themes\DotNest.Core.SDK.Theme\DotNest.Core.SDK.Theme.csproj" />
+    <ProjectReference Include="..\Themes\Sample.Theme\Sample.Theme.csproj" />
     <ProjectReference Include="..\Themes\LettersFromFiume.Theme\LettersFromFiume.Theme.csproj" />
   </ItemGroup>
 </Project>
