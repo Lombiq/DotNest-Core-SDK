@@ -103,11 +103,14 @@
         "OrchardCore.Templates",
         "OrchardCore.AdminTemplates",
         "OrchardCore.Apis.GraphQL",
+        "OrchardCore.ArchiveLater",
         "OrchardCore.AutoSetup",
         "OrchardCore.BackgroundTasks",
         "OrchardCore.Commerce.ContentFields",
         "OrchardCore.Commerce",
         "OrchardCore.Commerce.CurrencySettingsSelector",
+        "OrchardCore.Commerce.Inventory",
+        "OrchardCore.Commerce.Promotion",
         "OrchardCore.Commerce.SessionCartStorage",
         "OrchardCore.Commerce.Tax",
         "OrchardCore.ContentFields.Indexing.SQL",
@@ -133,9 +136,6 @@
         "OrchardCore.Https",
         "OrchardCore.Layers",
         "OrchardCore.Localization.ContentLanguageHeader",
-        "OrchardCore.Lucene",
-        "OrchardCore.Lucene.ContentPicker",
-        "OrchardCore.Lucene.Worker",
         "OrchardCore.Media.AmazonS3",
         "OrchardCore.Microsoft.Authentication.AzureAD",
         "OrchardCore.Microsoft.Authentication.MicrosoftAccount",
@@ -158,6 +158,13 @@
         "OrchardCore.RemotePublishing",
         "OrchardCore.ResponseCompression",
         "OrchardCore.ReverseProxy",
+        "OrchardCore.Search",
+        "OrchardCore.Search.Elasticsearch",
+        "OrchardCore.Search.Elasticsearch.ContentPicker",
+        "OrchardCore.Search.Elasticsearch.Worker",
+        "OrchardCore.Search.Lucene",
+        "OrchardCore.Search.Lucene.ContentPicker",
+        "OrchardCore.Search.Lucene.Worker",
         "OrchardCore.Security",
         "OrchardCore.Sitemaps.Cleanup",
         "OrchardCore.Sitemaps.RazorPages",
@@ -168,6 +175,7 @@
         "OrchardCore.Tenants.FileProvider",
         "OrchardCore.Twitter",
         "OrchardCore.Twitter.Signin",
+        "OrchardCore.Users.Authentication.CacheTicketStore",
         "OrchardCore.Users.ChangeEmail",
         "OrchardCore.Users.CustomUserSettings",
         "OrchardCore.Users.ResetPassword",
@@ -499,7 +507,9 @@
                   "Position": "2",
                   "Editor": "Trumbowyg"
                 },
-                "HtmlBodyPartSettings": {},
+                "HtmlBodyPartSettings": {
+                  "SanitizeHtml": false
+                },
                 "HtmlBodyPartTrumbowygEditorSettings": {
                   "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"insertShortcode\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
                 }
@@ -577,7 +587,7 @@
                   "Position": "4"
                 },
                 "ListPartSettings": {
-                  "PageSize": 10,
+                  "PageSize": 30,
                   "ContainedContentTypes": [
                     "BlogPost"
                   ]
@@ -1855,7 +1865,7 @@
       },
       "AuditTrailTrimmingSettings": {
         "RetentionDays": 10,
-        "LastRunUtc": "2022-12-26T23:00:11.1831531Z",
+        "LastRunUtc": "2023-01-08T23:00:21.5096075Z",
         "Disabled": false
       },
       "ContentAuditTrailSettings": {
@@ -1971,6 +1981,240 @@
           }
         },
         {
+          "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+          "ContentType": "Blog",
+          "DisplayText": "Letters",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Letters"
+          },
+          "HtmlBodyPart": {
+            "Html": ""
+          },
+          "AutoroutePart": {
+            "Path": "letters",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "ListPart": {
+            "FeedProxyUrl": null,
+            "FeedItemsCount": 20
+          },
+          "Blog": {
+            "Image": {
+              "Paths": [
+                "home-bg.jpg"
+              ],
+              "MediaTexts": [
+                ""
+              ],
+              "Anchors": [
+                {
+                  "X": 0.5,
+                  "Y": 0.5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Article",
+          "DisplayText": "About",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "AutoroutePart": {
+            "Path": "about",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "HtmlBodyPart": {
+            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I don't intend to write hands-on development tutorials or technical deep dives. Those I'll keep to <a href=\"https://orcharddojo.net/\" target=\"_blank\">Orchard Dojo</a>.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of insight. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles (where I also post about new letters):</p><ul><li><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></li><li><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></li><li><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></li></ul>"
+          },
+          "TitlePart": {
+            "Title": "About"
+          },
+          "Article": {
+            "Subtitle": {
+              "Text": "What is Letters from Fiume?"
+            },
+            "Image": {
+              "Paths": [
+                "about-bg.jpg"
+              ],
+              "Anchors": [
+                {
+                  "X": 0.5,
+                  "Y": 0.5
+                }
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "BlogPost",
+          "DisplayText": "Involuntary superpower",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Involuntary superpower"
+          },
+          "AutoroutePart": {
+            "Path": "letters/involuntary-superpower",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "BlogPost": {
+            "Subtitle": {
+              "Text": "We in the EU"
+            },
+            "Image": {
+              "Paths": [],
+              "MediaTexts": [],
+              "Anchors": []
+            },
+            "Tags": {
+              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+              "TermContentItemIds": [
+                "4kbketez8hhq8xxwvh6ctgwexj",
+                "48crg1mxkg27q59dqy2nk0xbw0"
+              ],
+              "TagNames": [
+                "EU",
+                "Geopolitics"
+              ]
+            }
+          },
+          "CommonPart": {},
+          "HtmlBodyPart": {
+            "Html": "<p>Here in the EU, we have a curious situation: Although nobody really wants to admit, or openly talk about it on higher levels, we sort of built a kind of superpower. Although certain politicians on the Eastern side of the Union even have a hard time wrapping their heads around the fact that they're on the good side of history for a change, and learning the concepts of cooperation and consensus, so perhaps I should just cut everyone some slack. Why does the EU, which we so cherish to mock for inaction (or action, you can't really win) appears like a global superpower if you squint enough, you ask?</p><p>The <a href=\"https://en.wikipedia.org/wiki/European_Union\" style=\"background-color: rgba(255, 255, 255, 1)\" target=\"_blank\">Wikipedia article about the EU</a> reads like a description of some kind of Utopia. Good for them, you could&nbsp;say, but&nbsp;<a href=\"https://en.wikipedia.org/wiki/Brussels_effect\" target=\"_blank\">the Brussels effect</a>, most recently the well-known GDPR,&nbsp;shows that the EU asserts the influence of its domestic policy globally. As an economic unit, <a href=\"https://ec.europa.eu/eurostat/documents/portlet_file_entry/2995521/2-19052020-BP-EN.pdf/bb14f7f9-fc26-8aa1-60d4-7c2b509dda8e\" target=\"_blank\">the EU is the third-largest economy in the world</a> (after the US and China, and could even be better if the naughty British didn't mess that up). With a monetary union in form of the Euro, the European rule of law mechanism,&nbsp;or projects like the <a href=\"https://en.wikipedia.org/wiki/European_super_grid\" style=\"background-color: rgba(255, 255, 255, 1)\" target=\"_blank\">European super grid,</a>&nbsp;the EU (and the EEA, really) becomes ever more integrated, more than just a loose alliance of countries. Speaking of money, the Euro&nbsp;<a href=\"https://www.statista.com/statistics/1189498/share-of-global-payments-by-currency/\" target=\"_blank\">is the second-most used currency in international trade</a>, trailing not much after the US dollar, the two covering more than 75% of the transaction value.&nbsp;Nowadays, finally, there are talks about building up independent EU capabilities in terms of space research and defense as well, not to have to rely on our American friends too much. (Though did you know that the James Webb Space Telescope was hauled up by a European rocket, from the EU space port in French Guiana?) And recently, in an unexpected glance of hard power, <a href=\"https://www.politico.eu/article/eu-to-jointly-purchase-weapons/\" target=\"_blank\">the EU will acquire weapons</a> for the first time in its history.</p><p>At the table of aggressive, or at least highly assertive global players, the EU appears to be the soft-spoken pacifist who's not aware of their capabilities and especially potential. This seems to be changing, however; I do hope not the \"pacifist\" part, but perhaps we in the EU are starting to understand that we have something more at hand than we used to think of. The elephant in the room is of course federalization: Will the EU become the United States of Europe (I'd keep the name \"EU\" though, it's cleaner)? Functionally, I don't think too much needs to change, and if we draw the trends, the EU will inevitably end up being a federation, whether we call it that or not. For that though, we all have to understand that losing some kind of perceived sovereignty (after all, <a href=\"https://www.youtube.com/watch?v=q5D0t6ejcGE\" target=\"_blank\">what has the EU ever done for us?</a>) is a small price to pay to be able to maintain and defend our peaceful, free way of life.</p>"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "Order": 0,
+            "ListContentType": null
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "BlogPost",
+          "DisplayText": "No, I won't give you my phone number",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "No, I won't give you my phone number"
+          },
+          "AutoroutePart": {
+            "Path": "letters/no-i-won-t-give-you-my-phone-number",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "BlogPost": {
+            "Subtitle": {
+              "Text": "Please don't call me, and not because I'm socially awkward"
+            },
+            "Image": {
+              "Paths": [],
+              "MediaTexts": [],
+              "Anchors": []
+            },
+            "Tags": {
+              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+              "TermContentItemIds": [
+                "45yfj4790xsnc651g7defxxdmz",
+                "4zd5r4y7r4gfm49bd7j5htn5wa",
+                "4wzh8kjhmcsx87k9bp1kn1fsmy"
+              ],
+              "TagNames": [
+                "Communication",
+                "Work",
+                "Time management"
+              ]
+            }
+          },
+          "CommonPart": {},
+          "HtmlBodyPart": {
+            "Html": "<p>I love you, gentle reader, I really do, but I certainly won't give you my phone number. Why? Because then you'll call me. And this is how it'll play out:</p><ol><li>Almost inevitably, you call at a time when I won't pick up. I'll be deep in the flow with some programming task and I won't interrupt that. I'll be sleeping. I'll eat my lunch, without my phone, in another room, and I won't sprint over mid-bite. I'll be with my girlfriend, and I either won't be in the mood to talk to you or oh God, I'll definitely not be in the mood to talk to you. You get the idea.</li><li>I call you back because I'm such a nice person. Now it's you who it won't be suitable for, and you won't answer.</li><li>You call again. No jackpot still.</li><li>It's my turn to call you back. Miraculously, you answer. You tell me that it's not a good time since you're in a meeting (I don't understand why people do this instead of just not picking it up or replying with a text) but you ask me to please call you back at 14:00 when it ends.</li><li>Since I know how it goes with meetings, I call you back only at 14:10. And finally, we can actually talk about the thing!</li></ol><p>However, the mind-numbing inefficiency doesn't stop after we finished our awkward dance of kolo. Unless I was sitting in front of my computer, I couldn't take notes. So, I now need to do that from memory, which, given the reason why I take notes rigorously during meetings (it being me not trusting my ability to recall arbitrary information precisely in the distant future), will be error-prone. Then I'll ask you about details we talked about, and you'll forget things too that I'll have to repeat to you. Most possibly there are other people outside of us who need the information we discussed as well, so now I take on the role of postman and write down our conversation for them.</p><p>People call because it'll be \"quick\". Unless both parties' day is a vast emptiness, it'll be anything but. I get it though, it's about not having to think: If you have to send an e-mail, you need to gather your thoughts upfront instead of using the other person as your copilot to navigate the matter. And thinking hurts, your brain starts to suck up glucose and every cell in your body screams for you to stop. You may also not be able to type quickly. Unless a disability prevents you from it, the better investment of your attention is to learn it though. You'll also feel like a hacker magician typing away blindly soon enough!</p><p>So, please, unless it's an emergency, send an e-mail (or any other message). Am I being selfish? I'm trying to be respectful not to interrupt you, and considerate of both of our times. Calling randomly is selfish, actually, since it says, \"I want something from you right now, so throw away whatever you're doing and listen to me\".</p><p>Needless to say, when it comes to family members and close friends, or urgent matters, calling is fine. This is about more of a professional setting. Arranged calls and meetings scheduled in advance are not what I'm talking about either.</p><p>I'll be looking forward to your e-mail!<br></p>"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "ListContentType": "Blog",
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "BlogPost",
+          "DisplayText": "The calmest week of the year, every week",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "The calmest week of the year, every week"
+          },
+          "AutoroutePart": {
+            "Path": "letters/the-calmest-week-of-the-year-every-week",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "BlogPost": {
+            "Subtitle": {
+              "Text": "On trying to live like between Christmas and New Year's Eve"
+            },
+            "Image": {
+              "Paths": [],
+              "MediaTexts": [],
+              "Anchors": []
+            },
+            "Tags": {
+              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+              "TermContentItemIds": [
+                "4wzh8kjhmcsx87k9bp1kn1fsmy",
+                "45yfj4790xsnc651g7defxxdmz",
+                "4zd5r4y7r4gfm49bd7j5htn5wa"
+              ],
+              "TagNames": [
+                "Time management",
+                "Communication",
+                "Work"
+              ]
+            }
+          },
+          "CommonPart": {},
+          "HtmlBodyPart": {
+            "Html": "<p>You may agree with me that the last week of the year, between Christmas and&nbsp;New Year's Eve, has a particular charm. I mean that aspect here, that nobody (at least in the \"Western\" world) is really working. It's that one week where you can take time off from daily duties and not be left behind, because everybody just agreed that we won't be busy this week. Hence that's the week I'm also starting this website on. I finally have time, time in the sense that pressing issues, however well-managed, are not piling up right while I'm writing this letter.&nbsp;</p><p>At the software company&nbsp;<a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>, we work all around the clock. On contrary to global teams that do this by \"following the sun\", most of our team members are in the same or close time zones. So, it's a result of us being a remote-first, distributed, <a href=\"/letters/no-i-won-t-give-you-my-phone-number\">asynchronously</a> collaborating team: there are people who, following their personal preference, get up&nbsp;at the same time others&nbsp;go to bed, despite living in the same city. We also have clients and partners from all continents. This means that, especially if you fulfill a leadership role, you'll always have something to catch up on when you first sit down to work for the day.</p><p>Can we replicate the calmest week? Is it possible to make the world stop for you while you're away from the keyboard, during weekends, public holidays, or when you go on vacation? I don't think so&nbsp;unless we go extremely local and synchronized, including with clients, which isn't really possible in IT (but can be the case if you open a corner store without an online presence, for example). There are experiments <a href=\"https://time.com/3116424/daimler-vacation-email-out-of-office/\" target=\"_blank\">like at the German automaker Daimler</a>, to free you from at least having to chew through the dump of e-mails that you get during your time off by auto-deleting them. While this is interesting, you'll still have things to catch up on, causing stress during your first few days of being back. Also, I as someone running a company can't really imagine telling prospective clients that their e-mail was deleted, and if they really insist on the pleasure of giving us money, they should send their e-mail again when it fits my schedule.</p><p>So, what can we do? Since I don't think the root cause can be solved (or rather, I don't think there's an actual problem to being with, i.e. people your work with communicating with you), what I recommend tackling is the effect: you having to catch up on matters. So, here are my tips, that I follow continuously, so the cognitive load of everything happening all at once is reduced not just when I'm on holiday:</p><ul><li>Distribute not just work, but responsibility. I'm consciously the opposite of the managers that tell they \"want to know about everything\". When working in a team, have defined areas of responsibility that allows you to not care about things. You don't need to further optimize communication if there's no communication.</li><li>Turn off disruptive notifications. The only time my phone makes a sound is when somebody is calling (so the only time I use my phone for synchronous communication). Everything else can wait until I decide that now I want to deal with it (like reading e-mails). Similarly, turn off any kind of desktop toast/popup notification.</li><li>Unsubscribe from what doesn't matter. If you notice yourself ignoring something that you get notified about, then unsubscribe from it. This sounds obvious, but people still somehow postpone it; I think this is because deleting a notification is a tiny bit easier than unsubscribing, and they subconsciously want to rather \"pay\" the single delete click right now&nbsp;than the two clicks to save many single clicks in the future. E.g., unsubscribe from newsletters that you don't actually read, mute conversations/hide channels in chat apps that you don't care about daily, and unfollow tasks in the collaboration platform you use.</li><li>Have a central stream of things that matter and may require action. I find that e-mail, as the lowest common denominator of all written communication, works well for this. You can get a list of things that require your attention, ordered by the time you received them. Due to this, I turn off in-app notifications whenever possible, and channel everything to e-mails instead (like notifications from the collaboration platform Basecamp, or the issue tracker Jira). Note that then you have to be diligent when processing e-mail, where I think the best is to go one by one, reading and replying to everything, not postponing anything</li><li>Set up e-mail rules to delete what you don't need to see. If all else fails, and you still get e-mails about things that don't matter to you, then employ automation to get rid of them. The upfront \"investment\" is a lot greater than unsubscribing, so you must be conscious about going through the pain of creating rules to then get the dividend of not deleting junk continuously.</li></ul><p>I also recommend the book&nbsp;<a href=\"https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/0062874780\" target=\"_blank\">It Doesn't Have to Be Crazy at Work</a> by <a href=\"https://basecamp.com/\" target=\"_blank\">Basecamp</a>'s founders, which largely matches how we work at Lombiq. <a href=\"https://basecamp.com/shapeup\" target=\"_blank\">Shape Up</a> is worth a read too.</p>"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "Order": 0,
+            "ListContentType": null
+          }
+        },
+        {
           "ContentItemId": "[js: uuid()]",
           "ContentType": "Taxonomy",
           "DisplayText": "Tags",
@@ -2034,36 +2278,6 @@
                 },
                 "AutoroutePart": {
                   "Path": "eu",
-                  "SetHomepage": false,
-                  "Disabled": false,
-                  "RouteContainedItems": false,
-                  "Absolute": false
-                },
-                "TermPart": {
-                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
-                },
-                "@WeldedPartSettings": {
-                  "TermPart": {}
-                }
-              },
-              {
-                "ContentItemId": "4xq0vk4en1m2m5p855xsvsj7wj",
-                "ContentItemVersionId": null,
-                "ContentType": "Tag",
-                "DisplayText": "Politics",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2022-02-15T18:16:36.5113391Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "zoltan.lehoczky",
-                "Tag": {},
-                "TitlePart": {
-                  "Title": "Politics"
-                },
-                "AutoroutePart": {
-                  "Path": "politics",
                   "SetHomepage": false,
                   "Disabled": false,
                   "RouteContainedItems": false,
@@ -2165,6 +2379,276 @@
                 "@WeldedPartSettings": {
                   "TermPart": {}
                 }
+              },
+              {
+                "ContentItemId": "4rmar1vsrq03js30v89cgehk5f",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Kindle",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-12-29T20:39:44.9520727Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "kindle",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4vjachn412rx72y4y6h0x9qvxk",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Ebooks",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2022-12-29T20:39:48.686478Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "ebooks",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4ccyj784szd8fzxs9j42gt1gwj",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Music",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-04T04:41:26.1215847Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "music",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "498wqdax59pdkxnye62r2ny3wz",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Filk",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-04T04:41:30.5464795Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "filk",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "48crg1mxkg27q59dqy2nk0xbw0",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Geopolitics",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-04T05:43:32.2903853Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "geopolitics",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "43xw67mypgbajrefr3jr6xxmwk",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Russia",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-04T05:45:54.8149065Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "russia",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4y5enj2w7bg5m7a7wzjs5c86mp",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Book",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-06T02:58:55.286548Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "book",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "48ch0979cyqhz40hrked0hrawd",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "GDPR",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-07T01:07:11.3681224Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "gdpr",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "48gdkedde4y7s265bjcsq4bqm4",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Regulation",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-07T01:07:13.4335524Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "regulation",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
               }
             ],
             "TermContentType": "Tag"
@@ -2178,60 +2662,18 @@
           }
         },
         {
-          "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
-          "ContentType": "Blog",
-          "DisplayText": "Letters",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "TitlePart": {
-            "Title": "Letters"
-          },
-          "HtmlBodyPart": {
-            "Html": ""
-          },
-          "AutoroutePart": {
-            "Path": "letters",
-            "SetHomepage": true,
-            "Disabled": false,
-            "RouteContainedItems": false,
-            "Absolute": false
-          },
-          "ListPart": {
-            "FeedProxyUrl": null,
-            "FeedItemsCount": 20
-          },
-          "Blog": {
-            "Image": {
-              "Paths": [
-                "home-bg.jpg"
-              ],
-              "MediaTexts": [
-                ""
-              ],
-              "Anchors": [
-                {
-                  "X": 0.5,
-                  "Y": 0.5
-                }
-              ]
-            }
-          }
-        },
-        {
           "ContentItemId": "[js: uuid()]",
           "ContentType": "BlogPost",
-          "DisplayText": "The calmest week of the year, every week",
+          "DisplayText": "I hate GDPR. We should have more of it.",
           "Latest": true,
           "Published": true,
           "Owner": "[js: parameters('AdminUserId')]",
           "Author": "[js: parameters('AdminUsername')]",
           "TitlePart": {
-            "Title": "The calmest week of the year, every week"
+            "Title": "I hate GDPR. We should have more of it."
           },
           "AutoroutePart": {
-            "Path": "letters/the-calmest-week-of-the-year-every-week",
+            "Path": "letters/i-hate-gdpr-we-should-have-more-of-it",
             "SetHomepage": false,
             "Disabled": false,
             "RouteContainedItems": false,
@@ -2239,7 +2681,7 @@
           },
           "BlogPost": {
             "Subtitle": {
-              "Text": "On trying to live like between Christmas and New Year's Eve"
+              "Text": "GDPR is good for you if you're a company, and it's good for you if you're a private person"
             },
             "Image": {
               "Paths": [],
@@ -2249,65 +2691,23 @@
             "Tags": {
               "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
               "TermContentItemIds": [
-                "4wzh8kjhmcsx87k9bp1kn1fsmy",
-                "45yfj4790xsnc651g7defxxdmz",
-                "4zd5r4y7r4gfm49bd7j5htn5wa"
+                "48ch0979cyqhz40hrked0hrawd",
+                "48gdkedde4y7s265bjcsq4bqm4"
               ],
               "TagNames": [
-                "Time management",
-                "Communication",
-                "Work"
+                "GDPR",
+                "Regulation"
               ]
             }
           },
           "CommonPart": {},
           "HtmlBodyPart": {
-            "Html": "<p>You may agree with me that the last week of the year, between Christmas and&nbsp;New Year's Eve, has a particular charm. I mean that aspect here, that nobody (at least in the \"Western\" world) is really working. It's that one week where you can take time off from daily duties and not be left behind, because everybody just agreed that we won't be busy this week. Hence that's the week I'm also starting this website on. I finally have time, time in the sense that pressing issues, however well-managed, are not piling up right while I'm writing this letter.&nbsp;</p><p>At the software company&nbsp;<a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>, we work all around the clock. On contrary to global teams that do this by \"following the sun\", most of our team members are in the same or close time zones. So, it's a result of us being a remote-first, distributed, asynchronously collaborating team: there are people who, following their personal preference, get up&nbsp;at the same time others&nbsp;go to bed, despite living in the same city. We also have clients and partners from all continents. This means that, especially if you fulfill a leadership role, you'll always have something to catch up on when you first sit down to work for the day.</p><p>Can we replicate the calmest week? Is it possible to make the world stop for you while you're away from the keyboard, during weekends, public holidays, or when you go on vacation? I don't think so&nbsp;unless we go extremely local and synchronized, including with clients, which isn't really possible in IT (but can be the case if you open a corner store without an online presence, for example). There are experiments <a href=\"https://time.com/3116424/daimler-vacation-email-out-of-office/\" target=\"_blank\">like at the German automaker Daimler</a>, to free you from at least having to chew through the dump of e-mails that you get during your time off by auto-deleting them. While this is interesting, you'll still have things to catch up on, causing stress during your first few days of being back. Also, I as someone running a company can't really imagine telling prospective clients that their e-mail was deleted, and if they really insist on the pleasure of giving us money, they should send their e-mail again when it fits my schedule.</p><p>So, what can we do? Since I don't think the root cause can be solved (or rather, I don't think there's an actual problem to being with, i.e. people your work with communicating with you), what I recommend tackling is the effect: you having to catch up on matters. So, here are my tips, that I follow continuously, so the cognitive load of everything happening all at once is reduced not just when I'm on holiday:</p><ul><li>Distribute not just work, but responsibility. I'm consciously the opposite of the managers that tell they \"want to know about everything\". When working in a team, have defined areas of responsibility that allows you to not care about things. You don't need to further optimize communication if there's no communication.</li><li>Turn off disruptive notifications. The only time my phone makes a sound is when somebody is calling (so the only time I use my phone for synchronous communication). Everything else can wait until I decide that now I want to deal with it (like reading e-mails). Similarly, turn off any kind of desktop toast/popup notification.</li><li>Unsubscribe from what doesn't matter. If you notice yourself ignoring something that you get notified about, then unsubscribe from it. This sounds obvious, but people still somehow postpone it; I think this is because deleting a notification is a tiny bit easier than unsubscribing, and they subconsciously want to rather \"pay\" the single delete click right now&nbsp;than the two clicks to save many single clicks in the future. E.g., unsubscribe from newsletters that you don't actually read, mute conversations/hide channels in chat apps that you don't care about daily, and unfollow tasks in the collaboration platform you use.</li><li>Have a central stream of things that matter and may require action. I find that e-mail, as the lowest common denominator of all written communication, works well for this. You can get a list of things that require your attention, ordered by the time you received them. Due to this, I turn off in-app notifications whenever possible, and channel everything to e-mails instead (like notifications from the collaboration platform Basecamp, or the issue tracker Jira). Note that then you have to be diligent when processing e-mail, where I think the best is to go one by one, reading and replying to everything, not postponing anything</li><li>Set up e-mail rules to delete what you don't need to see. If all else fails, and you still get e-mails about things that don't matter to you, then employ automation to get rid of them. The upfront \"investment\" is a lot greater than unsubscribing, so you must be conscious about going through the pain of creating rules to then get the dividend of not deleting junk continuously.</li></ul><p>I also recommend the book&nbsp;<a href=\"https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/0062874780\" target=\"_blank\">It Doesn't Have to Be Crazy at Work</a> by <a href=\"https://basecamp.com/\" target=\"_blank\">Basecamp</a>'s founders, which largely matches how we work at Lombiq. <a href=\"https://basecamp.com/shapeup\" target=\"_blank\">Shape Up</a> is worth a read too.</p>"
+            "Html": "<p>The EU&nbsp;General Data Protection Regulation, aka GDPR, is the EU-wide legislation about companies and other entities protecting the personal data of individuals. It came into effect in 2018, forcing every single company registered in the EU to start caring about how they handle data like people's names, e-mail addresses, birth dates, and everything more sensitive. It <a href=\"/letters/involuntary-superpower\">also had an effect way beyond just the EU</a>. And I was really pissed about it:</p><p class=\"twitter-tweet twitter-tweet-rendered\" style=\"display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;\"><iframe id=\"twitter-widget-0\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" class=\"\" style=\"position: static; visibility: visible; width: 550px; height: 225px; display: block; flex-grow: 1;\" title=\"Twitter Tweet\" src=\"https://platform.twitter.com/embed/Tweet.html?dnt=true&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2J1c2luZXNzX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0ZndfbWl4ZWRfbWVkaWFfMTU4OTciOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd19zZW5zaXRpdmVfbWVkaWFfaW50ZXJzdGl0aWFsXzEzOTYzIjp7ImJ1Y2tldCI6ImludGVyc3RpdGlhbCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2R1cGxpY2F0ZV9zY3JpYmVzX3RvX3NldHRpbmdzIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd192aWRlb19obHNfZHluYW1pY19tYW5pZmVzdHNfMTUwODIiOnsiYnVja2V0IjoidHJ1ZV9iaXRyYXRlIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2JsdWVfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2xlZ2FjeV90aW1lbGluZV9zdW5zZXQiOnsiYnVja2V0IjpmYWxzZSwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2dvdl92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19idXNpbmVzc19hZmZpbGlhdGVfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfZnJvbnRlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=996091672231587840&amp;lang=en&amp;origin=https%3A%2F%2Flettersfromfiume.com%2FAdmin%2FContents%2FContentItems%2F41dqy5znjepht0mv9fc2185fw6%2FEdit%3FreturnUrl%3D%252FAdmin%252FContents%252FContentItems%252F4v58m5s5fnhz6z8hrqaa9sj953%252FDisplay%253Fadmin%253D-1701622765&amp;sessionId=11bcede27595bd1de6c513675c7c52a5fe32896f&amp;theme=light&amp;widgetsVersion=a3525f077c700%3A1667415560940&amp;width=550px\" data-tweet-id=\"996091672231587840\"></iframe></p> <script async=\"\" src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script><p>As somebody running a company, at first, becoming GDPR-compliant was a hassle, a time and money sink. I thought that the only thing we were doing was hiring lawyers to create lengthy privacy policies that nobody will read and developing cookie banners that everybody will hate. And in the end, we'll manage what little personal data that we collect in the same way as before, since we already were conscious about keeping them safe.</p><p>But I had to admit even then, and especially in the 5 years since, that GDPR wasn't the regulation we wanted but one that we needed. We had to, for the first time, actually think through in-depth how we manage personal data. There was no documented process to delete user data, so we created one. Writing the privacy policy helped us understand how we use all the online services where we keep data, evaluate whether we need all of them, and make sure the data there is safe both from prying eyes and from getting lost. Finally, while I personally hate the annoyance of \"cookie warnings\", I don't have a better idea. They're not just about cookies, mind you, but giving (or refusing to give) permission to a variety of data collection and profiling.</p><p>GDPR is still a chore. But it's necessary; there's no fair game without rules, and data protection was a partially regulated wild west. It also improved people being aware of data privacy. Some of them actually read the privacy policy, and request their data be removed!</p><p>I also understand it being important for me as a private person since I'm only an entrepreneur in one company, but I'm a consumer with many. Am I at a dentist's office, giving out a bunch of my very sensitive healthcare data? Yes, I'd like to see the privacy policy. Yes, even if you have to dig for it in the drawer. Are you a telemarketer calling me? Thanks, but not at this time, I want my data to be removed. We both know you actually have to do it. Are you sending me newsletters without an unsubscribe link? That's illegal, but water under the bridge; a polite e-mail mentioning the magic word \"GDPR\" will quickly remove me from the list though.</p><p>We need more groundbreaking regulations such as GDPR. Yes, we the companies will complain about having to work to become compliant and because we hate rules that aren't ours. Yes, we the people will complain because there's always something to complain about. But ultimately, this is what governments should do: create legislation that protects those who are less capable of asserting their interests, or dare I say, who're weaker.&nbsp;</p>"
           },
           "ContainedPart": {
             "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "ListContentType": null,
             "Order": 0
-          }
-        },
-        {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "Article",
-          "DisplayText": "About",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "AutoroutePart": {
-            "Path": "about",
-            "SetHomepage": false,
-            "Disabled": false,
-            "RouteContainedItems": false,
-            "Absolute": false
-          },
-          "HtmlBodyPart": {
-            "Html": "<p>This is the personal website of and a collection of letters to you, gentle reader, from Zoltán Lehóczky. I'm writing about whatever I find worth sharing in a longer form than a tweet here, which is mostly connected to my experiences at my company <a href=\"https://lombiq.com/\" target=\"_blank\">Lombiq</a>. Check out the inaugural letter,&nbsp;<a href=\"letters/the-calmest-week-of-the-year-every-week\">\"The calmest week of the year, every week\"</a>.</p><p>My guiding principles for these letters:</p><ul><li>I'll write about \"ideas worth sharing\" as the TED slogan says. I intend to have something between <a href=\"http://www.hanselman.com/blog/\" target=\"_blank\">Scott Hanselman's blog</a> and&nbsp;<a href=\"http://www.paulgraham.com/articles.html\" target=\"_blank\">Paul Graham's essays</a>: Not as practical and entertaining as Hanselman's but not as high-level and strategic as Graham's.&nbsp;It also struck me that Graham once tweeted something along the lines of (I'm paraphrasing) \"sometimes when people come to me with intricate questions, I already have an answer because I've thought and written an essay about it\" - perhaps a useful tool to just write out your thoughts.</li><li>I'm working in tech and in a minority of but still a large part of my time as a software developer (with the web and .NET, and specifically the web content management system and framework <a href=\"https://orchardcore.net/\" target=\"_blank\">Orchard Core</a>). While most of the topics here will be somehow related to tech, I don't intend to write hands-on development tutorials or technical deep dives. Those I'll keep to <a href=\"https://orcharddojo.net/\" target=\"_blank\">Orchard Dojo</a>.</li><li>I was born Hungarian and currently reside in Hungary. However, while this naturally affects my point of view, I won't write about matters only interesting to Hungarians. I'll touch on geopolitical topics that affect the European Union though, which I feel more of a citizen of anyway. I'll try to steer not too much away from my core area of expertise though (where I, compared to myself, have the most well-founded opinions).</li><li>I'll try to stay humble. Ultimately, these letters are here to share what I'd consider a piece of insight. However, I understand that my perspective and experience are limited.<br></li><li>I know that your time is precious, and if you invest it in reading these letters, then every second counts. I'll thus try to keep everything as succinct as possible, removing text just until the point the content still conveys what I want to say. I'll also refrain from using jargon and abbreviations that aren't well-known, so you don't have to look up terminology just to understand what I write.</li><li>There's no posting cadence. I'll write when I have something to tell.</li><li>While I try to base my opinions on facts, the content here is still mostly opinions. Take them as such.</li></ul><p>You can also find me and get in touch with me under one of my social media profiles:</p><ul><li><a href=\"https://github.com/Piedone\" target=\"_blank\">GitHub</a></li><li><a href=\"https://www.linkedin.com/in/zoltanlehoczky/\" target=\"_blank\">LinkedIn</a></li><li><a href=\"https://twitter.com/zlehoczky\" target=\"_blank\">Twitter</a></li></ul>"
-          },
-          "TitlePart": {
-            "Title": "About"
-          },
-          "Article": {
-            "Subtitle": {
-              "Text": "What is Letters from Fiume?"
-            },
-            "Image": {
-              "Paths": [
-                "about-bg.jpg"
-              ],
-              "Anchors": [
-                {
-                  "X": 0.5,
-                  "Y": 0.5
-                }
-              ],
-              "MediaTexts": [
-                ""
-              ]
-            }
           }
         }
       ]
@@ -2427,7 +2827,7 @@
     {
       "name": "custom-settings",
       "SocialMetaSettings": {
-        "ContentItemId": "4sq0akxe9fpqb4epmgfbf3pjwh",
+        "ContentItemId": "48jbgp65c2m5wrrxjsmhg5w5n6",
         "ContentItemVersionId": null,
         "ContentType": "SocialMetaSettings",
         "DisplayText": "",
@@ -2680,7 +3080,7 @@
       "Calendar": null,
       "MaxPagedCount": 0,
       "MaxPageSize": 100,
-      "PageSize": 10,
+      "PageSize": 30,
       "TimeZoneId": "Europe/Budapest",
       "ResourceDebugMode": 0,
       "SiteName": "Letters from Fiume",
