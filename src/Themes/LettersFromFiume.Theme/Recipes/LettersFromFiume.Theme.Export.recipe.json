@@ -62,6 +62,7 @@
         "OrchardCore.Queries",
         "OrchardCore.Queries.Sql",
         "OrchardCore.Roles",
+        "OrchardCore.Search",
         "OrchardCore.Seo",
         "OrchardCore.Shortcodes.Templates",
         "OrchardCore.Taxonomies",
@@ -158,7 +159,6 @@
         "OrchardCore.RemotePublishing",
         "OrchardCore.ResponseCompression",
         "OrchardCore.ReverseProxy",
-        "OrchardCore.Search",
         "OrchardCore.Search.Elasticsearch",
         "OrchardCore.Search.Elasticsearch.ContentPicker",
         "OrchardCore.Search.Elasticsearch.Worker",
@@ -1604,6 +1604,46 @@
             }
           },
           "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "MenuItemsListPart",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "LinkMenuItem",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "ContentMenuItem",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "HtmlMenuItem",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "TaxonomyPart",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "Container",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "Page",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "Tag",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": []
         }
       ]
     },
@@ -1942,45 +1982,6 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "Menu",
-          "DisplayText": "Main Menu",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "MenuPart": {},
-          "TitlePart": {
-            "Title": "Main Menu"
-          },
-          "MenuItemsListPart": {
-            "MenuItems": [
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "4h0nerfy764z85w1dav70pg9w9",
-                "DisplayText": "Letters",
-                "LinkMenuItemPart": {
-                  "Name": "Letters",
-                  "Url": "~/"
-                },
-                "LinkMenuItem": {}
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "4dp52ykk9ppcf2m9e7tm7s1r50",
-                "DisplayText": "About",
-                "LinkMenuItemPart": {
-                  "Name": "About",
-                  "Url": "~/about"
-                }
-              }
-            ]
-          },
-          "AliasPart": {
-            "Alias": "main-menu"
-          }
-        },
-        {
           "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
           "ContentType": "Blog",
           "DisplayText": "Letters",
@@ -2212,6 +2213,55 @@
             "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
             "Order": 0,
             "ListContentType": null
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "BlogPost",
+          "DisplayText": "I hate GDPR. We should have more of it.",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "I hate GDPR. We should have more of it."
+          },
+          "AutoroutePart": {
+            "Path": "letters/i-hate-gdpr-we-should-have-more-of-it",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "BlogPost": {
+            "Subtitle": {
+              "Text": "GDPR is good for you if you're a company, and it's good for you if you're a private person"
+            },
+            "Image": {
+              "Paths": [],
+              "MediaTexts": [],
+              "Anchors": []
+            },
+            "Tags": {
+              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+              "TermContentItemIds": [
+                "48ch0979cyqhz40hrked0hrawd",
+                "48gdkedde4y7s265bjcsq4bqm4"
+              ],
+              "TagNames": [
+                "GDPR",
+                "Regulation"
+              ]
+            }
+          },
+          "CommonPart": {},
+          "HtmlBodyPart": {
+            "Html": "<p>The EU&nbsp;General Data Protection Regulation, aka GDPR, is the EU-wide legislation about companies and other entities protecting the personal data of individuals. It came into effect in 2018, forcing every single company registered in the EU to start caring about how they handle data like people's names, e-mail addresses, birth dates, and everything more sensitive. It <a href=\"/letters/involuntary-superpower\">also had an effect way beyond just the EU</a>. And I was really pissed about it:</p><p class=\"twitter-tweet twitter-tweet-rendered\" style=\"display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;\"><iframe id=\"twitter-widget-0\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" class=\"\" style=\"position: static; visibility: visible; width: 550px; height: 225px; display: block; flex-grow: 1;\" title=\"Twitter Tweet\" src=\"https://platform.twitter.com/embed/Tweet.html?dnt=true&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2J1c2luZXNzX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0ZndfbWl4ZWRfbWVkaWFfMTU4OTciOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd19zZW5zaXRpdmVfbWVkaWFfaW50ZXJzdGl0aWFsXzEzOTYzIjp7ImJ1Y2tldCI6ImludGVyc3RpdGlhbCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2R1cGxpY2F0ZV9zY3JpYmVzX3RvX3NldHRpbmdzIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd192aWRlb19obHNfZHluYW1pY19tYW5pZmVzdHNfMTUwODIiOnsiYnVja2V0IjoidHJ1ZV9iaXRyYXRlIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2JsdWVfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2xlZ2FjeV90aW1lbGluZV9zdW5zZXQiOnsiYnVja2V0IjpmYWxzZSwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2dvdl92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19idXNpbmVzc19hZmZpbGlhdGVfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfZnJvbnRlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=996091672231587840&amp;lang=en&amp;origin=https%3A%2F%2Flettersfromfiume.com%2FAdmin%2FContents%2FContentItems%2F41dqy5znjepht0mv9fc2185fw6%2FEdit%3FreturnUrl%3D%252FAdmin%252FContents%252FContentItems%252F4v58m5s5fnhz6z8hrqaa9sj953%252FDisplay%253Fadmin%253D-1701622765&amp;sessionId=11bcede27595bd1de6c513675c7c52a5fe32896f&amp;theme=light&amp;widgetsVersion=a3525f077c700%3A1667415560940&amp;width=550px\" data-tweet-id=\"996091672231587840\"></iframe></p> <script async=\"\" src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script><p>As somebody running a company, at first, becoming GDPR-compliant was a hassle, a time and money sink. I thought that the only thing we were doing was hiring lawyers to create lengthy privacy policies that nobody will read and developing cookie banners that everybody will hate. And in the end, we'll manage what little personal data that we collect in the same way as before, since we already were conscious about keeping them safe.</p><p>But I had to admit even then, and especially in the 5 years since, that GDPR wasn't the regulation we wanted but one that we needed. We had to, for the first time, actually think through in-depth how we manage personal data. There was no documented process to delete user data, so we created one. Writing the privacy policy helped us understand how we use all the online services where we keep data, evaluate whether we need all of them, and make sure the data there is safe both from prying eyes and from getting lost. Finally, while I personally hate the annoyance of \"cookie warnings\", I don't have a better idea. They're not just about cookies, mind you, but giving (or refusing to give) permission to a variety of data collection and profiling.</p><p>GDPR is still a chore. But it's necessary; there's no fair game without rules, and data protection was a partially regulated wild west. It also improved people being aware of data privacy. Some of them actually read the privacy policy, and request their data be removed!</p><p>I also understand it being important for me as a private person since I'm only an entrepreneur in one company, but I'm a consumer with many. Am I at a dentist's office, giving out a bunch of my very sensitive healthcare data? Yes, I'd like to see the privacy policy. Yes, even if you have to dig for it in the drawer. Are you a telemarketer calling me? Thanks, but not at this time, I want my data to be removed. We both know you actually have to do it. Are you sending me newsletters without an unsubscribe link? That's illegal, but water under the bridge; a polite e-mail mentioning the magic word \"GDPR\" will quickly remove me from the list though.</p><p>We need more groundbreaking regulations such as GDPR. Yes, we the companies will complain about having to work to become compliant and because we hate rules that aren't ours. Yes, we the people will complain because there's always something to complain about. But ultimately, this is what governments should do: create legislation that protects those who are less capable of asserting their interests, or dare I say, who're weaker.&nbsp;</p>"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "ListContentType": null,
+            "Order": 0
           }
         },
         {
@@ -2649,6 +2699,66 @@
                 "@WeldedPartSettings": {
                   "TermPart": {}
                 }
+              },
+              {
+                "ContentItemId": "46pbgbpnc17nj01bt1d2s7xmx0",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "World War II",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-09T14:29:55.6174381Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "world-war-ii",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4hg3k44hmcx601dmfvmqp8zhnt",
+                "ContentItemVersionId": null,
+                "ContentType": "Tag",
+                "DisplayText": "Submarines",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-09T14:30:01.0838212Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "Tag": {},
+                "TitlePart": {
+                  "Title": null
+                },
+                "AutoroutePart": {
+                  "Path": "submarines",
+                  "SetHomepage": false,
+                  "Disabled": false,
+                  "RouteContainedItems": false,
+                  "Absolute": false
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
               }
             ],
             "TermContentType": "Tag"
@@ -2663,51 +2773,75 @@
         },
         {
           "ContentItemId": "[js: uuid()]",
-          "ContentType": "BlogPost",
-          "DisplayText": "I hate GDPR. We should have more of it.",
+          "ContentType": "Menu",
+          "DisplayText": "Main Menu",
           "Latest": true,
           "Published": true,
           "Owner": "[js: parameters('AdminUserId')]",
           "Author": "[js: parameters('AdminUsername')]",
+          "MenuPart": {},
           "TitlePart": {
-            "Title": "I hate GDPR. We should have more of it."
+            "Title": "Main Menu"
           },
-          "AutoroutePart": {
-            "Path": "letters/i-hate-gdpr-we-should-have-more-of-it",
-            "SetHomepage": false,
-            "Disabled": false,
-            "RouteContainedItems": false,
-            "Absolute": false
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "ContentItemId": "4h0nerfy764z85w1dav70pg9w9",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "Letters",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": null,
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": null,
+                "LinkMenuItemPart": {
+                  "Name": "Letters",
+                  "Url": "~/"
+                },
+                "LinkMenuItem": {}
+              },
+              {
+                "ContentItemId": "42edmffzynnb6s2ytdvg7gcqny",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "Search",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-01-09T16:20:17.8682922Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "zoltan.lehoczky",
+                "LinkMenuItemPart": {
+                  "Name": "Search",
+                  "Url": "~/Search"
+                },
+                "LinkMenuItem": {}
+              },
+              {
+                "ContentItemId": "4dp52ykk9ppcf2m9e7tm7s1r50",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "About",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": null,
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": null,
+                "LinkMenuItemPart": {
+                  "Name": "About",
+                  "Url": "~/about"
+                }
+              }
+            ]
           },
-          "BlogPost": {
-            "Subtitle": {
-              "Text": "GDPR is good for you if you're a company, and it's good for you if you're a private person"
-            },
-            "Image": {
-              "Paths": [],
-              "MediaTexts": [],
-              "Anchors": []
-            },
-            "Tags": {
-              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
-              "TermContentItemIds": [
-                "48ch0979cyqhz40hrked0hrawd",
-                "48gdkedde4y7s265bjcsq4bqm4"
-              ],
-              "TagNames": [
-                "GDPR",
-                "Regulation"
-              ]
-            }
-          },
-          "CommonPart": {},
-          "HtmlBodyPart": {
-            "Html": "<p>The EU&nbsp;General Data Protection Regulation, aka GDPR, is the EU-wide legislation about companies and other entities protecting the personal data of individuals. It came into effect in 2018, forcing every single company registered in the EU to start caring about how they handle data like people's names, e-mail addresses, birth dates, and everything more sensitive. It <a href=\"/letters/involuntary-superpower\">also had an effect way beyond just the EU</a>. And I was really pissed about it:</p><p class=\"twitter-tweet twitter-tweet-rendered\" style=\"display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;\"><iframe id=\"twitter-widget-0\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"true\" class=\"\" style=\"position: static; visibility: visible; width: 550px; height: 225px; display: block; flex-grow: 1;\" title=\"Twitter Tweet\" src=\"https://platform.twitter.com/embed/Tweet.html?dnt=true&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2J1c2luZXNzX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0ZndfbWl4ZWRfbWVkaWFfMTU4OTciOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd19zZW5zaXRpdmVfbWVkaWFfaW50ZXJzdGl0aWFsXzEzOTYzIjp7ImJ1Y2tldCI6ImludGVyc3RpdGlhbCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2R1cGxpY2F0ZV9zY3JpYmVzX3RvX3NldHRpbmdzIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd192aWRlb19obHNfZHluYW1pY19tYW5pZmVzdHNfMTUwODIiOnsiYnVja2V0IjoidHJ1ZV9iaXRyYXRlIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2JsdWVfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2xlZ2FjeV90aW1lbGluZV9zdW5zZXQiOnsiYnVja2V0IjpmYWxzZSwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2dvdl92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19idXNpbmVzc19hZmZpbGlhdGVfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfZnJvbnRlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfX0%3D&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=996091672231587840&amp;lang=en&amp;origin=https%3A%2F%2Flettersfromfiume.com%2FAdmin%2FContents%2FContentItems%2F41dqy5znjepht0mv9fc2185fw6%2FEdit%3FreturnUrl%3D%252FAdmin%252FContents%252FContentItems%252F4v58m5s5fnhz6z8hrqaa9sj953%252FDisplay%253Fadmin%253D-1701622765&amp;sessionId=11bcede27595bd1de6c513675c7c52a5fe32896f&amp;theme=light&amp;widgetsVersion=a3525f077c700%3A1667415560940&amp;width=550px\" data-tweet-id=\"996091672231587840\"></iframe></p> <script async=\"\" src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script><p>As somebody running a company, at first, becoming GDPR-compliant was a hassle, a time and money sink. I thought that the only thing we were doing was hiring lawyers to create lengthy privacy policies that nobody will read and developing cookie banners that everybody will hate. And in the end, we'll manage what little personal data that we collect in the same way as before, since we already were conscious about keeping them safe.</p><p>But I had to admit even then, and especially in the 5 years since, that GDPR wasn't the regulation we wanted but one that we needed. We had to, for the first time, actually think through in-depth how we manage personal data. There was no documented process to delete user data, so we created one. Writing the privacy policy helped us understand how we use all the online services where we keep data, evaluate whether we need all of them, and make sure the data there is safe both from prying eyes and from getting lost. Finally, while I personally hate the annoyance of \"cookie warnings\", I don't have a better idea. They're not just about cookies, mind you, but giving (or refusing to give) permission to a variety of data collection and profiling.</p><p>GDPR is still a chore. But it's necessary; there's no fair game without rules, and data protection was a partially regulated wild west. It also improved people being aware of data privacy. Some of them actually read the privacy policy, and request their data be removed!</p><p>I also understand it being important for me as a private person since I'm only an entrepreneur in one company, but I'm a consumer with many. Am I at a dentist's office, giving out a bunch of my very sensitive healthcare data? Yes, I'd like to see the privacy policy. Yes, even if you have to dig for it in the drawer. Are you a telemarketer calling me? Thanks, but not at this time, I want my data to be removed. We both know you actually have to do it. Are you sending me newsletters without an unsubscribe link? That's illegal, but water under the bridge; a polite e-mail mentioning the magic word \"GDPR\" will quickly remove me from the list though.</p><p>We need more groundbreaking regulations such as GDPR. Yes, we the companies will complain about having to work to become compliant and because we hate rules that aren't ours. Yes, we the people will complain because there's always something to complain about. But ultimately, this is what governments should do: create legislation that protects those who are less capable of asserting their interests, or dare I say, who're weaker.&nbsp;</p>"
-          },
-          "ContainedPart": {
-            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
-            "ListContentType": null,
-            "Order": 0
+          "AliasPart": {
+            "Alias": "main-menu"
           }
         }
       ]
@@ -2776,15 +2910,8 @@
             "ManageTemplates",
             "QueryLuceneApi",
             "ManagePlacements",
-            "ManageQueries"
-          ]
-        },
-        {
-          "Name": "Anonymous",
-          "Description": "Anonymous role",
-          "Permissions": [
-            "ViewContent",
-            "QueryLuceneSearchIndex"
+            "ManageQueries",
+            "QueryElasticsearchApi"
           ]
         },
         {
@@ -2815,7 +2942,17 @@
             "ApplyTheme",
             "ManageMediaTheme",
             "ViewAuditTrail",
-            "ManageAuditTrailSettings"
+            "ManageAuditTrailSettings",
+            "ManageElasticIndexes",
+            "ManageSearchSettings"
+          ]
+        },
+        {
+          "Name": "Anonymous",
+          "Description": "Anonymous role",
+          "Permissions": [
+            "ViewContent",
+            "QueryElasticsearchSearchIndex"
           ]
         }
       ]
@@ -2827,7 +2964,7 @@
     {
       "name": "custom-settings",
       "SocialMetaSettings": {
-        "ContentItemId": "48jbgp65c2m5wrrxjsmhg5w5n6",
+        "ContentItemId": "4k53mtar1ychkyn8jts0e73q5g",
         "ContentItemVersionId": null,
         "ContentType": "SocialMetaSettings",
         "DisplayText": "",
@@ -3049,6 +3186,13 @@
                 "Id": "3d0d3e5638174298bc98d377186325b2",
                 "Name": "ContentAuditTrailSettings_SiteSettingsPropertyDeploymentStep"
               }
+            },
+            {
+              "Type": "SearchSettingsDeploymentStep",
+              "Step": {
+                "Id": "298457b2d69f43feaaf5d3014de05000",
+                "Name": "SearchSettings"
+              }
             }
           ]
         }
@@ -3100,6 +3244,12 @@
       "name": "Themes",
       "Site": "Lombiq.Hosting.MediaTheme",
       "Admin": "TheAdmin"
+    },
+    {
+      "name": "Settings",
+      "SearchSettings": {
+        "SearchProviderAreaName": null
+      }
     }
   ]
 }
