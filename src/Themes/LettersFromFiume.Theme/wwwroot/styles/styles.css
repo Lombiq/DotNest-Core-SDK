@@ -1,3 +1,4 @@
-.justify-content-center li a {
+/* Fixing list item links in content, excluding search result items (which are content summaries). */
+.justify-content-center li:not(.list-group-item) a {
     text-decoration: underline;
 }
