@@ -10,10 +10,10 @@ on:
 jobs:
   build-and-test:
     name: Build and Test
-    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-dotnet.yml@issue/OSOE-531
+    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-dotnet.yml@dev
     with:
       timeout-minutes: 5
 
   spelling:
     name: Spelling
-    uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@issue/OSOE-531
+    uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@dev
