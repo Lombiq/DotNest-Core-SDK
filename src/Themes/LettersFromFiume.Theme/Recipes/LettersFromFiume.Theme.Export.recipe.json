@@ -1789,7 +1789,7 @@
       },
       "AuditTrailTrimmingSettings": {
         "RetentionDays": 10,
-        "LastRunUtc": "2023-01-08T23:00:21.5096075Z",
+        "LastRunUtc": "2023-01-23T23:00:00.5399874Z",
         "Disabled": false
       },
       "ContentAuditTrailSettings": {
@@ -1823,13 +1823,17 @@
       "name": "Content",
       "data": [
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "4fg5djtbj3zhet680y90aevjn7",
+          "ContentItemVersionId": "4fxqa3ksbmytyvwyhg0a13pnm6",
           "ContentType": "Taxonomy",
           "DisplayText": "Categories",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2022-02-15T17:45:05.966514Z",
+          "PublishedUtc": "2022-02-15T17:45:05.9815689Z",
+          "CreatedUtc": "2022-02-15T17:45:05.9664602Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "Categories"
           },
@@ -1867,12 +1871,16 @@
         },
         {
           "ContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+          "ContentItemVersionId": "4exknw7qe4xhsxv6cnnzwdwh4y",
           "ContentType": "Blog",
           "DisplayText": "Letters",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2022-12-25T18:41:35.4386717Z",
+          "PublishedUtc": "2022-12-25T18:41:35.4622255Z",
+          "CreatedUtc": "2022-02-15T17:45:05.9840515Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "Letters"
           },
@@ -1908,13 +1916,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "40dx4vjtheps65y86xfngrswwz",
+          "ContentItemVersionId": "49br90fbrztpd3and0n6yrg4d1",
           "ContentType": "Article",
           "DisplayText": "About",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-04T05:22:47.2360771Z",
+          "PublishedUtc": "2023-01-04T05:22:47.2965741Z",
+          "CreatedUtc": "2022-02-15T17:45:06.2104519Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "AutoroutePart": {
             "Path": "about",
             "SetHomepage": false,
@@ -1949,13 +1961,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "4wx2a3d45s6hbwra58ggfxgzn9",
+          "ContentItemVersionId": "4es44aqa0zt9j618ps7kkc0zcy",
           "ContentType": "BlogPost",
           "DisplayText": "Involuntary superpower",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-05T16:37:01.7263142Z",
+          "PublishedUtc": "2023-01-05T16:37:01.7678041Z",
+          "CreatedUtc": "2023-01-04T18:08:00Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "Involuntary superpower"
           },
@@ -1998,13 +2014,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "41pez8b4p8yvkws1gbc9veyc5f",
+          "ContentItemVersionId": "4thk79tz84s656hchk1f57zqn6",
           "ContentType": "BlogPost",
           "DisplayText": "No, I won't give you my phone number",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-05T16:41:31.539582Z",
+          "PublishedUtc": "2023-01-05T16:41:31.6405479Z",
+          "CreatedUtc": "2023-01-05T05:08:00Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "No, I won't give you my phone number"
           },
@@ -2049,13 +2069,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "4fgycv977qcq01fv503qgw4ywe",
+          "ContentItemVersionId": "46jzp8sjpxyrc32566jmfvv955",
           "ContentType": "BlogPost",
           "DisplayText": "The calmest week of the year, every week",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-06T16:59:56.242046Z",
+          "PublishedUtc": "2023-01-06T16:59:56.2840108Z",
+          "CreatedUtc": "2022-12-27T15:21:00Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "The calmest week of the year, every week"
           },
@@ -2100,13 +2124,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "41dqy5znjepht0mv9fc2185fw6",
+          "ContentItemVersionId": "419v83vv1g4cj6apghzfc3ct5e",
           "ContentType": "BlogPost",
           "DisplayText": "I hate GDPR. We should have more of it.",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-07T20:57:03.5186063Z",
+          "PublishedUtc": "2023-01-07T20:57:03.590666Z",
+          "CreatedUtc": "2023-01-07T01:31:00Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "I hate GDPR. We should have more of it."
           },
@@ -2149,13 +2177,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+          "ContentItemVersionId": "46t2cp2c2a1fd5p0s331c6hsm7",
           "ContentType": "Taxonomy",
           "DisplayText": "Tags",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-09T14:30:01.0835337Z",
+          "PublishedUtc": "2023-01-09T14:30:01.3218149Z",
+          "CreatedUtc": "2022-02-15T17:45:05.7050032Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": null,
           "TitlePart": {
             "Title": "Tags"
           },
@@ -2656,13 +2688,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "4bc605qb186sv3h2m005gf7fcj",
+          "ContentItemVersionId": "4j7q0g2hqzf8qr5p9g6fp73kdt",
           "ContentType": "BlogPost",
           "DisplayText": "Thunder Below!",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-20T22:46:27.196166Z",
+          "PublishedUtc": "2023-01-20T22:46:27.2960709Z",
+          "CreatedUtc": "2023-01-09T14:48:00Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "TitlePart": {
             "Title": "Thunder Below!"
           },
@@ -2707,13 +2743,17 @@
           }
         },
         {
-          "ContentItemId": "[js: uuid()]",
+          "ContentItemId": "40ksmf6w4ssk43gbpv2gcgqsc2",
+          "ContentItemVersionId": "4xz7ffxy06r6t4xzx75yk8emmf",
           "ContentType": "Menu",
           "DisplayText": "Main Menu",
           "Latest": true,
           "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
+          "ModifiedUtc": "2023-01-09T18:22:42.1745312Z",
+          "PublishedUtc": "2023-01-09T18:22:42.2001993Z",
+          "CreatedUtc": "2022-02-15T17:45:05.3777387Z",
+          "Owner": "4r7a294fed995x678hx54s95c5",
+          "Author": "zoltan.lehoczky",
           "MenuPart": {},
           "TitlePart": {
             "Title": "Main Menu"
@@ -2899,7 +2939,7 @@
     {
       "name": "custom-settings",
       "SocialMetaSettings": {
-        "ContentItemId": "4k53mtar1ychkyn8jts0e73q5g",
+        "ContentItemId": "4meek41vv06w67gch3ag5vrvw4",
         "ContentItemVersionId": null,
         "ContentType": "SocialMetaSettings",
         "DisplayText": "",
@@ -2963,6 +3003,22 @@
           "Name": "Full export",
           "Steps": [
             {
+              "Type": "RecipeFileDeploymentStep",
+              "Step": {
+                "RecipeName": "LettersFromFiume.Theme.Export",
+                "DisplayName": null,
+                "Description": null,
+                "Author": null,
+                "WebSite": null,
+                "Version": null,
+                "IsSetupRecipe": false,
+                "Categories": null,
+                "Tags": null,
+                "Id": "78bc828d820d453db28bf2ed160a3b78",
+                "Name": "RecipeFileDeploymentStep"
+              }
+            },
+            {
               "Type": "AllFeaturesDeploymentStep",
               "Step": {
                 "IgnoreDisabledFeatures": true,
@@ -2997,7 +3053,7 @@
             {
               "Type": "AllContentDeploymentStep",
               "Step": {
-                "ExportAsSetupRecipe": true,
+                "ExportAsSetupRecipe": false,
                 "Id": "87f6f300013e4c638764cb47fb5de6f9",
                 "Name": "AllContent"
               }
@@ -3058,9 +3114,15 @@
             {
               "Type": "MediaDeploymentStep",
               "Step": {
-                "IncludeAll": true,
-                "FilePaths": [],
-                "DirectoryPaths": [],
+                "IncludeAll": false,
+                "FilePaths": [
+                  "about-bg.jpg",
+                  "home-bg.jpg",
+                  "post-bg.jpg"
+                ],
+                "DirectoryPaths": [
+                  "_Users"
+                ],
                 "Id": "84a73e50b90948bfb596a236dff1d788",
                 "Name": "Media"
               }
