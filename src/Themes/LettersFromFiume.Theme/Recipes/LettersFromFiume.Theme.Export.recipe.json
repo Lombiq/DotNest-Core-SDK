@@ -2657,6 +2657,57 @@
         },
         {
           "ContentItemId": "[js: uuid()]",
+          "ContentType": "BlogPost",
+          "DisplayText": "Thunder Below!",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Thunder Below!"
+          },
+          "AutoroutePart": {
+            "Path": "letters/thunder-below",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "BlogPost": {
+            "Subtitle": {
+              "Text": "Musing on a US submariner's gripping account of World War II"
+            },
+            "Image": {
+              "Paths": [],
+              "MediaTexts": [],
+              "Anchors": []
+            },
+            "Tags": {
+              "TaxonomyContentItemId": "4mgy5x4py2cwp2z5yb6z56ysw3",
+              "TermContentItemIds": [
+                "4y5enj2w7bg5m7a7wzjs5c86mp",
+                "46pbgbpnc17nj01bt1d2s7xmx0",
+                "4hg3k44hmcx601dmfvmqp8zhnt"
+              ],
+              "TagNames": [
+                "Book",
+                "World War II",
+                "Submarines"
+              ]
+            }
+          },
+          "CommonPart": {},
+          "HtmlBodyPart": {
+            "Html": "<p>I've just finished the book&nbsp;<a href=\"https://www.amazon.com/Thunder-Below-Revolutionizes-Submarine-Warfare/dp/0252066707\" target=\"_blank\" style=\"background-color: var(--bs-body-bg); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\"><em>Thunder Below!</em></a>&nbsp;by&nbsp;<a href=\"https://en.wikipedia.org/wiki/Eugene_B._Fluckey\" target=\"_blank\" style=\"background-color: var(--bs-body-bg); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Eugene B. Fluckey</a>. It's a detailed story of six patrols of the US submarine <a href=\"https://en.wikipedia.org/wiki/USS_Barb_(SS-220)\" style=\"font-style: italic;\" target=\"_blank\">USS Barb</a>, during the last year of World War II.</p><p>For two weeks, every night I was teleported to the Pacific, riding along with the&nbsp;<em>Barb</em> under the command of Fluckey. I was anxious about the upcoming patrol. I felt the excitement of finding the enemy and rooted for it to get into the firing line. When the torpedoes were launched, I held my breath that they'll run straight and hit. I felt the retaliatory depth charges shaking the whole tiny boat when it was their turn to wreak havoc and it wasn't lost on me that any of these could be the last one. Finally, I felt joy, pride, and relief, when sailing into the home port, alive and victorious. I felt the guilt too, of the destruction unleashed, and the lives lost to horror, for while they were the enemy, they were people and sailors like me.</p><p><em>Note that I don't think you can really spoil the book, it being nonfiction and not operating with plot twists, but be aware that below I'll refer to some parts of the story.</em></p><p>Fluckey's operations were unique in the era because he was highly aggressive as a submarine commander, seeking out targets to destroy. His US contemporaries in the same area of operation were more passive, waiting for enemy ships to come by, mostly hiding just under the surface, in relative safety from air attacks. Fluckey used his submarine more of a torpedo boat, patrolling on the surface, scanning a wide area with its extended periscope, and only submerging to dodge aircraft or immediately before an attack (sometimes not even then). This made the <em>Barb</em>&nbsp;one of the most successful submarines of the war.<span style=\"background-color: var(--bs-body-bg); color: var(--bs-body-color); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">&nbsp;</span><span style=\"background-color: var(--bs-body-bg); color: var(--bs-body-color); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">(You have to keep in mind that submarines of the time could only stay fully submerged for a few hours, otherwise having to use their Diesel engines on the surface.)</span></p><p>Creativity is perhaps not one you think would be the most important skill for a submariner, but Fluckey was incredibly creative in combat as well. One thing that makes the US war machine so effective is that it gives certain freedoms to soldiers on every level to reach the objectives with the means they see fit. Fluckey utilized this fully. On his fifth and last patrol as a commander, he went completely crazy on the&nbsp;Sea of Okhotsk with his diversionary mission: the <em style=\"background-color: var(--bs-body-bg); color: var(--bs-body-color); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Barb</em>&nbsp;attacked Japanese targets, both land and sea, all over the place, zooming from target to target at high speed. This gave the Japanese command the false impression of there being multiple attackers, and that the US intends to invade the island of Hokkaido. <em style=\"background-color: var(--bs-body-bg); color: var(--bs-body-color); font-weight: var(--bs-body-font-weight); text-align: var(--bs-body-text-align);\">Barb</em>&nbsp;was the first submarine in history to launch rockets at land targets. They even blew up a train as part of a saboteur attack carried out with rubber boats.<br></p><p>What I was always wondering while reading the book was, how can someone like this get back into peaceful life after the war? If for years your job is to hunt for the enemy on the seas in a high-intensity, global conflict, what happens if that conflict is suddenly over? There's a navy in peacetime as well, sure, there are patrols and exercises, but you won't be going around sinking Japanese ships by the dozen. And if you have to go back to civilian life altogether? It turns out that for Fluckey, at least, the answer was that, as a Navy professional, not a conscript, he very well remained with the Navy, retiring as a&nbsp;Rear Admiral. Most of <em>Barb</em>'s sailors became civilians after the war - what, for them, was just one more uneventful patrol cut short.<br></p><p>Should you read this book? If you're interested in military history, especially submarines, with some lessons of leadership, yes. For me, it was one of the few books I had a hard time putting down. However, I believe for the average reader its logbook-like format, going hour by hour, and the details of submarine warfare are probably less enjoyable.</p><p>Oh, and what does \"thunder below\" refer to? I guess you have to read the book to find out!</p>"
+          },
+          "ContainedPart": {
+            "ListContentItemId": "4v58m5s5fnhz6z8hrqaa9sj953",
+            "ListContentType": null,
+            "Order": 0
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
           "ContentType": "Menu",
           "DisplayText": "Main Menu",
           "Latest": true,
