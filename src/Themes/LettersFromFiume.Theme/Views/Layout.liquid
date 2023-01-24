@@ -19,6 +19,9 @@
     {% assign appleIconUrl = "~/mediatheme/images/apple-touch-icon.png" | href %}
     {% link rel:"apple-touch-icon", sizes:"180x180", href:appleIconUrl, append_version:"true" %}
 
+    {% assign faviconUrl = "~/mediatheme/images/favicon.ico" | href %}
+    {% link type:"image/x-icon", rel:"shortcut icon", href:faviconUrl, append_version:"true" %}
+
     {% assign 32pxIconUrl = "~/mediatheme/images/favicon-32x32.png" | href %}
     {% link type:"image/png", rel:"icon", sizes:"32x32", href:32pxIconUrl, append_version:"true" %}
 
