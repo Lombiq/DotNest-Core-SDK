@@ -27,8 +27,7 @@
     },
     {
       "name": "Themes",
-      "Site": "LettersFromFiume.Theme",
-      "Admin": "TheAdmin"
+      "Site": "LettersFromFiume.Theme"
     }
   ]
 }
