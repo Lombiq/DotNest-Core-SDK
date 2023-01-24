@@ -13,7 +13,7 @@ This project, along with DotNest, is developed by [Lombiq Technologies Ltd](http
 Are you unfamiliar with Orchard Core theme development and Liquid templates, or even Orchard Core in general? Then we recommend you check out the [Dojo Course 3 tutorial](https://orcharddojo.net/orchard-training/dojo-course-3-the-full-orchard-core-tutorial) and the official docs [on Liquid](https://docs.orchardcore.net/en/latest/docs/reference/modules/Liquid/) and [templates in Orchard Core](https://docs.orchardcore.net/en/latest/docs/reference/modules/Templates/) first. Otherwise, please continue below.
 
 1. Go to GitHub and fork the [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) repository or create an empty repository and push the SDK's `dev` branch to it. For simplicity, we'll refer to your repository as `fork` from now on and assume a simple branching strategy with only one additional branch for development, but your use-case can be more complex.
-2. For clarity, rename the solution file on your prefixed development branch to what you prefer, e.g. _AwesomeProject.DotNestSites.sln_.
+2. For clarity, rename the solution file to what you prefer, e.g. _AwesomeProject.DotNestSites.sln_.
 3. Create a project for your theme, as you'd usually do, with [the Orchard code generation template](https://docs.orchardcore.net/en/latest/docs/getting-started/templates/), manually, or by copying `Sample.Theme` from the SDK. The only thing important is that you'll need to add a NuGet package reference to `Lombiq.Hosting.MediaTheme` to it, and in its `Manifest` should declare `Lombiq.Hosting.MediaTheme.Bridge` as a dependency. See `Sample.Theme` for these.
 4. Reference the theme project from the root web project, `DotNest.Core.SDK.Web`.
 5. You're now good to continue with developing your theme and deploying it to your DotNest site. Continue with the below sections.
@@ -41,7 +41,7 @@ For example, if the project you're working is called `Awesome Project`, then you
 
 ## Theme development
 
-- General Orchard Core theme development rules apply but with [Media Theme limitations](https://github.com/Lombiq/Hosting-Media-Theme#limitations). Keep those in mind.
+- General Orchard Core theme development rules apply but with [Media Theme practices](https://github.com/Lombiq/Hosting-Media-Theme#local-development) and [Media Theme limitations](https://github.com/Lombiq/Hosting-Media-Theme#limitations). Keep those in mind.
 - You can synchronize content from your site running on DotNest by exporting it and then importing it locally. That way, you can maintain a setup recipe locally that you keep up-to-date with the production site's data, even using [Auto Setup](https://docs.orchardcore.net/en/latest/docs/reference/modules/AutoSetup/).
  to set up the site when you run the app. Be sure to not use the recipe locally without some modifications:
     - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
