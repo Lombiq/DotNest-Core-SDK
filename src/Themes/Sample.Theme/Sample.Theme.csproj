@@ -1,22 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-        <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**</DefaultItemExcludes>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**</DefaultItemExcludes>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+  </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="OrchardCore.Theme.Targets" Version="1.5.0" />
-        <PackageReference Include="OrchardCore.ContentManagement" Version="1.5.0" />
-        <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0" />
-        <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0" />
-        <PackageReference Include="Lombiq.BaseTheme" Version="2.0.0" />
-        <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.0.0" />
-    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.5.0"/>
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.5.0"/>
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0"/>
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0"/>
+    <PackageReference Include="Lombiq.BaseTheme" Version="2.0.0"/>
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.1.2-alpha.0.nest-407-7"/>
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="2.1.2-alpha.0.nest-407-7"/>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- This must be defined after the Lombiq.Hosting.MediaTheme.Targets import to override property. -->
+    <MediaThemeBaseId>Lombiq.BaseTheme</MediaThemeBaseId>
+  </PropertyGroup>
 
 </Project>
