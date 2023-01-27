@@ -16,8 +16,8 @@
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0"/>
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.5.0"/>
     <PackageReference Include="Lombiq.BaseTheme" Version="2.0.0"/>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.1.2-alpha.0.nest-407-7"/>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="2.1.2-alpha.0.nest-407-7"/>
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="3.0.0-alpha.0.nest-407"/>
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="3.0.0-alpha.0.nest-407"/>
   </ItemGroup>
 
   <PropertyGroup>
