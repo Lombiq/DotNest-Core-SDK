@@ -10,7 +10,6 @@ on:
 jobs:
   build-and-test:
     name: Build and Test
-    if: false
     uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-dotnet.yml@issue/OSOE-523
     with:
       timeout-minutes: 5
