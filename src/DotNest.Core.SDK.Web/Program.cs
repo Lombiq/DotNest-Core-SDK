@@ -13,7 +13,6 @@ builder.Services
     .AddOrchardCms(orchardCoreBuilder =>
     {
         orchardCoreBuilder
-            .AllowMiniProfilerOnAdmin()
             .AddDatabaseShellsConfigurationIfAvailable(configuration)
             .ConfigureSmtpSettings(overrideAdminSettings: false);
 
