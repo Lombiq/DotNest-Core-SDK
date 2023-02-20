@@ -12,6 +12,8 @@ This project, along with DotNest, is developed by [Lombiq Technologies Ltd](http
 
 Are you unfamiliar with Orchard Core theme development and Liquid templates, or even Orchard Core in general? Then we recommend you check out the [Dojo Course 3 tutorial](https://orcharddojo.net/orchard-training/dojo-course-3-the-full-orchard-core-tutorial) and the official docs [on Liquid](https://docs.orchardcore.net/en/latest/docs/reference/modules/Liquid/) and [templates in Orchard Core](https://docs.orchardcore.net/en/latest/docs/reference/modules/Templates/) first. Otherwise, please continue below.
 
+We have everything documented here, but if you prefer videos, check out our [DotNest Core tutorials here](https://www.youtube.com/playlist?list=PLuskKJW0FhJebHGSavU5OJugryMPCSKaU).
+
 1. Go to GitHub and fork the [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) repository or create an empty repository and push the SDK's `dev` branch to it. For simplicity, we'll refer to your repository as `fork` from now on and assume a simple branching strategy with only one additional branch for development, but your use-case can be more complex.
 2. For clarity, rename the solution file to what you prefer, e.g. _AwesomeProject.DotNestSites.sln_.
 3. Create a project for your theme, as you'd usually do, with [the Orchard code generation template](https://docs.orchardcore.net/en/latest/docs/getting-started/templates/), manually, or by copying `Sample.Theme` from the SDK. The only thing important is that you'll need to add a NuGet package reference to `Lombiq.Hosting.MediaTheme` to it, and in its `Manifest` should declare `Lombiq.Hosting.MediaTheme.Bridge` as a dependency. See `Sample.Theme` for these.
