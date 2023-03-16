@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.6.0-preview-17273" />
-    <PackageReference Include="OrchardCore.Commerce" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="0.0.1-preview-87" />
+    <PackageReference Include="OrchardCore.Commerce" Version="1.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="1.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="1.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="1.0.0" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="1.5.0" />
   </ItemGroup>
 
