@@ -12,7 +12,7 @@
     <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="1.2.0" />
     <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="1.2.0" />
     <PackageReference Include="OrchardCore.Commerce.Tax" Version="1.2.0" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.7.0-preview-17520" />
   </ItemGroup>
 
   <ItemGroup>
