@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.7.0" />
-    <PackageReference Include="OrchardCore.Commerce" Version="1." />
+    <PackageReference Include="OrchardCore.Commerce" Version="1.3.0" />
     <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="1.3.0" />
     <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="1.3.0" />
     <PackageReference Include="OrchardCore.Commerce.Tax" Version="1.3.0" />
