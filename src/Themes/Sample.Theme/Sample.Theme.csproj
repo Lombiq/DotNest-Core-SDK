@@ -11,13 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.6.0"/>
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.6.0"/>
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.6.0"/>
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.6.0"/>
-    <PackageReference Include="Lombiq.BaseTheme" Version="4.0.0"/>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="4.0.0"/>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="4.0.0"/>
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.7.0"/>
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.7.0"/>
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.7.0"/>
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.7.0"/>
+    <PackageReference Include="Lombiq.BaseTheme" Version="5.0.0"/>
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="5.0.0"/>
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="5.0.0"/>
   </ItemGroup>
 
   <PropertyGroup>
