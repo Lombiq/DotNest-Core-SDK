@@ -16,7 +16,7 @@ jobs:
 
   spelling:
     name: Spelling
-    uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@dev
+    uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@issue/OSOE-636
     with:
       additional-dictionaries: |
         lombiq-lgha:dictionaries/Liquid.txt
