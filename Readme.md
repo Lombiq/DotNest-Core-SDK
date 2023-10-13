@@ -6,7 +6,7 @@
 
 The base of the source code on the `dev` branch is the same Orchard Core version that is running on DotNest as well as all the hotfixes and mods we've applied to it. On top of that, all the open-source modules are added as NuGet packages, which gives you the ability to develop your theme and run your site locally in an environment quite close to the live DotNest site.
 
-We at [Lombiq](https://lombiq.com/) also used this SDK for the new [Show Orchard website](https://showorchard.com/) when migrating it from Orchard 1 DotNest to DotNest Core ([see case study](https://dotnest.com/blog/showorchard-case-study-migrating-an-orchard-1-dotnest-site-to-dotnest-core)).<!-- #spell-check-ignore-line -->
+We at [Lombiq](https://lombiq.com/) also used this SDK for the new [Show Orchard website](https://showorchard.com/) when migrating it from Orchard 1 DotNest to DotNest Core ([see case study](https://dotnest.com/blog/show-orchard-case-study-migrating-an-orchard-1-dotnest-site-to-orchard-core)).<!-- #spell-check-ignore-line -->
 
 This project, along with DotNest, is developed by [Lombiq Technologies Ltd](https://lombiq.com). Commercial-grade support is available through Lombiq.
 
