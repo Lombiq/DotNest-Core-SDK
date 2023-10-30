@@ -12,9 +12,7 @@ jobs:
     name: Build and Test
     uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-orchard-core.yml@dev
     with:
-      timeout-minutes: 20
-      build-create-binary-log: "true"
-      blame-hang-timeout: "5m"
+      timeout-minutes: 5
 
   spelling:
     name: Spelling
