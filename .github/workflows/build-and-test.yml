@@ -19,3 +19,4 @@ jobs:
     with:
       additional-dictionaries: |
         lombiq-lgha:dictionaries/Liquid.txt
+        cspell:html/dict/html.txt
