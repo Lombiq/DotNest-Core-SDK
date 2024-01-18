@@ -7,17 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_helpers.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_mixins.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_native-variables.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\abstracts\_variables.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\general\_general.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\site.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\vendors\_bootstrap-mixins.scss" />
-      <Content Remove="C:\Users\lehoc\.nuget\packages\lombiq.basetheme\2.0.0\contentFiles\any\net6.0\Assets\Styles\_base.scss" />
-    </ItemGroup>
-
-    <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
