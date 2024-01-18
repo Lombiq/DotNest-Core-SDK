@@ -7,34 +7,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.5.0" />
-    <PackageReference Include="OrchardCore.Commerce" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="0.0.1-preview-87" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Commerce" Version="1.3.0" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="1.3.0" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="1.3.0" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="1.3.0" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="TheBootstrapTheme" Version="1.5.0" />
-    <PackageReference Include="TheClassLessTheme" Version="1.5.0" />
-    <PackageReference Include="TheResumeTheme" Version="1.5.0" />
+    <PackageReference Include="TheBootstrapTheme" Version="1.7.0" />
+    <PackageReference Include="TheClassLessTheme" Version="1.7.0" />
+    <PackageReference Include="TheResumeTheme" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lombiq.BaseTheme" Version="2.0.0" />
-    <PackageReference Include="Lombiq.Analyzers" Version="3.0.1" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="4.0.0" />
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="5.0.0" />
-    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="4.0.0" />
-    <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="3.0.0" />
-    <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="3.0.0" />
-    <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="3.0.0" />
-    <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="3.0.0" />
-    <PackageReference Include="Lombiq.Privacy" Version="4.0.0" />
-    <PackageReference Include="Lombiq.SetupExtensions" Version="3.0.0" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="2.0.0" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="2.0.0" />
+    <PackageReference Include="Lombiq.BaseTheme" Version="5.0.0" />
+    <PackageReference Include="Lombiq.Analyzers" Version="3.3.0" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="7.0.0" />
+    <PackageReference Include="Lombiq.HelpfulLibraries" Version="8.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="7.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="6.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="6.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="6.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="6.0.0" />
+    <PackageReference Include="Lombiq.Privacy" Version="6.0.0" />
+    <PackageReference Include="Lombiq.SetupExtensions" Version="5.0.0" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="5.0.0" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>

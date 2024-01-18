@@ -9,7 +9,7 @@ on:
 jobs:
   build-and-test:
     name: Build and Test
-    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-dotnet.yml@dev
+    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-orchard-core.yml@dev
     with:
       timeout-minutes: 5
 
@@ -17,4 +17,5 @@ jobs:
     name: Spelling
     uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@dev
     with:
-      spell-check-this: Lombiq/GitHub-Actions@dev
+      additional-dictionaries: |
+        lombiq-lgha:dictionaries/Liquid.txt
