@@ -143,6 +143,10 @@
         {
           "executionid": "DotNest.Core.SDK.Web",
           "name": "Lombiq.BaseTheme.LayersAndZones"
+        },
+        {
+          "executionid": "DotNest.Core.SDK.Web",
+          "name": "DotNest.Core.SDK.MediaTheme"
         }
       ]
     },
@@ -150,19 +154,6 @@
       "name": "mediatheme",
       "ClearMediaThemeFolder": false,
       "BaseThemeId": "Lombiq.BaseTheme"
-    },
-    {
-      "name": "media",
-      "Files": [
-        {
-          "SourcePath": "_MediaTheme/Assets/example.png",
-          "TargetPath": "_MediaTheme/Assets/example.png"
-        },
-        {
-          "SourcePath": "_MediaTheme/Templates/Example.liquid",
-          "TargetPath": "_MediaTheme/Templates/Example.liquid"
-        }
-      ]
     }
   ]
 }
