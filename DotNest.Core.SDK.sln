@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\validate-pull-request.yml = .github\workflows\validate-pull-request.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7BE78863-16CE-4AA3-8C46-7761183142DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNest.Core.SDK.Tests.UI", "test\DotNest.Core.SDK.Tests.UI\DotNest.Core.SDK.Tests.UI.csproj", "{13764086-2125-4C44-AFC2-665AC3C89AC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{4415DF94-4550-45C4-85DA-2741284D2C01} = {C0E663BB-B9D0-49AA-BBEB-ECA748632007}
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE} = {4415DF94-4550-45C4-85DA-2741284D2C01}
 		{190B979E-A5AB-42A4-85CE-8A94044706DF} = {7E3915D4-E24A-45FD-887C-3CB4F445C30B}
+		{13764086-2125-4C44-AFC2-665AC3C89AC0} = {7BE78863-16CE-4AA3-8C46-7761183142DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E281D9A-C9FF-49D6-A7E7-192EB8DC0074}
