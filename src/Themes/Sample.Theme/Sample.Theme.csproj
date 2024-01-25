@@ -22,11 +22,6 @@
 
   <ItemGroup>
     <Content Include=".config\dotnet-tools.json" />
-    <Content Include="Recipes\*.Tests.*.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\_ViewImports.cshtml" />
   </ItemGroup>
 
   <PropertyGroup>
