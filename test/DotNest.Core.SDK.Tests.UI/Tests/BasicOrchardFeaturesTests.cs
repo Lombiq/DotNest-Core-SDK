@@ -16,15 +16,5 @@ public class BasicOrchardFeaturesTests : UITestBase
     [Fact]
     public Task BasicOrchardFeaturesShouldWork() =>
         ExecuteTestAsync(
-            context => context.TestBasicOrchardFeaturesExceptRegistrationAsync(Recipes.DefaultRecipeId),
-            configuration =>
-            {
-                configuration.SetDisableColorContrastRuleAccessibilityCheckingConfiguration();
-
-                // Should be deleted once https://github.com/OrchardCMS/OrchardCore/pull/14523 is merged and released in
-                // new OC version.
-                configuration.SetTemporaryAccessibilityAndHtmlConfiguration();
-
-                return Task.CompletedTask;
-            });
+            context => context.TestBasicOrchardFeaturesExceptRegistrationAsync(Recipes.DefaultRecipeId));
 }
