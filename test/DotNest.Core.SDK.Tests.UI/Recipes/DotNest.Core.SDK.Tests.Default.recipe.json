@@ -3,7 +3,7 @@
   "displayName": "TEST: DotNest Core SDK - Default tenant",
   "description": "Setup recipe for the default tenant of DotNest Tenants SDK, for automated UI test execution.",
   "author": "Lombiq Technologies",
-  "website": "https://dotnest.com/",
+  "website": "https://github.com/Lombiq/DotNest-Core-SDK",
   "version": "1.0",
   "issetuprecipe": true,
   "categories": [ "developer" ],
@@ -19,7 +19,7 @@
         },
         {
           "executionid": "DotNest.Core.SDK.Tests.UI",
-          "name": "Configuration.Tests"
+          "name": "DotNest.Core.SDK.Tests.Configuration.Tests"
         }
       ]
     }

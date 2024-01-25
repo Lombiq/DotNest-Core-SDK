@@ -1,9 +1,9 @@
 {
-  "name": "Configuration.Tests",
-  "displayName": "Configuration Tests",
+  "name": "DotNest.Core.SDK.Tests.Configuration.Tests",
+  "displayName": "TEST: DotNest Core SDK - Configuration Tests",
   "description": "Common configuration necessary for UI tests.",
   "author": "Lombiq Technologies",
-  "website": "https://lombiq.com/",
+  "website": "https://github.com/Lombiq/DotNest-Core-SDK",
   "version": "1.0",
   "issetuprecipe": false,
   "categories": [ "test" ],
