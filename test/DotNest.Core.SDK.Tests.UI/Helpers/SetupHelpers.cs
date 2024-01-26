@@ -16,12 +16,12 @@ public static class SetupHelpers
         var homepageUri = await context.GoToSetupPageAndSetupOrchardCoreAsync(
             new OrchardCoreSetupParameters(context)
             {
-                SiteName = "DotNest Core SDK",
+                SiteName = "Letters from Fiume",
                 RecipeId = Recipes.DefaultRecipeId,
                 SiteTimeZoneValue = "Europe/Budapest",
             });
 
-        context.Get(By.ClassName("navbar-brand")).Text.ShouldBe("DotNest Core SDK");
+        context.Get(By.ClassName("navbar-brand")).Text.ShouldBe("Letters from Fiume");
 
         return homepageUri;
     }
