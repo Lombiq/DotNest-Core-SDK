@@ -2,13 +2,16 @@
   "name": "DotNest.Core.SDK.Setup",
   "displayName": "DotNest Core SDK - Setup",
   "description": "Settings and features required only for development.",
-  "author": "DotNestCoreSDK",
-  "website": "https://www.dotnestcoresdk.com",
+  "author": "Lombiq Technologies",
+  "website": "https://github.com/Lombiq/DotNest-Core-SDK",
   "version": "1.0",
   "issetuprecipe": true,
   "categories": [ "dotnestcoresdk" ],
   "tags": [],
-
+  "variables": {
+    "homeContentItemId": "[js:uuid()]",
+    "now": "[js: new Date().toISOString()]"
+  },
   "steps": [
     {
       "name": "feature",
@@ -121,13 +124,10 @@
         "Lombiq.Hosting.Tenants.Admin.Login.SubTenant",
         "Lombiq.Hosting.Tenants.Management.ForbiddenTenantNames",
         "Lombiq.Hosting.MediaTheme",
-        "Lombiq.Privacy",
-        "Lombiq.Privacy.ConsentBanner",
-        "Lombiq.Privacy.FormConsent",
-        "Lombiq.Privacy.RegistrationConsent",
 
         // Themes
         "TheAdmin",
+        "TheTheme",
         "Lombiq.BaseTheme",
         "Sample.Theme"
       ]
@@ -135,25 +135,68 @@
     {
       "name": "themes",
       "admin": "TheAdmin",
-      "site": "Sample.Theme"
+      "site": "TheTheme"
+    },
+    {
+      "name": "Content",
+      "data": [
+        {
+          "ContentItemId": "[js: variables('homeContentItemId')]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "This is DotNest Core SDK",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "[js: variables('now')]",
+          "PublishedUtc": "[js: variables('now')]",
+          "CreatedUtc": "[js: variables('now')]",
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "This is DotNest Core SDK"
+          },
+          "AutoroutePart": {
+            "Path": "this-is-dotnest-core-sdk",
+            "SetHomepage": true,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "HomeRoute": {
+        "Area": "OrchardCore.Contents",
+        "Controller": "Item",
+        "Action": "Display",
+        "contentItemId": "[js: variables('homeContentItemId')]"
+      }
+    },
+    {
+      "name": "Roles",
+      "Roles": [
+        {
+          "Name": "Anonymous",
+          "Description": "Anonymous role",
+          "Permissions": [
+            "ViewContent"
+          ]
+        }
+      ]
     },
     {
       "name": "recipes",
       "Values": [
         {
           "executionid": "DotNest.Core.SDK.Web",
-          "name": "Lombiq.BaseTheme.LayersAndZones"
-        },
-        {
-          "executionid": "DotNest.Core.SDK.Web",
           "name": "DotNest.Core.SDK.MediaTheme"
         }
       ]
-    },
-    {
-      "name": "mediatheme",
-      "ClearMediaThemeFolder": false,
-      "BaseThemeId": "Lombiq.BaseTheme"
     }
   ]
 }
