@@ -1,0 +1,35 @@
+{
+  "name": "DotNest.Core.SDK.Tests.Configuration.Tests",
+  "displayName": "TEST: DotNest Core SDK - Configuration Tests",
+  "description": "Common configuration necessary for UI tests.",
+  "author": "Lombiq Technologies",
+  "website": "https://github.com/Lombiq/DotNest-Core-SDK",
+  "version": "1.0",
+  "issetuprecipe": false,
+  "categories": [ "test" ],
+  "tags": [ "test", "HideFromSetupScreen" ],
+
+  "steps": [
+    {
+      "name": "feature",
+      "enable": [
+        "OrchardCore.Localization"
+      ]
+    },
+    {
+      "name": "settings",
+      // To make sure that e.g. numbers and dates are formatted the same way on all machines we have to specify the
+      // culture too.
+      "UseCdn": false,
+      "SmtpSettings": {
+        "DefaultSender": "sender@example.com"
+      },
+      "LocalizationSettings": {
+        "DefaultCulture": "en-US",
+        "SupportedCultures": [
+          "en-US"
+        ]
+      }
+    }
+  ]
+}

@@ -7,22 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.7.0"/>
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.7.0"/>
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.7.0"/>
-    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.7.0"/>
-    <PackageReference Include="Lombiq.BaseTheme" Version="5.0.0"/>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="5.0.0"/>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="5.0.0"/>
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.7.0" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="5.0.1-alpha.1.osoe-775" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="5.0.1-alpha.1.osoe-775" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".config\dotnet-tools.json" />
   </ItemGroup>
 
   <PropertyGroup>
     <!-- This must be defined after the Lombiq.Hosting.MediaTheme.Targets import to override property. -->
-    <MediaThemeBaseId>Lombiq.BaseTheme</MediaThemeBaseId>
+    <MediaThemeBaseId>TheTheme</MediaThemeBaseId>
   </PropertyGroup>
 
 </Project>

@@ -7,7 +7,7 @@ using OrchardCore.DisplayManagement.Manifest;
     Version = "0.0.1",
     Website = "https://github.com/Lombiq/DotNest-Core-SDK",
     Description = "A sample DotNest theme for local development. It must be packaged and used as a Media Theme on DotNest.",
-    BaseTheme = "Lombiq.BaseTheme",
+    BaseTheme = "TheTheme",
     Dependencies = new[]
     {
         FeatureNames.MediaThemeBridge

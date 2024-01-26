@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+    <PackageReference Include="Lombiq.Tests.UI" Version="8.2.1-alpha.6.osoe-351" />
+    <PackageReference Include="Lombiq.Analyzers" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Recipes\*.Tests*.recipe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DotNest.Core.SDK.Web\DotNest.Core.SDK.Web.csproj" />
+  </ItemGroup>
+</Project>
