@@ -12,18 +12,11 @@ var configuration = builder.Configuration;
 builder.Services
     .AddSingleton(configuration)
     .AddOrchardCms(orchardCoreBuilder =>
-    {
         orchardCoreBuilder
             .AddDatabaseShellsConfigurationIfAvailable(configuration)
-            .ConfigureSmtpSettings(overrideAdminSettings: false);
-
-        if (builder.Environment.IsDevelopment())
-        {
-            orchardCoreBuilder
-                .AddSetupFeatures("OrchardCore.AutoSetup")
-                .HideRecipesByTagsFromSetup("test", "HideFromSetupScreen");
-        }
-    });
+            .ConfigureSmtpSettings(overrideAdminSettings: false)
+            .EnableAutoSetupIfNotUITesting(configuration)
+            .HideRecipesByTagsFromSetup("test", "HideFromSetupScreen"));
 
 var app = builder.Build();
 
