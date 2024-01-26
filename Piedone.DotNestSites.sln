@@ -28,9 +28,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LettersFromFiume.Theme", "src\Themes\LettersFromFiume.Theme\LettersFromFiume.Theme.csproj", "{CF03AC33-7CCB-49C0-8700-DB1FF18E2E90}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7BE78863-16CE-4AA3-8C46-7761183142DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNest.Core.SDK.Tests.UI", "test\DotNest.Core.SDK.Tests.UI\DotNest.Core.SDK.Tests.UI.csproj", "{13764086-2125-4C44-AFC2-665AC3C89AC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNest.Core.SDK.Tests.UI", "test\DotNest.Core.SDK.Tests.UI\DotNest.Core.SDK.Tests.UI.csproj", "{13764086-2125-4C44-AFC2-665AC3C89AC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +47,10 @@ Global
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A65FF2E-0C9C-4FEF-9136-B575141355AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF03AC33-7CCB-49C0-8700-DB1FF18E2E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF03AC33-7CCB-49C0-8700-DB1FF18E2E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF03AC33-7CCB-49C0-8700-DB1FF18E2E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF03AC33-7CCB-49C0-8700-DB1FF18E2E90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13764086-2125-4C44-AFC2-665AC3C89AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
