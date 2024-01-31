@@ -2,7 +2,7 @@
 
 ## Overview
 
-[DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) is a local development environment for building [Media Themes](https://github.com/Lombiq/Hosting-Media-Theme) to be deployed to [Orchard Core CMS](http://orchardcore.net) sites running on [DotNest](http://dotnest.com), the Orchard SaaS. Media Themes are almost full-fledged Orchard themes that you can develop as any Orchard theme, but they'll still work on DotNest.
+[DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) is a local development environment for building [Media Themes](https://github.com/Lombiq/Hosting-Media-Theme) to be deployed to [Orchard Core CMS](http://orchardcore.net) sites running on [DotNest](http://dotnest.com), the Orchard Core SaaS. Media Themes are almost full-fledged Orchard themes that you can develop as any Orchard theme, but they'll still work on DotNest.
 
 The base of the source code on the `dev` branch is the same Orchard Core version that is running on DotNest as well as all the hotfixes and mods we've applied to it. On top of that, all the open-source modules are added as NuGet packages, which gives you the ability to develop your theme and run your site locally in an environment quite close to the live DotNest site.
 
