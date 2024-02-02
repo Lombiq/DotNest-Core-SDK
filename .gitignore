@@ -7,7 +7,7 @@ artifacts/
 node_modules/
 *.user
 .pnpm-debug.log
-src/*/wwwroot/is-cache
+src/*/wwwroot/*/is-cache
 *.placeholder
 App_Data/
 *.user
