@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <!-- This must be defined after the Lombiq.Hosting.MediaTheme.Targets import to override property. -->
+    <!-- This must be defined after the Lombiq.Hosting.MediaTheme.Targets import to override the property. -->
     <MediaThemeBaseId>TheTheme</MediaThemeBaseId>
   </PropertyGroup>
 
