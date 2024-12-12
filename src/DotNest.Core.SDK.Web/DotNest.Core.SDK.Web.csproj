@@ -8,11 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="2.0.0-preview-18288" />
+    <PackageReference Include="OrchardCore.Logging.NLog" Version="2.0.0-preview-18288" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="OrchardCore.Commerce" Version="2.1.1-preview.2.nest-536" />
     <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="2.1.1-preview.2.nest-536" />
     <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="2.1.1-preview.2.nest-536" />
     <PackageReference Include="OrchardCore.Commerce.Tax" Version="2.1.1-preview.2.nest-536" />
-    <PackageReference Include="OrchardCore.Logging.NLog" Version="2.0.0-preview-18288" />
   </ItemGroup>
 
   <ItemGroup>
