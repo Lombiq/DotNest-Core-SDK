@@ -1,4 +1,4 @@
-# DotNest Core SDK
+# DotNest Sites Core SDK
 
 ## Overview
 
@@ -40,7 +40,7 @@ Optionally, you can set up a mirror on [Git-hg Mirror](https://githgmirror.com) 
 
 **Note** that this project uses [GitHub Actions](https://github.com/features/actions) for automated builds. If you don't need these, and especially if your fork will be auto-updated with Git-hg Mirror (which pushes to your repository multiple times a minute) then you shouldn't enable GitHub Actions for the repository (since then e.g. a build will run on each Git-hg Mirror push).
 
-## Working with the repository 
+## Working with the repository
 
 - Whenever you create any branches, make sure that you prefix their names so they don't collide with the ones in the SDK.
 For example, if the project you're working is called `Awesome Project`, then your development branch should be created on top of `dev` and name it e.g. `ap-dev`.
@@ -52,13 +52,43 @@ For example, if the project you're working is called `Awesome Project`, then you
 - General Orchard Core theme development rules apply but with [Media Theme practices](https://github.com/Lombiq/Hosting-Media-Theme#local-development) and [Media Theme limitations](https://github.com/Lombiq/Hosting-Media-Theme#limitations). Keep those in mind.
 - You can synchronize content from your site running on DotNest by exporting it and then importing it locally. That way, you can maintain a setup recipe locally that you keep up-to-date with the production site's data, even using [Auto Setup](https://docs.orchardcore.net/en/latest/docs/reference/modules/AutoSetup/).
  to set up the site when you run the app. Be sure to not use the recipe locally without some modifications:
-    - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
-    - Enable your theme project and set it as the site theme (instead of Media Theme).
+  - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
+  - Enable your theme project and set it as the site theme (instead of Media Theme).
 - Deploy your theme to your site by following [the corresponding docs of Media Theme](https://github.com/Lombiq/Hosting-Media-Theme/blob/dev/Readme.md#deployment-importexport).
 
 The [`Piedone/DotNest-Sites` project](https://github.com/Piedone/DotNest-Sites) mentioned above also demonstrates all of these.<!-- #spell-check-ignore-line -->
 
-## Help us make it better!
+## Contained sites
+
+The solution also contains the recipes and themes of Lombiq's DotNest Orchard Core sites, these currently being:
+
+- Ik Wil Een Taart
+
+### Ik Wil Een Taart
+
+#### Lucene indices (for local testing)
+
+The lucene index for products have to be rebuilt on the IWET tenant after site setup. You can do that at _/iwet/Admin/Lucene/Index_. After it, you should see 3 products in the _Gebakjes_ menu.
+
+#### Elasticsearch indices
+
+If you want to use Elasticsearch from your machine (`localhost`) you need to set it up first. See: [https://docs.orchardcore.net/en/latest/docs/reference/modules/Elasticsearch/#install-elasticsearch-7x-with-docker-compose](https://docs.orchardcore.net/en/latest/docs/reference/modules/Elasticsearch/#install-elasticsearch-7x-with-docker-compose "https://docs.orchardcore.net/en/latest/docs/reference/modules/Elasticsearch/#install-elasticsearch-7x-with-docker-compose"). The previous step is not necessary if you are using the default Elasticsearch settings in `appsettings.json`. After it you should set up the site with the `IkWilEenTaart.Elasticsearch.Setup.recipe` setup recipe. Finally, you should see 3 products in the _Gebakjes_ menu.
+
+#### Commerce settings
+
+Make sure to set the correct currency on the dashboard, in _Configuration_ → _Commerce_ → _Currency_.
+
+#### Stripe payment
+
+To be able to test Stripe payment, you need to set the Stripe API keys on the dashboard, in _Configuration_ → _Commerce_ → _Stripe API_. You can find the test API keys and test cards [here](https://github.com/OrchardCMS/OrchardCore.Commerce/blob/main/Readme.md).
+
+#### Workflows
+
+Workflows are imported from recipes. Some of them won't work right away, see [this GitHub issue](https://github.com/OrchardCMS/OrchardCore/issues/5490). For `inschrijf_workflow` and `contact workflow` you need to regenerate the URLs. To do that go to the admin dashboard, then to _Workflows_. Click on _Edit_, then click on the _Startup task_ (first one, green colored) and on _Edit_. You can see the URL there, click on _Regenerate_, and then copy the URL. Find where the old URL was used and copy it there.
+
+Currently only one URL is used for workflows. Go to the admin dashboard then _Content_ → _Content Items_. Search for _Contact_, you should see a _Page_ content item, edit it. At the bottom you can see the _inschrijfformulier Formulier_ accordion, open it. Paste the newly generated URL to the _Action_ field, overriding the old one and save the content item.
+
+## Help us make it better
 
 In case you come across an Orchard Core bug during development, don't keep it to yourself: Orchard Core bugs should be reported at [the official Orchard Core GitHub repository](https://github.com/OrchardCMS/OrchardCore).
 
