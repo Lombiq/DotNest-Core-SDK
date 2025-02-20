@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <OrchardCoreVersion>2.1.5</OrchardCoreVersion>
+    <OrchardCoreVersion>2.1.6</OrchardCoreVersion>
     <OrchardCoreCommerceVersion>2.2.0-alpha.0.nest-537</OrchardCoreCommerceVersion>
   </PropertyGroup>
 
