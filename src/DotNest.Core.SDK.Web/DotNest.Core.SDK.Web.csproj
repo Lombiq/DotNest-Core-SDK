@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <OrchardCoreVersion>2.1.6</OrchardCoreVersion>
-    <OrchardCoreCommerceVersion>2.2.0-alpha.0.nest-537</OrchardCoreCommerceVersion>
+    <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
   </PropertyGroup>
 
   <ItemGroup>
