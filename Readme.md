@@ -1,4 +1,4 @@
-# DotNest Core SDK
+# DotNest Sites Core SDK
 
 ## Overview
 
@@ -40,7 +40,7 @@ Optionally, you can set up a mirror on [Git-hg Mirror](https://githgmirror.com) 
 
 **Note** that this project uses [GitHub Actions](https://github.com/features/actions) for automated builds. If you don't need these, and especially if your fork will be auto-updated with Git-hg Mirror (which pushes to your repository multiple times a minute) then you shouldn't enable GitHub Actions for the repository (since then e.g. a build will run on each Git-hg Mirror push).
 
-## Working with the repository 
+## Working with the repository
 
 - Whenever you create any branches, make sure that you prefix their names so they don't collide with the ones in the SDK.
 For example, if the project you're working is called `Awesome Project`, then your development branch should be created on top of `dev` and name it e.g. `ap-dev`.
@@ -52,13 +52,13 @@ For example, if the project you're working is called `Awesome Project`, then you
 - General Orchard Core theme development rules apply but with [Media Theme practices](https://github.com/Lombiq/Hosting-Media-Theme#local-development) and [Media Theme limitations](https://github.com/Lombiq/Hosting-Media-Theme#limitations). Keep those in mind.
 - You can synchronize content from your site running on DotNest by exporting it and then importing it locally. That way, you can maintain a setup recipe locally that you keep up-to-date with the production site's data, even using [Auto Setup](https://docs.orchardcore.net/en/latest/docs/reference/modules/AutoSetup/).
  to set up the site when you run the app. Be sure to not use the recipe locally without some modifications:
-    - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
-    - Enable your theme project and set it as the site theme (instead of Media Theme).
+  - Remove feature `enable` references for all Azure-related features unless you want to use e.g. Azure Blob Storage locally too.
+  - Enable your theme project and set it as the site theme (instead of Media Theme).
 - Deploy your theme to your site by following [the corresponding docs of Media Theme](https://github.com/Lombiq/Hosting-Media-Theme/blob/dev/Readme.md#deployment-importexport).
 
 The [`Piedone/DotNest-Sites` project](https://github.com/Piedone/DotNest-Sites) mentioned above also demonstrates all of these.<!-- #spell-check-ignore-line -->
 
-## Help us make it better!
+## Help us make it better
 
 In case you come across an Orchard Core bug during development, don't keep it to yourself: Orchard Core bugs should be reported at [the official Orchard Core GitHub repository](https://github.com/OrchardCMS/OrchardCore).
 
