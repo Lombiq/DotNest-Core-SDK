@@ -14,9 +14,9 @@ jobs:
     with:
       timeout-minutes: 5
 
-  spelling:
-    name: Spelling
-    uses: Lombiq/GitHub-Actions/.github/workflows/spelling.yml@dev
-    with:
-      additional-dictionaries: |
-        lombiq-lgha:dictionaries/Liquid.txt
+  codespell:
+    name: Codespell
+    uses: Lombiq/GitHub-Actions/.github/workflows/codespell.yml@dev
+    permissions:
+      actions: write
+      contents: read
