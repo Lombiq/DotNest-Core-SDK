@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2" />
     <PackageReference Include="Lombiq.Tests.UI" Version="12.1.0" />
     <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
   </ItemGroup>
