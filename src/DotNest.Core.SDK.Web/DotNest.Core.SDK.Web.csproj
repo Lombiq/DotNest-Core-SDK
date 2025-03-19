@@ -23,7 +23,7 @@
   <ItemGroup>
     <PackageReference Include="TheBootstrapTheme" Version="2.1.0" />
     <PackageReference Include="TheClassLessTheme" Version="2.1.0" />
-    <PackageReference Include="TheResumeTheme" Version="2.1.0" />
+    <PackageReference Include="TheResumeTheme" Version="2.1.6" />
   </ItemGroup>
 
   <ItemGroup>
