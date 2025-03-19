@@ -28,9 +28,9 @@
 
   <ItemGroup>
     <PackageReference Include="Lombiq.BaseTheme" Version="9.0.0" />
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.1.0" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="10.0.0" />
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.0.0" />
+    <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.1.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="9.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="9.0.0" />
@@ -40,8 +40,8 @@
     <PackageReference Include="Lombiq.SetupExtensions" Version="7.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="8.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="12.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="12.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="12.1.0" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="12.1.0" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
   </ItemGroup>
 
