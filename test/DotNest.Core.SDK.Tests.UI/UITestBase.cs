@@ -3,7 +3,7 @@ using Lombiq.Tests.UI;
 using Lombiq.Tests.UI.Services;
 using System;
 using System.Threading.Tasks;
-using Xunit.Abstractions;
+using Xunit;
 
 namespace DotNest.Core.SDK.Tests.UI;
 
