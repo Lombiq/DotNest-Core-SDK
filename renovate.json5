@@ -1,5 +1,16 @@
 {
     '$schema': 'https://docs.renovatebot.com/renovate-schema.json',
     'extends': [ 'github>Lombiq/renovate-config:default-orchard-core-superproject.json5' ],
+    packageRules: [
+        // The release of these themes are usually tied together.
+        {
+            groupName: 'Theme Packages',
+            matchPackageNames: [
+                'TheBootstrapTheme',
+                'TheClassLessTheme',
+                'TheResumeTheme',
+            ],
+            enabled: false,
+        },
+    ],
 }
-
