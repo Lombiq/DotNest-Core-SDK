@@ -11,6 +11,7 @@ We at [Lombiq](https://lombiq.com/) also used this SDK for the following project
 - The new [Xero4PowerBI website](https://xero4powerbi.com/) ([see case study](https://dotnest.com/blog/xero4powerbi-website-case-study-migration-to-orchard-core)).
 - The new [Ik wil een taart website](https://ikwileentaart.nl/) ([see case study](https://dotnest.com/blog/revamping-ik-wil-een-taart-migrating-an-old-version-of-orchard-core-website-with-custom-theme-and-commerce-logic-to-dotnest)).
 - The new [Show Orchard website](https://showorchard.com/) when migrating it from Orchard 1 DotNest to DotNest Core (see [case study](https://dotnest.com/blog/show-orchard-case-study-migrating-an-orchard-1-dotnest-site-to-orchard-core) and the [theme's source code](https://github.com/Lombiq/Show-Orchard-Theme)).
+- The [GPU Day website](https://gpuday.com/) ([see case study](https://dotnest.com/blog/gpu-day-case-study-migrating-another-orchard-1-dotnest-site-to-orchard-core-with-smart-compromises-for-quicker-implementation) and the [theme's source code](https://github.com/Lombiq/GPU-Day-Theme)).
 
 This project, along with DotNest, is developed by [Lombiq Technologies Ltd](https://lombiq.com). Commercial-grade support is available through Lombiq.
 
@@ -56,7 +57,12 @@ For example, if the project you're working is called `Awesome Project`, then you
   - Enable your theme project and set it as the site theme (instead of Media Theme).
 - Deploy your theme to your site by following [the corresponding docs of Media Theme](https://github.com/Lombiq/Hosting-Media-Theme/blob/dev/Readme.md#deployment-importexport).
 
-The [`Piedone/DotNest-Sites` project](https://github.com/Piedone/DotNest-Sites) mentioned above also demonstrates all of these.
+## Samples
+
+- [Sample Theme](https://github.com/Lombiq/DotNest-Core-SDK/tree/dev/src/Themes/Sample.Theme)
+- [Show Orchard Theme](https://github.com/Lombiq/Show-Orchard-Theme)
+- [GPU Day Theme](https://github.com/Lombiq/GPU-Day-Theme)
+- The [`Piedone/DotNest-Sites` project](https://github.com/Piedone/DotNest-Sites)
 
 ## Help us make it better
 
