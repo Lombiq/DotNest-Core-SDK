@@ -1,6 +1,9 @@
 {
     '$schema': 'https://docs.renovatebot.com/renovate-schema.json',
     'extends': [ 'github>Lombiq/renovate-config:default-orchard-core-superproject.json5' ],
+    prBodyNotes: [
+        '@Lombiq/dotnest-sites-renovate-notification-recipients',
+    ],
     packageRules: [
         // The release of these themes are usually tied together.
         {
