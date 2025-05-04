@@ -30,7 +30,7 @@
     <PackageReference Include="Lombiq.BaseTheme" Version="9.0.0" />
     <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="10.0.0" />
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.1.0" />
+    <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.2.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="9.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="9.0.0" />
