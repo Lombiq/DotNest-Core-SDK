@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.0" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.0" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.3.nest-562" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.1-alpha.3.nest-562" />
   </ItemGroup>
 
   <ItemGroup>
