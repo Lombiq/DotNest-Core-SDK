@@ -1,5 +1,5 @@
 {
-  "name": "DotNest.Core.SDK.Setup",
+  "name": "DotNest.Core.SDK.MediaTheme.Setup",
   "displayName": "DotNest Core SDK - Setup",
   "description": "Settings and features required only for development.",
   "author": "Lombiq Technologies",
@@ -21,10 +21,6 @@
           "name": "DotNest.Core.SDK.Common"
         }
       ]
-    },
-    {
-      "name": "themes",
-      "site": "Sample.Theme"
     }
   ]
 }
