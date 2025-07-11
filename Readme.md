@@ -29,17 +29,7 @@ We have everything documented here, but if you prefer videos, check out our [Dot
 
 You can see an example of a fork of this project for the website [Letters from Fiume](https://lettersfromfiume.com/), with a Media Theme [here](https://github.com/Piedone/DotNest-Sites). This demonstrates how to have a Media Theme theme project with Liquid templates and CSS, and do local development with an export of the production site, also making use of [Auto Setup](https://docs.orchardcore.net/en/latest/docs/reference/modules/AutoSetup/).
 
-### Automatic sync for your fork with Git-hg Mirror
-
-Optionally, you can set up a mirror on [Git-hg Mirror](https://githgmirror.com) to automatically (and continuously) synchronize every commit from the original repository to your fork. This gives you an easy way to always work with same code base as what is running on DotNest.
-
-- The "Git clone URL" should be `git+https://github.com/Lombiq/DotNest-Core-SDK.git`.
-- The "Hg clone URL" (don't worry about "Hg") should be a similar URL pointing to your fork with some authentication details to allow Git-hg Mirror to push to your repository. You can create an access token under [your GitHub settings](https://github.com/settings/tokens) (select full `repo` access) and use it as follows: `git+https://0123456789abcdef0123456789abcdef:x-oauth-basic@github.com/AwesomeDeveloper/Awesome-Project.git`.
-- The "Mirroring direction" should be `Git to Hg`.
-- You'll just need the default branch, so configure "Git ref selection regex for pushes" as `refs/heads/dev`.
-- Make sure that you never commit anything to the branches coming from the original repository, otherwise the synchronization will fail.
-
-**Note** that this project uses [GitHub Actions](https://github.com/features/actions) for automated builds. If you don't need these, and especially if your fork will be auto-updated with Git-hg Mirror (which pushes to your repository multiple times a minute) then you shouldn't enable GitHub Actions for the repository (since then e.g. a build will run on each Git-hg Mirror push).
+**Note** that this project uses [GitHub Actions](https://github.com/features/actions) for automated builds. If you don't need these in your fork then you shouldn't enable GitHub Actions for the repository, but we do recommend you utilize them for automated QA.
 
 ## Working with the repository
 
