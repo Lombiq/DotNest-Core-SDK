@@ -44,6 +44,7 @@
     <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="13.0.0" />
     <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="13.0.0" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
+    <PackageReference Include="CrestApps.OrchardCore.Cms.Core.Targets" Version="1.2.0-beta-0015" />
   </ItemGroup>
 
   <ItemGroup>
