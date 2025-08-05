@@ -33,10 +33,36 @@ Fork the [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) reposito
 
 ## Working with the repository
 
-- In case new commits are pushed to your fork from the original repository, check the changes (e.g. new modules might be added that you also need to add to your custom solution) and merge `dev` to your development branch.
 - Whenever you create any branches, make sure to choose names that don't collide with the ones in the SDK. If your project is called e.g. `Awesome Project`, then your development branch should be created on top of `dev` and name it e.g. `dev-ap`.
 - We recommend you create such a development branch and set it as the default branch of your fork.
 - For clarity, rename the solution file to what you prefer, e.g. _AwesomeProject.DotNestSites.sln_.
+
+## Updating your fork with changes from the SDK
+
+- If your repository is an actual fork, you can use the [`Sync fork` feature](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) on GitHub to manually update it.
+- Regardless of whether your repository is a fork or not, you can also automate updating its `dev` branch from the SDK using our [Mirror branches workflow](https://github.com/Lombiq/GitHub-Actions/blob/dev/Docs/Workflows/Productivity/MirrorBranches.md). A minimal mirror workflow looks like this (you need to update the `destination-repository` parameter and set up a secret for `DESTINATION_TOKEN`):
+
+    ```yaml
+    name: Mirror from SDK
+
+    on:
+      workflow_dispatch:
+      schedule:
+        - cron: '0 0 * * *' # Once every day.
+
+    jobs:
+      mirror-from-sdk:
+        name: Mirror from SDK
+        uses: Lombiq/GitHub-Actions/.github/workflows/mirror-branches.yml@dev
+        with:
+          source-repository: Lombiq/DotNest-Core-SDK
+          destination-repository: AwesomeDeveloper/Awesome-Project
+          branch-names: dev
+        secrets:
+          DESTINATION_TOKEN: ${{ secrets.AWESOME_PROJECT_MIRROR_TOKEN }}
+    ```
+
+In case new commits are pushed to your fork from the SDK, check the changes (e.g. new modules might be added that you also need to add to your custom solution) and merge `dev` into your development branch.
 
 ## Theme development
 
