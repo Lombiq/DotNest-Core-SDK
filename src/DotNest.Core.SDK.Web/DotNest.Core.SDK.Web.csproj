@@ -6,10 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OrchardCoreVersion>2.1.7</OrchardCoreVersion>
     <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
+    <CrestAppsOrchardCoreVersion>1.2.0-beta-0015</CrestAppsOrchardCoreVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lombiq.UIKit" Version="9.1.0" />
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="$(OrchardCoreVersion)" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="$(OrchardCoreVersion)" />
   </ItemGroup>
@@ -43,17 +43,21 @@
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="8.0.1-alpha.3.nest-562" />
     <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="13.0.0" />
     <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="13.0.0" />
+    <PackageReference Include="Lombiq.UIKit" Version="9.1.0" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
-    <PackageReference Include="CrestApps.OrchardCore.AI" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="1.2.0-beta-0015" />
-    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="1.2.0-beta-0015" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CrestApps.OrchardCore.AI" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="$(CrestAppsOrchardCoreVersion)" />
   </ItemGroup>
 
   <ItemGroup>
