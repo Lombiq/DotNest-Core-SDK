@@ -1,6 +1,6 @@
 using DotNest.Core.SDK.Tests.UI.Constants;
 using Lombiq.Tests.UI.BasicOrchardFeaturesTesting;
-using Lombiq.Tests.UI.Pages;
+using Lombiq.Tests.UI.Models;
 using System.Threading.Tasks;
 using Xunit;
 
