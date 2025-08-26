@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OrchardCoreVersion>2.1.9</OrchardCoreVersion>
     <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
-    <CrestAppsOrchardCoreVersion>1.2.0-beta-0015</CrestAppsOrchardCoreVersion>
+    <CrestAppsOrchardCoreVersion>1.2.0-beta-0016</CrestAppsOrchardCoreVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
-    <PackageReference Include="Lombiq.BaseTheme" Version="10.0.0" />
+    <PackageReference Include="Lombiq.BaseTheme" Version="10.0.1" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.0" />
     <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.3.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
