@@ -41,8 +41,8 @@
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="9.0.0" />
     <PackageReference Include="Lombiq.Privacy" Version="10.0.0" />
     <PackageReference Include="Lombiq.SetupExtensions" Version="7.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.1.0" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.1.0" />
     <PackageReference Include="Lombiq.UIKit" Version="10.0.0" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
   </ItemGroup>
