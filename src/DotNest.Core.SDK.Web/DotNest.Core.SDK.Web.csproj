@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OrchardCoreVersion>2.1.9</OrchardCoreVersion>
     <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
-    <CrestAppsOrchardCoreVersion>1.2.0-beta-0016</CrestAppsOrchardCoreVersion>
+    <CrestAppsOrchardCoreVersion>1.2.0-beta-0017</CrestAppsOrchardCoreVersion>
   </PropertyGroup>
 
   <ItemGroup>
