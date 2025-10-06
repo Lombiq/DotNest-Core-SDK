@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <OrchardCoreVersion>2.1.9</OrchardCoreVersion>
+    <OrchardCoreVersion>2.2.0</OrchardCoreVersion>
     <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
     <CrestAppsOrchardCoreVersion>1.2.0-beta-0017</CrestAppsOrchardCoreVersion>
   </PropertyGroup>
@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="TheBootstrapTheme" Version="2.1.7" />
-    <PackageReference Include="TheClassLessTheme" Version="2.1.7" />
-    <PackageReference Include="TheResumeTheme" Version="2.1.7" />
+    <PackageReference Include="TheBootstrapTheme" Version="$(OrchardCoreVersion)" />
+    <PackageReference Include="TheClassLessTheme" Version="$(OrchardCoreVersion)" />
+    <PackageReference Include="TheResumeTheme" Version="$(OrchardCoreVersion)" />
   </ItemGroup>
 
   <ItemGroup>
