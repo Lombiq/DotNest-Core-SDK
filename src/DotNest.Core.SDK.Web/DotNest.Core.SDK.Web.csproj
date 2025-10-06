@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="TheBootstrapTheme" Version="$(OrchardCoreVersion)" />
-    <PackageReference Include="TheClassLessTheme" Version="$(OrchardCoreVersion)" />
-    <PackageReference Include="TheResumeTheme" Version="$(OrchardCoreVersion)" />
+    <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
+    <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
+    <PackageReference Include="TheResumeTheme" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
