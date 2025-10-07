@@ -9,32 +9,38 @@
     <CrestAppsOrchardCoreVersion>1.2.0-beta-0018</CrestAppsOrchardCoreVersion>
   </PropertyGroup>
 
+  <!-- Keep all the references below sorted alphabetically for easier merging into forks. -->
+
+  <!-- Orchard Core -->
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="$(OrchardCoreVersion)" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="$(OrchardCoreVersion)" />
   </ItemGroup>
 
+  <!-- Orchard Core Commerce -->
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Commerce" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
     <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce" Version="$(OrchardCoreCommerceVersion)" />
   </ItemGroup>
 
+  <!-- Third-party themes -->
   <ItemGroup>
     <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
     <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
     <PackageReference Include="TheResumeTheme" Version="2.2.0" />
   </ItemGroup>
 
+  <!-- Lombiq -->
   <ItemGroup>
     <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
     <PackageReference Include="Lombiq.BaseTheme" Version="10.0.1" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.0" />
     <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.3.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="8.0.1-alpha.3.nest-562" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.3.nest-562" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="8.0.1-alpha.3.nest-562" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="9.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="9.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="9.0.0" />
@@ -47,19 +53,21 @@
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
   </ItemGroup>
 
+  <!-- CrestApps -->
   <ItemGroup>
+    <PackageReference Include="CrestApps.OrchardCore.AI" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.AI" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.Resources" Version="$(CrestAppsOrchardCoreVersion)" />
     <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="$(CrestAppsOrchardCoreVersion)" />
   </ItemGroup>
 
+  <!-- Project references -->
   <ItemGroup>
     <ProjectReference Include="..\Themes\Sample.Theme\Sample.Theme.csproj" />
   </ItemGroup>
