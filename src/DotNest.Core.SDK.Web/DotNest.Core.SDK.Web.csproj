@@ -12,7 +12,6 @@
   <PropertyGroup>
     <CrestAppsVersion>1.2.0-beta-0018</CrestAppsVersion>
     <LombiqBaseThemeVersion>10.0.2-alpha.0.olys-32</LombiqBaseThemeVersion>
-    <LombiqHelpfulLibrariesVersion>12.3.0</LombiqHelpfulLibrariesVersion>
     <LombiqHostingMediaThemeVersion>8.0.1-alpha.7.olys-29</LombiqHostingMediaThemeVersion>
     <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
     <LombiqTestsUIVersion>14.1.0</LombiqTestsUIVersion>
@@ -48,9 +47,7 @@
     <PackageReference Include="Lombiq.BaseTheme.Core" Version="$(LombiqBaseThemeVersion)" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="$(LombiqBaseThemeVersion)" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.0" />
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="$(LombiqHelpfulLibrariesVersion)" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" Version="$(LombiqHelpfulLibrariesVersion)" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="$(LombiqHelpfulLibrariesVersion)" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.3.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
