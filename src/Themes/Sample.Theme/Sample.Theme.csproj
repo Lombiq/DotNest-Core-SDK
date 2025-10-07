@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**;Deployment\**</DefaultItemExcludes>
-    <OrchardCoreVersion>2.2.1</OrchardCoreVersion>
+    <OrchardCoreVersion>2.1.0</OrchardCoreVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.3.nest-562" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.1-alpha.3.nest-562" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.7.olys-29" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.1-alpha.7.olys-29" />
   </ItemGroup>
 
   <ItemGroup>
