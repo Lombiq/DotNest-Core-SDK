@@ -19,10 +19,10 @@
 
   <!-- Orchard Core Commerce -->
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
     <PackageReference Include="OrchardCore.Commerce" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
   </ItemGroup>
 
   <!-- Third-party themes -->
