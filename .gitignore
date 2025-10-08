@@ -27,3 +27,4 @@ profiling/
 .testPublish/
 src/*.Web/Localization
 .editorconfig
+DotNest.Core.SDK.MediaTheme.recipe.json
