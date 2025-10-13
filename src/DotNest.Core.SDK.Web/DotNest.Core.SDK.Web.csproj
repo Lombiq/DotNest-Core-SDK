@@ -46,7 +46,7 @@
     <PackageReference Include="Lombiq.BaseTheme" Version="$(LombiqBaseThemeVersion)" />
     <PackageReference Include="Lombiq.BaseTheme.Core" Version="$(LombiqBaseThemeVersion)" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="$(LombiqBaseThemeVersion)" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.0" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.1-alpha.4.olys-35" />
     <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.3.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
@@ -58,7 +58,8 @@
     <PackageReference Include="Lombiq.Privacy" Version="10.0.0" />
     <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="$(LombiqTestsUIVersion)" />
     <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="$(LombiqTestsUIVersion)" />
-    <PackageReference Include="Lombiq.UIKit" Version="10.0.0" />
+    <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.1.olys-37" />
+    <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.1.olys-37" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
   </ItemGroup>
 
