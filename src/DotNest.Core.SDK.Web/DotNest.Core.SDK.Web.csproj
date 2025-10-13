@@ -4,18 +4,28 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <OrchardCoreVersion>2.1.9</OrchardCoreVersion>
-    <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
-    <LombiqBaseThemeVersion>10.0.2-alpha.0.olys-32</LombiqBaseThemeVersion>
-    <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
-    <CrestAppsOrchardCoreVersion>1.2.0-beta-0017</CrestAppsOrchardCoreVersion>
   </PropertyGroup>
 
+  <!-- Keep all the references below sorted alphabetically for easier merging into forks. -->
+
+  <!-- Package versions for package groups -->
+  <PropertyGroup>
+    <CrestAppsVersion>1.2.0-beta-0018</CrestAppsVersion>
+    <LombiqBaseThemeVersion>10.0.2-alpha.0.olys-32</LombiqBaseThemeVersion>
+    <LombiqHostingMediaThemeVersion>8.0.1-alpha.7.olys-29</LombiqHostingMediaThemeVersion>
+    <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
+    <LombiqTestsUIVersion>14.1.0</LombiqTestsUIVersion>
+    <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
+    <OrchardCoreVersion>2.2.1</OrchardCoreVersion>
+  </PropertyGroup>
+
+  <!-- Orchard Core -->
   <ItemGroup>
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="$(OrchardCoreVersion)" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="$(OrchardCoreVersion)" />
   </ItemGroup>
 
+  <!-- Orchard Core Commerce -->
   <ItemGroup>
     <PackageReference Include="OrchardCore.Commerce" Version="$(OrchardCoreCommerceVersion)" />
     <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
@@ -23,47 +33,50 @@
     <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
   </ItemGroup>
 
+  <!-- Third-party themes -->
   <ItemGroup>
-    <PackageReference Include="TheBootstrapTheme" Version="2.1.7" />
-    <PackageReference Include="TheClassLessTheme" Version="2.1.7" />
-    <PackageReference Include="TheResumeTheme" Version="2.1.7" />
+    <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
+    <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
+    <PackageReference Include="TheResumeTheme" Version="2.2.0" />
   </ItemGroup>
 
+  <!-- Lombiq -->
   <ItemGroup>
     <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
     <PackageReference Include="Lombiq.BaseTheme" Version="$(LombiqBaseThemeVersion)" />
+    <PackageReference Include="Lombiq.BaseTheme.Core" Version="$(LombiqBaseThemeVersion)" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="$(LombiqBaseThemeVersion)" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.1-alpha.4.olys-35" />
-    <PackageReference Include="Lombiq.HelpfulLibraries" Version="12.3.0" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.0.0" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.3.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.0" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.7.olys-29" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="8.0.1-alpha.7.olys-29" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="$(LombiqHostingTenantsVersion)" />
-    <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="$(LombiqHostingTenantsVersion)" />
+    <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Privacy" Version="10.0.0" />
-    <PackageReference Include="Lombiq.SetupExtensions" Version="7.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.1.0" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.1.0" />
-    <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.1.olys-37" />
-    <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.1.olys-37" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="$(LombiqTestsUIVersion)" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="$(LombiqTestsUIVersion)" />
+    <PackageReference Include="Lombiq.UIKit" Version="10.0.0" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.0" />
   </ItemGroup>
 
+  <!-- CrestApps -->
   <ItemGroup>
-    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.AI" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="$(CrestAppsOrchardCoreVersion)" />
-    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="$(CrestAppsOrchardCoreVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="$(CrestAppsVersion)" />
+    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="$(CrestAppsVersion)" />
   </ItemGroup>
 
+  <!-- Project references -->
   <ItemGroup>
     <ProjectReference Include="..\Themes\Sample.Theme\Sample.Theme.csproj" />
   </ItemGroup>
