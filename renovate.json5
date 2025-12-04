@@ -4,6 +4,9 @@
     prBodyNotes: [
         '@Lombiq/dotnest-sites-renovate-notification-recipients',
     ],
+    addLabels: [
+        'no-jira-community-activity-issue',
+    ],
     packageRules: [
         // The release of these themes are usually tied together.
         {
