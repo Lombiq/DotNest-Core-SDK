@@ -27,10 +27,10 @@
 
   <!-- Orchard Core Commerce -->
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Commerce" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce" Version="3.1.0" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="3.1.0" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="3.1.0" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="3.1.0" />
   </ItemGroup>
 
   <!-- Third-party themes -->
@@ -47,7 +47,7 @@
     <PackageReference Include="Lombiq.BaseTheme.Core" Version="11.0.0" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="11.0.0" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.1.1-alpha.2.nest-643" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.5.1-alpha.1.osoe-754" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.6.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.1-alpha.0.osoe-935" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
