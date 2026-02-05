@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,7 +15,7 @@
     <LombiqHostingMediaThemeVersion>8.0.1-alpha.7.olys-29</LombiqHostingMediaThemeVersion>
     <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
     <LombiqTestsUIVersion>14.1.0</LombiqTestsUIVersion>
-    <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
+    <OrchardCoreCommerceVersion>3.1.0</OrchardCoreCommerceVersion>
     <OrchardCoreVersion>2.2.1</OrchardCoreVersion>
   </PropertyGroup>
 
@@ -27,10 +27,10 @@
 
   <!-- Orchard Core Commerce -->
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Commerce" Version="3.1.0" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="3.1.0" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="3.1.0" />
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="3.1.0" />
+    <PackageReference Include="OrchardCore.Commerce" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
   </ItemGroup>
 
   <!-- Third-party themes -->
