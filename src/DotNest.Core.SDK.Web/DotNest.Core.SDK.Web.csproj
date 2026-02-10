@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,7 +15,7 @@
     <LombiqHostingMediaThemeVersion>8.0.1-alpha.7.olys-29</LombiqHostingMediaThemeVersion>
     <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
     <LombiqTestsUIVersion>14.1.0</LombiqTestsUIVersion>
-    <OrchardCoreCommerceVersion>3.0.0</OrchardCoreCommerceVersion>
+    <OrchardCoreCommerceVersion>3.1.0</OrchardCoreCommerceVersion>
     <OrchardCoreVersion>2.2.1</OrchardCoreVersion>
   </PropertyGroup>
 
@@ -47,7 +47,7 @@
     <PackageReference Include="Lombiq.BaseTheme.Core" Version="11.0.0" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="11.0.0" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.1.1-alpha.2.nest-643" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.5.1-alpha.1.osoe-754" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.6.0" />
     <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.1-alpha.0.osoe-935" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
