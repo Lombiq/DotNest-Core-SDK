@@ -62,7 +62,7 @@ Fork the [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) reposito
           DESTINATION_TOKEN: ${{ secrets.AWESOME_PROJECT_MIRROR_TOKEN }}
     ```
 
-In case new commits are pushed to your fork from the SDK, check the changes (e.g. new modules might be added that you also need to add to your custom solution) and merge `dev` into your development branch. You can also automated this with the [Open Pull Request workflow](https://github.com/Lombiq/GitHub-Actions/blob/dev/Docs/Workflows/Productivity/OpenPullRequest.md).
+In case new commits are pushed to your fork from the SDK, check the changes (e.g. new modules might be added that you also need to add to your custom solution) and merge `dev` into your development branch. You can also automate this with the [Open Pull Request workflow](https://github.com/Lombiq/GitHub-Actions/blob/dev/Docs/Workflows/Productivity/OpenPullRequest.md).
 
 ## Theme development
 
