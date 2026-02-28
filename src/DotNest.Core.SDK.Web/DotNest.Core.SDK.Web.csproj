@@ -15,7 +15,7 @@
     <LombiqHostingMediaThemeVersion>8.0.1-alpha.9.osoe-925</LombiqHostingMediaThemeVersion>
     <LombiqHostingTenantsVersion>9.0.1-alpha.20.osoe-925</LombiqHostingTenantsVersion>
     <OrchardCoreCommerceVersion>3.1.1-preview-371</OrchardCoreCommerceVersion>
-    <OrchardCoreVersion>3.0.0-preview-18924</OrchardCoreVersion>
+    <OrchardCoreVersion>3.0.0-preview-18930</OrchardCoreVersion>
     <SkipThemes>true</SkipThemes>
   </PropertyGroup>
 
