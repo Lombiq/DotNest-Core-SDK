@@ -8,8 +8,8 @@ using OrchardCore.DisplayManagement.Manifest;
     Website = "https://github.com/Lombiq/DotNest-Core-SDK",
     Description = "A sample DotNest theme for local development. It must be packaged and used as a Media Theme on DotNest.",
     BaseTheme = "TheTheme",
-    Dependencies = new[]
-    {
-        FeatureNames.MediaThemeBridge
-    }
+    Dependencies =
+    [
+        FeatureNames.MediaThemeBridge,
+    ]
 )]
