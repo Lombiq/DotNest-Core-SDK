@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.7.olys-29" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.1-alpha.7.olys-29" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.9.osoe-925" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.1-alpha.9.osoe-925" />
   </ItemGroup>
 
   <ItemGroup>

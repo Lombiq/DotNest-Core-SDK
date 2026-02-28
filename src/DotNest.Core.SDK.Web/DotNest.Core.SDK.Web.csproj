@@ -10,13 +10,13 @@
 
   <!-- Package versions for package groups -->
   <PropertyGroup>
-    <CrestAppsVersion>1.2.0-beta-0018</CrestAppsVersion>
-    <LombiqBaseThemeVersion>10.0.2-alpha.0.olys-32</LombiqBaseThemeVersion>
-    <LombiqHostingMediaThemeVersion>8.0.1-alpha.7.olys-29</LombiqHostingMediaThemeVersion>
-    <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
-    <LombiqTestsUIVersion>14.1.0</LombiqTestsUIVersion>
+    <CrestAppsVersion>2.0.0-preview-0001</CrestAppsVersion>
+    <LombiqBaseThemeVersion>11.0.1-alpha.3.osoe-925</LombiqBaseThemeVersion>
+    <LombiqHostingMediaThemeVersion>8.0.1-alpha.9.osoe-925</LombiqHostingMediaThemeVersion>
+    <LombiqHostingTenantsVersion>9.0.1-alpha.20.osoe-925</LombiqHostingTenantsVersion>
     <OrchardCoreCommerceVersion>3.1.1-preview-371</OrchardCoreCommerceVersion>
     <OrchardCoreVersion>3.0.0-preview-18924</OrchardCoreVersion>
+    <SkipThemes>true</SkipThemes>
   </PropertyGroup>
 
   <!-- Orchard Core -->
@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <!-- Third-party themes -->
-  <ItemGroup>
+  <ItemGroup Condition="'$(SkipThemes)' == 'true'">
     <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
     <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
     <PackageReference Include="TheResumeTheme" Version="2.2.0" />
@@ -43,25 +43,25 @@
 
   <!-- Lombiq -->
   <ItemGroup>
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.1-alpha.3.osoe-925" />
     <PackageReference Include="Lombiq.BaseTheme" Version="$(LombiqBaseThemeVersion)" />
-    <PackageReference Include="Lombiq.BaseTheme.Core" Version="11.0.0" />
-    <PackageReference Include="Lombiq.BaseTheme.Native" Version="11.0.0" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.1.1-alpha.2.nest-643" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.6.0" />
-    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.1-alpha.0.osoe-935" />
+    <PackageReference Include="Lombiq.BaseTheme.Core" Version="11.0.1-alpha.3.osoe-925" />
+    <PackageReference Include="Lombiq.BaseTheme.Native" Version="11.0.1-alpha.3.osoe-925" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.1.1-alpha.4.osoe-925" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="14.2.2-alpha.6.osoe-925" />
+    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.1-alpha.1.osoe-925" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="$(LombiqHostingTenantsVersion)" />
-    <PackageReference Include="Lombiq.Privacy" Version="10.0.1-alpha.4.osoe-1069" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.5.nest-643" />
-    <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.5.nest-643" />
-    <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.1-alpha.19.nest-643" />
+    <PackageReference Include="Lombiq.Privacy" Version="10.0.1-alpha.6.osoe-925" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.2.2-alpha.6.osoe-925" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.2.2-alpha.6.osoe-925" />
+    <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.7.osoe-925" />
+    <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.7.osoe-925" />
+    <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.1-alpha.21.osoe-925" />
   </ItemGroup>
 
   <!-- CrestApps -->
