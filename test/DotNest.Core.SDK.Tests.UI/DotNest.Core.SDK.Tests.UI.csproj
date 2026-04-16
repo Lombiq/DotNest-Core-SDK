@@ -7,11 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
     <PackageReference Include="xunit.v3" Version="3.2.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5" />
-    <PackageReference Include="Lombiq.Tests.UI" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.1-alpha.3.osoe-925" />
+    <PackageReference Include="Lombiq.Tests.UI" Version="14.2.2-alpha.11.osoe-925" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.1-alpha.4.osoe-925" />
+  </ItemGroup>
+
+  <!-- Fixes "NU1901: Package has a known low severity vulnerability" errors. -->
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.6" NoWarn="NU1510" />
   </ItemGroup>
 
   <ItemGroup>
