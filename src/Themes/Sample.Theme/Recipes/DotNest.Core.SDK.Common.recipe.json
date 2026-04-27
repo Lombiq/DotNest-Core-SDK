@@ -123,6 +123,9 @@
         "Lombiq.Hosting.Tenants.Admin.Login.SubTenant",
         "Lombiq.Hosting.Tenants.Management.ForbiddenTenantNames",
         "Lombiq.Hosting.MediaTheme",
+        "Lombiq.Marketing.Pirsch",
+        "Lombiq.Marketing.UrlShortener",
+        "Lombiq.UIKit.Widgets",
 
         // Themes
         "TheAdmin",
