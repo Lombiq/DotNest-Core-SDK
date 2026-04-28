@@ -61,6 +61,9 @@
     <PackageReference Include="Lombiq.Privacy" Version="10.0.1-alpha.8.osoe-925" />
     <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.2.2-alpha.11.osoe-925" />
     <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.2.2-alpha.11.osoe-925" />
+    <PackageReference Include="Lombiq.Marketing" Version="0.0.0-alpha.9.osoe-1239" />
+    <PackageReference Include="Lombiq.Marketing.Pirsch" Version="0.0.0-alpha.9.osoe-1239" />
+    <PackageReference Include="Lombiq.Marketing.UrlShortener" Version="0.0.0-alpha.9.osoe-1239" />
     <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.9.osoe-925" />
     <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.9.osoe-925" />
     <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.1-alpha.23.osoe-925" />
