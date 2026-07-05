@@ -15,8 +15,7 @@
     <LombiqHostingMediaThemeVersion>8.0.1-alpha.11.osoe-925</LombiqHostingMediaThemeVersion>
     <LombiqHostingTenantsVersion>9.0.1-alpha.22.osoe-925</LombiqHostingTenantsVersion>
     <OrchardCoreCommerceVersion>3.1.1-preview-376</OrchardCoreCommerceVersion>
-    <OrchardCoreVersion>3.0.0-preview-18991</OrchardCoreVersion>
-    <SkipThemes>true</SkipThemes>
+    <OrchardCoreVersion>4.0.0-preview-19068</OrchardCoreVersion>
   </PropertyGroup>
 
   <!-- Orchard Core -->
@@ -37,10 +36,10 @@
   </ItemGroup>
 
   <!-- Third-party themes -->
-  <ItemGroup Condition="'$(SkipThemes)' == 'true'">
-    <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
-    <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
-    <PackageReference Include="TheResumeTheme" Version="2.2.0" />
+  <ItemGroup>
+    <!-- <PackageReference Include="TheBootstrapTheme" Version="2.2.1" /> -->
+    <PackageReference Include="TheClassLessTheme" Version="3.0.0" />
+    <PackageReference Include="TheResumeTheme" Version="3.0.0" />
   </ItemGroup>
 
   <!-- Lombiq -->
