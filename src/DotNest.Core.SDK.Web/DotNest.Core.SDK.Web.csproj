@@ -15,7 +15,7 @@
     <LombiqHostingMediaThemeVersion>8.0.1-alpha.11.osoe-925</LombiqHostingMediaThemeVersion>
     <LombiqHostingTenantsVersion>9.0.1-alpha.22.osoe-925</LombiqHostingTenantsVersion>
     <OrchardCoreCommerceVersion>3.1.1-preview-376</OrchardCoreCommerceVersion>
-    <OrchardCoreVersion>4.0.0-preview-19068</OrchardCoreVersion>
+    <OrchardCoreVersion>3.0.1</OrchardCoreVersion>
   </PropertyGroup>
 
   <!-- Orchard Core -->
@@ -37,9 +37,9 @@
 
   <!-- Third-party themes -->
   <ItemGroup>
-    <!-- <PackageReference Include="TheBootstrapTheme" Version="2.2.1" /> -->
-    <PackageReference Include="TheClassLessTheme" Version="3.0.0" />
-    <PackageReference Include="TheResumeTheme" Version="3.0.0" />
+    <PackageReference Include="TheBootstrapTheme" Version="3.0.1" />
+    <PackageReference Include="TheClassLessTheme" Version="3.0.1" />
+    <PackageReference Include="TheResumeTheme" Version="3.0.1" />
   </ItemGroup>
 
   <!-- Lombiq -->
