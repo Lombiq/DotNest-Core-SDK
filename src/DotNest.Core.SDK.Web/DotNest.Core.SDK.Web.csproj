@@ -89,7 +89,10 @@
   
   <!-- Security Updates - make sure to check if these are still necessary -->
   <ItemGroup>
+    <!-- From OrchardCore.Application.Cms.Targets. -->
     <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" NoWarn="NU1510" />
+    <!-- Indirectly from CrestApps.Core.AI.Abstractions. -->
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="10.8.1" NoWarn="NU1510" />
   </ItemGroup>
 
 </Project>
