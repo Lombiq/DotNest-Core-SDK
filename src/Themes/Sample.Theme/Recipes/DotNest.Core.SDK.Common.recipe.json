@@ -195,7 +195,7 @@
       "Values": [
         {
           "executionid": "DotNest.Core.SDK.Web",
-          "name": "DotNest.Core.SDK.MediaTheme"
+          "name": "Sample.MediaTheme"
         }
       ]
     }
