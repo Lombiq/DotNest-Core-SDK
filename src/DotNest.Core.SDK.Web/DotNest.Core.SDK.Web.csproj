@@ -42,28 +42,28 @@
 
   <!-- Lombiq -->
   <ItemGroup>
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="6.0.0" />
     <PackageReference Include="Lombiq.BaseTheme" Version="$(LombiqBaseThemeVersion)" />
-    <PackageReference Include="Lombiq.BaseTheme.Core" Version="11.0.0" />
-    <PackageReference Include="Lombiq.BaseTheme.Native" Version="11.0.0" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.1.1-alpha.2.nest-643" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.6.0" />
-    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.1-alpha.0.osoe-935" />
+    <PackageReference Include="Lombiq.BaseTheme.Core" Version="12.0.0" />
+    <PackageReference Include="Lombiq.BaseTheme.Native" Version="12.0.0" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="12.0.0" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="13.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="11.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="$(LombiqHostingTenantsVersion)" />
-    <PackageReference Include="Lombiq.Marketing" Version="0.0.0-alpha.9.osoe-1239" />
-    <PackageReference Include="Lombiq.Marketing.Pirsch" Version="0.0.0-alpha.9.osoe-1239" />
-    <PackageReference Include="Lombiq.Marketing.UrlShortener" Version="0.0.0-alpha.9.osoe-1239" />
-    <PackageReference Include="Lombiq.Privacy" Version="10.0.1-alpha.4.osoe-1069" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.5.nest-643" />
-    <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.5.nest-643" />
-    <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.1-alpha.19.nest-643" />
+    <PackageReference Include="Lombiq.Marketing" Version="1.0.0" />
+    <PackageReference Include="Lombiq.Marketing.Pirsch" Version="1.0.0" />
+    <PackageReference Include="Lombiq.Marketing.UrlShortener" Version="1.0.0" />
+    <PackageReference Include="Lombiq.Privacy" Version="11.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="15.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="15.0.0" />
+    <PackageReference Include="Lombiq.UIKit" Version="11.0.0" />
+    <PackageReference Include="Lombiq.UIKit.Widgets" Version="11.0.0" />
+    <PackageReference Include="Lombiq.Walkthroughs" Version="4.0.0" />
   </ItemGroup>
 
   <!-- CrestApps -->
