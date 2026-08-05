@@ -35,9 +35,9 @@
 
   <!-- Third-party themes -->
   <ItemGroup>
-    <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
-    <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
-    <PackageReference Include="TheResumeTheme" Version="2.2.0" />
+    <PackageReference Include="TheBootstrapTheme" Version="3.0.1" />
+    <PackageReference Include="TheClassLessTheme" Version="3.0.1" />
+    <PackageReference Include="TheResumeTheme" Version="3.0.1" />
   </ItemGroup>
 
   <!-- Lombiq -->
