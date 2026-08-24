@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/build-and-test.yml" />
+    <File Path=".github/workflows/create-jira-issues-for-community-activities.yml" />
+    <File Path=".github/workflows/renovate.yml" />
+    <File Path=".github/workflows/validate-pull-request.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="License.md" />
+    <File Path="NuGet.config" />
+    <File Path="Readme.md" />
+    <File Path="renovate.json5" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/DotNest.Core.SDK.Web/DotNest.Core.SDK.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/Themes/">
+    <Project Path="src/Themes/Sample.Theme/Sample.Theme.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/DotNest.Core.SDK.Tests.UI/DotNest.Core.SDK.Tests.UI.csproj" />
+  </Folder>
+</Solution>

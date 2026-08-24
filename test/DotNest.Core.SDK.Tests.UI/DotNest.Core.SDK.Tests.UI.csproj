@@ -1,33 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Lombiq.MSBuild.OrchardCore.Tests.Sdk/2.0.2">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.6.0" />
-    <PackageReference Include="xunit.v3" Version="3.2.2" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5" />
-    <PackageReference Include="Lombiq.Tests.UI" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
+    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update=".htmlvalidate.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Recipes\*.Tests*.recipe.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+    <PackageReference Include="Lombiq.Tests.UI" Version="$(PackageVersionLombiqTestsUI)" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DotNest.Core.SDK.Web\DotNest.Core.SDK.Web.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update=".htmlvalidate.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>

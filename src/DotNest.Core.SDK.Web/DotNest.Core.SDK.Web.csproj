@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -10,18 +10,19 @@
 
   <!-- Package versions for package groups -->
   <PropertyGroup>
-    <CrestAppsVersion>1.2.0-beta-0018</CrestAppsVersion>
-    <LombiqBaseThemeVersion>10.0.2-alpha.0.olys-32</LombiqBaseThemeVersion>
-    <LombiqHostingMediaThemeVersion>8.0.1-alpha.7.olys-29</LombiqHostingMediaThemeVersion>
-    <LombiqHostingTenantsVersion>9.0.1-alpha.15.osoe-1069</LombiqHostingTenantsVersion>
-    <LombiqTestsUIVersion>14.1.0</LombiqTestsUIVersion>
-    <OrchardCoreCommerceVersion>3.1.0</OrchardCoreCommerceVersion>
-    <OrchardCoreVersion>2.2.1</OrchardCoreVersion>
+    <CrestAppsVersion>2.0.0</CrestAppsVersion>
+    <LombiqBaseThemeVersion>11.0.1-alpha.6.osoe-925</LombiqBaseThemeVersion>
+    <LombiqHostingMediaThemeVersion>9.0.1-alpha.3.nest-608</LombiqHostingMediaThemeVersion>
+    <LombiqHostingTenantsVersion>10.0.0</LombiqHostingTenantsVersion>
+    <OrchardCoreCommerceVersion>3.1.1-preview-377</OrchardCoreCommerceVersion>
+    <OrchardCoreVersion>3.0.1</OrchardCoreVersion>
   </PropertyGroup>
 
   <!-- Orchard Core -->
   <ItemGroup>
+    <PackageReference Include="OrchardCore" Version="$(OrchardCoreVersion)" />
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="$(OrchardCoreVersion)" />
+    <PackageReference Include="OrchardCore.ContentFields" Version="$(OrchardCoreVersion)" />
     <PackageReference Include="OrchardCore.Logging.NLog" Version="$(OrchardCoreVersion)" />
   </ItemGroup>
 
@@ -31,39 +32,39 @@
     <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="$(OrchardCoreCommerceVersion)" />
     <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="$(OrchardCoreCommerceVersion)" />
     <PackageReference Include="OrchardCore.Commerce.Tax" Version="$(OrchardCoreCommerceVersion)" />
+    <PackageReference Include="OrchardCore.Commerce.Tests.UI.Shortcuts" Version="$(OrchardCoreCommerceVersion)" />
   </ItemGroup>
 
   <!-- Third-party themes -->
   <ItemGroup>
-    <PackageReference Include="TheBootstrapTheme" Version="2.2.0" />
-    <PackageReference Include="TheClassLessTheme" Version="2.2.0" />
-    <PackageReference Include="TheResumeTheme" Version="2.2.0" />
+    <PackageReference Include="TheBootstrapTheme" Version="3.0.1" />
+    <PackageReference Include="TheClassLessTheme" Version="3.0.1" />
+    <PackageReference Include="TheResumeTheme" Version="3.0.1" />
   </ItemGroup>
 
   <!-- Lombiq -->
   <ItemGroup>
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="5.2.0" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="6.0.0" />
     <PackageReference Include="Lombiq.BaseTheme" Version="$(LombiqBaseThemeVersion)" />
-    <PackageReference Include="Lombiq.BaseTheme.Core" Version="11.0.0" />
-    <PackageReference Include="Lombiq.BaseTheme.Native" Version="11.0.0" />
-    <PackageReference Include="Lombiq.HelpfulExtensions" Version="11.1.1-alpha.2.nest-643" />
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="12.6.0" />
-    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="10.0.1-alpha.0.osoe-935" />
+    <PackageReference Include="Lombiq.BaseTheme.Core" Version="12.0.0" />
+    <PackageReference Include="Lombiq.BaseTheme.Native" Version="12.0.0" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="12.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="11.0.0" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="$(LombiqHostingMediaThemeVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.FeaturesGuard" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="$(LombiqHostingTenantsVersion)" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="$(LombiqHostingTenantsVersion)" />
-    <PackageReference Include="Lombiq.Marketing" Version="0.0.0-alpha.9.osoe-1239" />
-    <PackageReference Include="Lombiq.Marketing.Pirsch" Version="0.0.0-alpha.9.osoe-1239" />
-    <PackageReference Include="Lombiq.Marketing.UrlShortener" Version="0.0.0-alpha.9.osoe-1239" />
-    <PackageReference Include="Lombiq.Privacy" Version="10.0.1-alpha.4.osoe-1069" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="14.2.1-alpha.2.nest-649" />
-    <PackageReference Include="Lombiq.UIKit" Version="10.0.1-alpha.5.nest-643" />
-    <PackageReference Include="Lombiq.UIKit.Widgets" Version="10.0.1-alpha.5.nest-643" />
-    <PackageReference Include="Lombiq.Walkthroughs" Version="3.0.1-alpha.19.nest-643" />
+    <PackageReference Include="Lombiq.Privacy" Version="11.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="15.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="15.0.0" />
+    <PackageReference Include="Lombiq.Marketing" Version="1.0.0" />
+    <PackageReference Include="Lombiq.Marketing.Pirsch" Version="1.0.0" />
+    <PackageReference Include="Lombiq.Marketing.UrlShortener" Version="1.0.0" />
+    <PackageReference Include="Lombiq.UIKit" Version="11.0.0" />
+    <PackageReference Include="Lombiq.UIKit.Widgets" Version="11.0.0" />
+    <PackageReference Include="Lombiq.Walkthroughs" Version="4.0.0" />
   </ItemGroup>
 
   <!-- CrestApps -->
@@ -84,4 +85,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Themes\Sample.Theme\Sample.Theme.csproj" />
   </ItemGroup>
+
+  <!-- Security Updates - make sure to check if these are still necessary -->
+  <ItemGroup>
+    <!-- From OrchardCore.Application.Cms.Targets. -->
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" NoWarn="NU1510" />
+  </ItemGroup>
+
 </Project>

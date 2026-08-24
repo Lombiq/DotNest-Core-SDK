@@ -1,9 +1,0 @@
-<Project>
-  <!-- OllamaSharp.SourceGenerators uses Roslyn analyzer 4.12.0.0 which is available only from .NET 9+ SDK. This can be
-  deleted once we upgrade to .NET 9. Need to remove the analyzer explicitly for this otherwise it does not remove it. -->
-  <Target Name="RemoveOllamaAnalyzer" BeforeTargets="CoreCompile">
-    <ItemGroup>
-      <Analyzer Remove="@(Analyzer)" Condition="'%(Filename)' == 'OllamaSharp.SourceGenerators'" />
-    </ItemGroup>
-  </Target>
-</Project>
