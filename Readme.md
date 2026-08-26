@@ -31,6 +31,8 @@ See [an example of a fork of this project](https://github.com/Piedone/DotNest-Si
 
 Fork the [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK) repository or create an empty repository and push the SDK's `dev` branch to it. For simplicity, we'll refer to your repository as `fork` from now on and assume a simple branching strategy with only one additional branch for development, but your use-case can be more complex.
 
+If you're using Windows, be sure to use a short path for the clone's folder; even the latest versions of Windows can choke on long paths.
+
 ## Working with the repository
 
 - Whenever you create any branches, make sure to choose names that don't collide with the ones in the SDK. If your project is called e.g. `Awesome Project`, then your development branch should be created on top of `dev` and name it e.g. `dev-ap`.
