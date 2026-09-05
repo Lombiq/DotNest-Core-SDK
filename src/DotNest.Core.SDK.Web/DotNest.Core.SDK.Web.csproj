@@ -18,11 +18,11 @@
 
   <!-- Orchard Core Commerce -->
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Commerce" Version="3.1.1-preview-377" />
-    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="3.1.1-preview-377" />
-    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="3.1.1-preview-377" />
-    <PackageReference Include="OrchardCore.Commerce.Tax" Version="3.1.1-preview-377" />
-    <PackageReference Include="OrchardCore.Commerce.Tests.UI.Shortcuts" Version="3.1.1-preview-377" />
+    <PackageReference Include="OrchardCore.Commerce" Version="4.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.ContentFields" Version="4.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.MoneyDataType" Version="4.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.Tax" Version="4.0.0" />
+    <PackageReference Include="OrchardCore.Commerce.Tests.UI.Shortcuts" Version="4.0.0" />
   </ItemGroup>
 
   <!-- Third-party themes -->
