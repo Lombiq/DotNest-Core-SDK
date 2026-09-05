@@ -82,4 +82,12 @@
     <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.11" NoWarn="NU1510" />
   </ItemGroup>
 
+  <!-- Analyzer compatibility workarounds - make sure to check if these are still necessary -->
+  <ItemGroup>
+    <!-- From the CrestApps.OrchardCore.* packages. OllamaSharp.SourceGenerators requires a newer Roslyn compiler
+    than the one used by the .NET SDK in CI, causing CS9057. Excluding the analyzer assets doesn't affect
+    functionality since the source generator only provides compile-time helpers. -->
+    <PackageReference Include="OllamaSharp" Version="5.4.30" ExcludeAssets="Analyzers" />
+  </ItemGroup>
+
 </Project>
