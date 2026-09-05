@@ -86,16 +86,9 @@
   <ItemGroup>
     <!-- From the CrestApps.OrchardCore.* packages. OllamaSharp.SourceGenerators requires a newer Roslyn compiler
     than the one used by the .NET SDK in CI, causing CS9057. Excluding the analyzer assets doesn't affect
-    functionality since the source generator only provides compile-time helpers. -->
+    functionality since the source generator only provides compile-time helpers. See Directory.Build.targets for
+    the removal of the analyzer for projects (like the UI tests project) referencing this project too. -->
     <PackageReference Include="OllamaSharp" Version="5.4.30" ExcludeAssets="Analyzers" />
   </ItemGroup>
-
-  <!-- ExcludeAssets above doesn't remove the analyzer if it's pulled in transitively by multiple packages, so also
-  remove it explicitly right before compilation as a fallback. -->
-  <Target Name="RemoveIncompatibleAnalyzers" BeforeTargets="CoreCompile">
-    <ItemGroup>
-      <Analyzer Remove="@(Analyzer)" Condition="'%(Analyzer.Filename)' == 'OllamaSharp.SourceGenerators'" />
-    </ItemGroup>
-  </Target>
 
 </Project>
