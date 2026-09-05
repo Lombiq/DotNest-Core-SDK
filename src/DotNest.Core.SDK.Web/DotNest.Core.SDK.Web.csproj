@@ -90,4 +90,12 @@
     <PackageReference Include="OllamaSharp" Version="5.4.30" ExcludeAssets="Analyzers" />
   </ItemGroup>
 
+  <!-- ExcludeAssets above doesn't remove the analyzer if it's pulled in transitively by multiple packages, so also
+  remove it explicitly right before compilation as a fallback. -->
+  <Target Name="RemoveIncompatibleAnalyzers" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Analyzer Remove="@(Analyzer)" Condition="'%(Analyzer.Filename)' == 'OllamaSharp.SourceGenerators'" />
+    </ItemGroup>
+  </Target>
+
 </Project>
