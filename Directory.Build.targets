@@ -1,0 +1,14 @@
+<Project>
+
+  <!-- OllamaSharp.SourceGenerators (from the CrestApps.OrchardCore.* packages) requires a newer Roslyn compiler
+  than the one used by the .NET SDK in CI, causing CS9057. This applies to every project that references
+  DotNest.Core.SDK.Web, directly or transitively, so it's removed repo-wide here instead of per-project. 
+  Remove this and the reference in src/DotNest.Core.SDK.Web/DotNest.Core.SDK.Web.csproj when CrestApps.OrchardCore.*
+  gets a new release that includes a fix for this, see https://github.com/CrestApps/CrestApps.OrchardCore/issues/640. -->
+  <Target Name="RemoveIncompatibleAnalyzers" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Analyzer Remove="@(Analyzer)" Condition="'%(Analyzer.Filename)' == 'OllamaSharp.SourceGenerators'" />
+    </ItemGroup>
+  </Target>
+
+</Project>

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Lombiq.MSBuild.OrchardCore.Theme.Sdk/2.0.2">
+﻿<Project Sdk="Lombiq.MSBuild.OrchardCore.Theme.Sdk/2.1.0">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <MediaThemeBaseId>TheTheme</MediaThemeBaseId>
@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="9.0.1-alpha.3.nest-608" />
-    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="9.0.1-alpha.3.nest-608" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="9.0.1" />
+    <PackageReference Include="Lombiq.Hosting.MediaTheme.Targets" Version="9.0.1" />
   </ItemGroup>
 </Project>
