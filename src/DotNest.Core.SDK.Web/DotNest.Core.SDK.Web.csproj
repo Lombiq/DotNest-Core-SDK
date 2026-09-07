@@ -59,16 +59,16 @@
 
   <!-- CrestApps -->
   <ItemGroup>
-    <PackageReference Include="CrestApps.OrchardCore.AI" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="2.1.2" />
-    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="2.1.2" />
+    <PackageReference Include="CrestApps.OrchardCore.AI" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="2.1.4" />
   </ItemGroup>
 
   <!-- Project references -->
@@ -80,15 +80,6 @@
   <ItemGroup>
     <!-- From OrchardCore.Application.Cms.Targets. -->
     <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.11" NoWarn="NU1510" />
-  </ItemGroup>
-
-  <!-- Analyzer compatibility workarounds - make sure to check if these are still necessary -->
-  <ItemGroup>
-    <!-- From the CrestApps.OrchardCore.* packages. OllamaSharp.SourceGenerators requires a newer Roslyn compiler
-    than the one used by the .NET SDK in CI, causing CS9057. Excluding the analyzer assets doesn't affect
-    functionality since the source generator only provides compile-time helpers. See Directory.Build.targets for
-    the removal of the analyzer for projects (like the UI tests project) referencing this project too. -->
-    <PackageReference Include="OllamaSharp" Version="5.4.30" ExcludeAssets="Analyzers" />
   </ItemGroup>
 
 </Project>
