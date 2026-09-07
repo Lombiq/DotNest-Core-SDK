@@ -59,16 +59,16 @@
 
   <!-- CrestApps -->
   <ItemGroup>
-    <PackageReference Include="CrestApps.OrchardCore.AI" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="2.1.3" />
-    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="2.1.3" />
+    <PackageReference Include="CrestApps.OrchardCore.AI" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Agent" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Chat" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AI.Mcp" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.AzureAIInference" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.Ollama" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.OpenAI.Azure" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.Resources" Version="2.1.4" />
+    <PackageReference Include="CrestApps.OrchardCore.SignalR" Version="2.1.4" />
   </ItemGroup>
 
   <!-- Project references -->
