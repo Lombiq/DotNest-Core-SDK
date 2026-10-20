@@ -34,7 +34,7 @@
 
   <!-- Lombiq -->
   <ItemGroup>
-    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="6.0.0" />
+    <PackageReference Include="Lombiq.Analyzers.OrchardCore" Version="7.0.0" />
     <PackageReference Include="Lombiq.BaseTheme" Version="11.0.1-alpha.6.osoe-925" />
     <PackageReference Include="Lombiq.BaseTheme.Core" Version="12.0.0" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="12.0.0" />
