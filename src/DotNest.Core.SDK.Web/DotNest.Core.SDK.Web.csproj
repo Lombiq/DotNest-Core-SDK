@@ -39,7 +39,7 @@
     <PackageReference Include="Lombiq.BaseTheme.Core" Version="12.0.0" />
     <PackageReference Include="Lombiq.BaseTheme.Native" Version="12.0.0" />
     <PackageReference Include="Lombiq.HelpfulExtensions" Version="12.0.0" />
-    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="11.0.0" />
+    <PackageReference Include="Lombiq.Hosting.Azure.ApplicationInsights" Version="11.0.1-alpha.0.osoe-1326" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme" Version="9.0.1" />
     <PackageReference Include="Lombiq.Hosting.MediaTheme.Bridge" Version="9.0.1" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Admin.Login" Version="10.0.0" />
@@ -47,8 +47,8 @@
     <PackageReference Include="Lombiq.Hosting.Tenants.IdleTenantManagement" Version="10.0.0" />
     <PackageReference Include="Lombiq.Hosting.Tenants.Management" Version="10.0.0" />
     <PackageReference Include="Lombiq.Privacy" Version="11.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="15.0.0" />
-    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="15.0.0" />
+    <PackageReference Include="Lombiq.Tests.UI.AppExtensions" Version="16.0.1-alpha.3.osoe-1326" />
+    <PackageReference Include="Lombiq.Tests.UI.Shortcuts" Version="16.0.1-alpha.3.osoe-1326" />
     <PackageReference Include="Lombiq.Marketing" Version="1.0.1" />
     <PackageReference Include="Lombiq.Marketing.Pirsch" Version="1.0.1" />
     <PackageReference Include="Lombiq.Marketing.UrlShortener" Version="1.0.1" />
@@ -82,6 +82,9 @@
     <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.14" NoWarn="NU1510" />
     <!-- From CrestApps.OrchardCore.SignalR. -->
     <PackageReference Include="MessagePack" Version="3.1.12" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="10.0.15" NoWarn="NU1510" />
+    <!-- From icrosoft.AspNetCore.Http. -->
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.3.14" NoWarn="NU1510" />
   </ItemGroup>
 
 </Project>
