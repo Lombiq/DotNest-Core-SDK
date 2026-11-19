@@ -14,12 +14,12 @@ public class BasicOrchardFeaturesTests : UITestBase
     }
 
     [Fact]
-    public Task BasicOrchardFeaturesShouldWork() =>
-        ExecuteTestAsync(
-            context => context.TestBasicOrchardFeaturesAsync(new OrchardCoreSetupParameters(context)
-            {
-                RecipeId = Recipes.DefaultRecipeId,
-                SkipFrontend = true,
-                SkipRegistration = true,
-            }));
+    public Task BasicOrchardFeaturesShouldWork() => TestBuilder
+        .WithoutSetup()
+        .RunAsync(context => context.TestBasicOrchardFeaturesAsync(new OrchardCoreSetupParameters(context)
+        {
+            RecipeId = Recipes.DefaultRecipeId,
+            SkipFrontend = true,
+            SkipRegistration = true,
+        }));
 }
